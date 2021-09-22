@@ -4,40 +4,83 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
     <title>SPSUL - lol boosting</title>
-    <style>
-        /* Remove the navbar's default margin-bottom and rounded borders */ 
-        .navbar {
-          margin-bottom: 0;
-          border-radius: 0;
-        }
-        
-        /* Set height of the grid so .sidenav can be 100% (adjust as needed) */
-        .row.content {height: 450px}
-        
-        /* Set black background color, white text and some padding */
-        footer {
-          background-color: #555;
-          color: white;
+    <style>        
+    /* Remove the navbar's default margin-bottom and rounded borders */ 
+      .navbar {
+        margin-bottom: 0;
+        border-radius: 0;
+      }
+      .carousel-inner img {
+    width: 100%; /* Set width to 100% */
+    margin: auto;
+  }
+      /* Set height of the grid so .sidenav can be 100% (adjust as needed) */
+      .row.content {height: 450px}
+      
+      /* Set black background color, white text and some padding */
+      footer {
+        background-color: #555;
+        color: white;
+        padding: 15px;
+      }    
+      body {
+        background-color: black;
+      }
+      .navbar {
+    font-family: Montserrat, sans-serif;
+    margin-bottom: 0;
+    background-color: #2d2d30;
+    border: 0;
+    font-size: 11px !important;
+    letter-spacing: 4px;
+    opacity: 0.9;
+  }
+  .navbar li a, .navbar .navbar-brand { 
+    color: #d5d5d5 !important;
+  }
+  .navbar-nav li a:hover {
+    color: #fff !important;
+  }
+  .navbar-nav li.active a {
+    color: #fff !important;
+    background-color: #29292c !important;
+  }
+  .navbar-default .navbar-toggle {
+    border-color: transparent;
+  }
+      footer {
+    background-color: #2d2d30;
+    color: #f5f5f5;
+    padding: 32px;
+    }
+  footer a {
+    color: #f5f5f5;
+  }
+  footer a:hover {
+    color: #777;
+    text-decoration: none;
+  }  
+      /* On small screens, set height to 'auto' for sidenav and grid */
+      @media screen and (max-width: 767px) {
+        .sidenav {
+          height: auto;
           padding: 15px;
         }
-        
-        /* On small screens, set height to 'auto' for sidenav and grid */
-        @media screen and (max-width: 767px) {
-          .sidenav {
-            height: auto;
-            padding: 15px;
-          }
-          .row.content {height:auto;} 
-        }
-      </style>
+        .row.content {height:auto;} 
+      }
+
+</style>
     </head>
-    <body>
+    <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="50">
     
-    <nav class="navbar navbar-inverse navbar-fixed-top">
+    <nav class="navbar navbar-default navbar-fixed-top">
       <div class="container-fluid">
         <div class="navbar-header">
           <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
@@ -49,7 +92,7 @@
         </div>
         <div class="collapse navbar-collapse" id="myNavbar">
           <ul class="nav navbar-nav">
-            <li><a href="#">Order</a></li>
+            <li><a href="#">Order Now</a></li>
             <li><a href="#">Our Boosters</a></li>
             <li><a href="#">Review</a></li>
             <li><a href="#">FaQ</a></li>
@@ -86,6 +129,7 @@
                 <h1>VIOLENCE</h1>
                 <h4>Our boosters will do everything to make you win.</h4>
               </div>
+              
             </div>
           
             <div class="item">
@@ -107,7 +151,7 @@
           </div>
           </div>
     </div>
-    
+
     <footer class="container-fluid text-center">
       <p>tvoje máma</p>
     </footer>
