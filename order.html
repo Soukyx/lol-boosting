@@ -6,14 +6,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <title>Order Now</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <title>SPSUL - lol boosting</title>
     <style>        
     /* Remove the navbar's default margin-bottom and rounded borders */ 
       .navbar {
         margin-bottom: 0;
         border-radius: 0;
       }
+      .carousel-inner img {
+    width: 100%; /* Set width to 100% */
+    margin: auto;
+  }
 
       /* Set height of the grid so .sidenav can be 100% (adjust as needed) */
       .row.content {height: 450px}
@@ -58,14 +63,7 @@
     color: #777;
     text-decoration: none;
   }  
-      /* On small screens, set height to 'auto' for sidenav and grid */
-      @media screen and (max-width: 767px) {
-        .sidenav {
-          height: auto;
-          padding: 15px;
-        }
-        .row.content {height:auto;} 
-      }
+
 
 </style>
     </head>
@@ -75,16 +73,14 @@
       <div class="container-fluid">
         <div class="navbar-header">
           <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-            <span class="glyphicon">&#xe021;</span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>                        
           </button>
-
+          <a href="index.html" class="navbar-brand"> <span class="glyphicon glyphicon-home"></span></a>
         </div>
         <div class="collapse navbar-collapse" id="myNavbar">
           <ul class="nav navbar-nav">
-            <li><a href="index.html" class="btn"> <span class="glyphicon glyphicon-home"></span></a></li>
             <li><a href="order.html">Order Now</a></li>
             <li><a href="#">Our Boosters</a></li>
             <li><a href="#">Review</a></li>
@@ -98,7 +94,27 @@
       </div>
     </nav>
     <div class="container">
-        <p>něco</p>
+      <form>
+        <div class="form-group">
+          <div class="col-md-4 col-md-offset-4">
+          <label for="sel2">input-lg</label>
+          <select class="form-control input-lg" id="sel2">
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+          </select>
+          </div>
+          <div class="col-md-4 col-md-offset-4">
+            <label for="sel2">input-lg</label>
+            <select class="form-control input-lg" id="sel2">
+              <option>1</option>
+              <option>2</option>
+              <option>3</option>
+            </select>
+            </div>
+        </div>
+        
+      </form>
     </div>
 
     <footer class="container-fluid text-center">
