@@ -1,5 +1,7 @@
 
 <?php
+
+if ( isset ($name) || isset ($email) || isset ($password)){
 	$name = $_POST['name'];
 	$email = $_POST['email'];
 	$password = $_POST['password'];
@@ -18,4 +20,5 @@
 		$stmt->close();
 		$conn->close();
 	}
+}
 ?>
