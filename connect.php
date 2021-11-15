@@ -1,23 +1,21 @@
 
 <?php
-
-	$username = $_POST['username'];
+	$name = $_POST['name'];
 	$email = $_POST['email'];
 	$password = $_POST['password'];
 
 	// připojení na databázi
-	$conn = new mysqli('localhost','root','','users');
+	$conn = new mysqli('localhost','root','','user');
 	if($conn->connect_error){
 		echo "$conn->connect_error";
 		die("Connection Failed : ". $conn->connect_error);
 	} else {
-		$stmt = $conn->prepare("insert into registration(username, email, password) values(?, ?, ?)");
-		$stmt->bind_param("sss", $username, $email, $password);
+		$stmt = $conn->prepare("insert into registration(name, email, password) values(?, ?, ?)");
+		$stmt->bind_param("sss", $name, $email, $password);
 		$execval = $stmt->execute();
 		echo $execval;
-		echo "Registration successfully...";
+		echo "Registrace proběhla úspěšně";
 		$stmt->close();
 		$conn->close();
 	}
-}
 ?>
