@@ -1,8 +1,7 @@
 
 <?php
 
-if ( isset ($name) || isset ($email) || isset ($password)){
-	$name = $_POST['name'];
+	$username = $_POST['username'];
 	$email = $_POST['email'];
 	$password = $_POST['password'];
 
@@ -12,8 +11,8 @@ if ( isset ($name) || isset ($email) || isset ($password)){
 		echo "$conn->connect_error";
 		die("Connection Failed : ". $conn->connect_error);
 	} else {
-		$stmt = $conn->prepare("insert into registration(name, email, password) values(?, ?, ?)");
-		$stmt->bind_param("sss", $name, $email, $password);
+		$stmt = $conn->prepare("insert into registration(username, email, password) values(?, ?, ?)");
+		$stmt->bind_param("sss", $username, $email, $password);
 		$execval = $stmt->execute();
 		echo $execval;
 		echo "Registration successfully...";
