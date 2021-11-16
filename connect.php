@@ -14,7 +14,7 @@
 		$stmt->bind_param("sss", $name, $email, $password);
 		$execval = $stmt->execute();
 		echo $execval;
-		echo "Registrace proběhla úspěšně";
+		header('Location: login.html');
 		$stmt->close();
 		$conn->close();
 	}
