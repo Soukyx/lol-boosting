@@ -16,7 +16,7 @@ filter: grayscale(90%)
   footer {
     background-color: #555;
     color: white;
-    position: absolute;
+    bottom: 0;
     padding: 15px;
   }    
   #myPage {
