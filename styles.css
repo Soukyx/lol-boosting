@@ -1,18 +1,11 @@
-/* Remove the navbar's default margin-bottom and rounded borders */ 
+
 .navbar {
     margin-bottom: 0;
     border-radius: 0;
   }
-  .carousel-inner img {
-width: 100%; /* Set width to 100% */
-margin: auto;
-filter: grayscale(90%)
-}
-
   /* Set height of the grid so .sidenav can be 100% (adjust as needed) */
-  .row.content {height: 450px}
-  
-  /* Set black background color, white text and some padding */
+  .row.content {height: 100%}
+
   footer {
     background-color: #555;
     color: white;
@@ -54,3 +47,34 @@ footer a:hover {
 color: #777;
 text-decoration: none;
 }  
+summary {
+  height: 60x;
+  font-size: 35px;
+  font-weight: 600;
+  background-color: #2d2d30;
+  color: #f5f5f5;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  outline: none;
+  border-radius: 0.25rem;
+  text-align: left;
+  cursor: pointer;
+  position: relative;
+}
+details > summary::after {
+  position: absolute;
+  content: "+";
+  right: 20px;
+}
+details[open] > summary::after {
+  position: absolute;
+  content: "-";
+  right: 20px;
+}
+details > summary::-webkit-details-marker {
+  display: none;
+}
+.textcontent p{
+  color: #f5f5f5;
+  font-size:20px;
+}
