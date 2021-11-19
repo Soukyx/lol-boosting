@@ -16,6 +16,8 @@ filter: grayscale(90%)
   footer {
     background-color: #555;
     color: white;
+    position:fixed;
+    width:100%;
     bottom: 0;
     padding: 15px;
   }    
