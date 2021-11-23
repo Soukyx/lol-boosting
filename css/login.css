@@ -1,4 +1,4 @@
-/* Remove the navbar's default margin-bottom and rounded borders */ 
+
 .navbar {
     margin-bottom: 0;
     border-radius: 0;
@@ -18,17 +18,13 @@
     cursor: default;
 }
 
-/*
- * Card component
- */
+/* login karta */
 .card {
     Color: #d5d5d5;
-    background-color: #464650;
-    /* just in case there no content*/
+    background-color: #464650;   
     padding: 20px 25px 30px;
     margin: 0 auto 25px;
     margin-top: 50px;
-    /* shadows and rounded borders */
     -moz-border-radius: 2px;
     -webkit-border-radius: 2px;
     border-radius: 2px;
@@ -38,10 +34,7 @@
 }
 
 
-/*
- * Form styles
- */
-
+/* Form styly */
 .reauth-email {
     display: block;
     color: #404040;
@@ -109,42 +102,33 @@
 .forgot-password:active,
 .forgot-password:focus{
     color: #fff;
-}
-  /* Set height of the grid so .sidenav can be 100% (adjust as needed) */
-  .row.content {height: 450px}
-  
-  /* Set black background color, white text and some padding */
-  footer {
-    background-color: #555;
-    color: white;
-    padding: 15px;
-  }    
-  #myPage {
+}  
+#myPage {
     background-color: #141414;
   }
-  #navbar {
-margin-bottom: 0;
-background-color: #2d2d30;
-border: 0;  
+#navbar {
+    margin-bottom: 0;
+    background-color: #2d2d30;
+    border: 0;  
 }
 .navbar li a, .navbar .navbar-brand { 
-color: #d5d5d5 !important;
+    color: #d5d5d5 !important;
 }
 .navbar-nav li a:hover {
-color: #fff !important;
+    color: #fff !important;
 }
 .navbar-nav li.active a {
-color: #fff !important;
-background-color: #29292c !important;
+    color: #fff !important;
+    background-color: #29292c !important;
 }
-  footer {
-background-color: #2d2d30;
-color: #f5f5f5;
-padding: 32px;
-position:fixed;
-width:100%;
-bottom: 0;
+footer {
+    background-color: #2d2d30;
+    color: #f5f5f5;
+    padding: 32px;
+    position:fixed;
+    width:100%;
+    bottom: 0;
 }
 footer a {
-color: #f5f5f5;
+    color: #f5f5f5;
 }

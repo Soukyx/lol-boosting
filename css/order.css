@@ -1,84 +1,74 @@
-/* Remove the navbar's default margin-bottom and rounded borders */ 
-.navbar {
-    margin-bottom: 0;
-    border-radius: 0;
-  }
-  .carousel-inner img {
-width: 100%; /* Set width to 100% */
-margin: auto;
-filter: grayscale(90%)
-}
 
-  /* Set height of the grid so .sidenav can be 100% (adjust as needed) */
-  .row.content {height: 450px}
-  
-  /* Set black background color, white text and some padding */
-  footer {
-    background-color: #555;
-    color: white;
-    position:fixed;
-    width:100%;
-    bottom: 0;
-    padding: 15px;
-  }    
-  #myPage {
-    background-color: #141414;
+.navbar {
+  margin-bottom: 0;
+  border-radius: 0;
   }
-  #navbar {
-margin-bottom: 0;
-background-color: #2d2d30;
-border: 0;  
-}
+footer {
+  background-color: #555;
+  color: white;
+  position:fixed;
+  width:100%;
+  bottom: 0;
+  padding: 15px;
+  }    
+#myPage {
+  background-color: #141414;
+  }
+#navbar {
+  margin-bottom: 0;
+  background-color: #2d2d30;
+  border: 0;  
+  }
 .navbar li a, .navbar .navbar-brand { 
-color: #d5d5d5 !important;
-}
+  color: #d5d5d5 !important;
+  }
 .navbar-nav li a:hover {
-color: #fff !important;
-}
+  color: #fff !important;
+  }
 .navbar-nav li.active a {
-color: #fff !important;
-background-color: #29292c !important;
-}
+  color: #fff !important;
+  background-color: #29292c !important;
+  }
 .navbar-default .navbar-toggle {
-border-color: transparent;
-}
-  footer {
-background-color: #2d2d30;
-color: #f5f5f5;
-padding: 32px;
-}
+  border-color: transparent;
+  }
+footer {
+  background-color: #2d2d30;
+  color: #f5f5f5;
+  padding: 32px;
+  }
 footer a {
-color: #f5f5f5;
-}
+  color: #f5f5f5;
+  }
 footer a:hover {
-color: #777;
-text-decoration: none;
-}  
+  color: #777;
+  text-decoration: none;
+  }  
 .form-signin button {
-    width: 100%;
-    display: block;
-    margin-bottom: 10px;
-    z-index: 1;
-    position: relative;
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-}
+  width: 100%;
+  display: block;
+  margin-bottom: 10px;
+  z-index: 1;
+  position: relative;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  }
 
 .btn.btn-signin {
-    color: #d5d5d5;
-    background-color: #555;
-    padding: 0px;
-    font-weight: 700;
-    font-size: 14px;
-    height: 45px;
-    -moz-border-radius: 3px;
-    -webkit-border-radius: 3px;
-    border-radius: 3px;
-    border: none;
-    -o-transition: all 0.218s;
-    -moz-transition: all 0.218s;
-    -webkit-transition: all 0.218s;
-    transition: all 0.218s;
-}
+  color: #d5d5d5;
+  background-color: #555;
+  padding: 0px;
+  font-weight: 700;
+  font-size: 14px;
+  height: 45px;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  border: none;
+  -o-transition: all 0.218s;
+  -moz-transition: all 0.218s;
+  -webkit-transition: all 0.218s;
+  transition: all 0.218s;
+  }
 

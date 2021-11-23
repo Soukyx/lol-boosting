@@ -1,80 +1,46 @@
 
 .navbar {
-    margin-bottom: 0;
-    border-radius: 0;
+  margin-bottom: 0;
+  border-radius: 0;
   }
-  /* Set height of the grid so .sidenav can be 100% (adjust as needed) */
-  .row.content {height: 100%}
-
-  footer {
-    background-color: #555;
-    color: white;
-    position:fixed;
-    width:100%;
-    bottom: 0;
-    padding: 15px;
+footer {
+  background-color: #555;
+  color: white;
+  position:fixed;
+  width:100%;
+  bottom: 0;
+  padding: 15px;
   }    
-  #myPage {
-    background-color: #141414;
+#myPage {
+  background-color: #141414;
   }
-  #navbar {
-margin-bottom: 0;
-background-color: #2d2d30;
-border: 0;  
+#navbar {
+  margin-bottom: 0;
+  background-color: #2d2d30;
+  border: 0;  
 }
 .navbar li a, .navbar .navbar-brand { 
-color: #d5d5d5 !important;
+  color: #d5d5d5 !important;
 }
 .navbar-nav li a:hover {
-color: #fff !important;
+  color: #fff !important;
 }
 .navbar-nav li.active a {
-color: #fff !important;
-background-color: #29292c !important;
+  color: #fff !important;
+  background-color: #29292c !important;
 }
 .navbar-default .navbar-toggle {
-border-color: transparent;
+  border-color: transparent;
 }
-  footer {
-background-color: #2d2d30;
-color: #f5f5f5;
-padding: 32px;
-}
-footer a {
-color: #f5f5f5;
-}
-footer a:hover {
-color: #777;
-text-decoration: none;
-}  
-summary {
-  height: 60x;
-  font-size: 35px;
-  font-weight: 600;
+footer {
   background-color: #2d2d30;
   color: #f5f5f5;
-  padding: 1rem;
-  margin-bottom: 1rem;
-  outline: none;
-  border-radius: 0.25rem;
-  text-align: left;
-  cursor: pointer;
-  position: relative;
+  padding: 32px;
 }
-details > summary::after {
-  position: absolute;
-  content: "+";
-  right: 20px;
-}
-details[open] > summary::after {
-  position: absolute;
-  content: "-";
-  right: 20px;
-}
-details > summary::-webkit-details-marker {
-  display: none;
-}
-.textcontent p{
+footer a {
   color: #f5f5f5;
-  font-size:20px;
 }
+footer a:hover {
+  color: #777;
+  text-decoration: none;
+}  
