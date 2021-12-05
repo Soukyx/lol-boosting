@@ -88,3 +88,7 @@ details > summary::-webkit-details-marker {
 details {
   padding-left: 20px;
 }
+#laptop {
+  width: 500px;
+  max-width: 100%;
+}
