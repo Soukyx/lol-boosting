@@ -27,7 +27,9 @@
     margin-top: 50px;
 
 }
-
+#logo {
+    padding-right: 2px;
+  }
 
 /* Form styly */
 .reauth-email {
@@ -78,7 +80,7 @@
 }
 .btn.btn-signin {
     color: white;
-    background-color: #33aaff;
+    background-color: #00aaff;
     padding: 0px;
     font-weight: 700;
     font-size: 14px;
@@ -122,20 +124,24 @@
     background-color: #29292c !important;
 }
 footer {
-    color: #f5f5f5;
-    padding: 32px;
-    position:fixed;
+    color: white;
+    position:absolute;
     width:100%;
     bottom: 0;
+    padding: 15px;
     border-top: solid;
     border-color: #d5d5d5;
     border-width: 1px;
-}
+    overflow: hidden;
+    }   
 footer a {
     color: #f5f5f5;
 }
 #review {
     padding-right:6px;
-    border-right:solid 1px #ccc;
+  }
+#login {
+    padding-left: 6px;
+    border-left:solid 1px #ccc;
     border-color: white;
   }
