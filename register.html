@@ -1,17 +1,18 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/faq.css">
+    <link rel="stylesheet" href="css/login.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <title>SPSUL - lol boosting</title>
     </head>
     <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="50">
-    <!-- navbar -->
+    <!-- nav bar -->
     <nav class="navbar navbar-expand-md navbar-dark">
       <a class="navbar-brand navbar-nav" href="index.html">
         <img id="logo" src="logo.png" alt="logo" style="width:32px;">Shinobi | Boosting
@@ -32,7 +33,7 @@
           <a class="nav-link" href="boosters.html">Our Boosters</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="contact.html">Contect Us</a>
+          <a class="nav-link" href="contact.html">Contact Us</a>
         </li>
         <li class="nav-item" id="review">
           <a class="nav-link" href="review.html">Review</a>
@@ -43,42 +44,26 @@
       </ul>
       </div>
     </nav>
-    <br>
-    <br>
-    <br>
     <!--container-->
     <div class="container">
-      <!--faq text kontent-->
-      <div class="textcontent bg-black">
-      <details>
-        <summary>How does your service work?</summary>
-          <p>You may choose one of our many ranked boosting services and customize your order to fulfill all your demands- summoners, champions and roles optimalization, 
-            DuoQ boost or SoloQ boost, live streaming on private Twitch while completing your order or simple good old coaching.</p>
-      </details>
-      <details>
-        <summary>How fast will my order be finished?</summary>
-          <p>We usually do 1-2 divisions a day on all divisions.</p>
-      </details>
-      <details>
-        <summary>How can I be sure my booster won't get me banned?</summary>
-          <p>Our boosters are complete professionals and are not allowed to speak in game.</p>
-      </details>
-      <details>
-        <summary>Can I play on my account while you are working on it?</summary>
-          <p>To complete your order as fast as possible, you won't be allowed to access your account while we are working on it. 
-            There's always going to be a booster finishing your order, however you always have the option to pause the boost so you can play normal games.</p>
-      </details>
-      <details>
-        <summary>Can I tip my booster?</summary>
-          <p>Yes, he gets full amount of the tip.</p>
-      </details>
-      <details>
-        <summary>Which payment methods do you accept?</summary>
-          <p>Right now we proccess payments through PayPal.</p>
-      </div>
-      </details>
-
-       
+      <!--karta registrace-->
+        <div class="card card-container" id="card">
+            <div class="text-center">
+              <h1 id="logintext">Register</h1>
+              <!--register formy-->
+            <form action="register.php" method="post" class="form-signin">
+                <input name="user_name" type="text" id="inputName" class="form-control" placeholder="Name" required >
+                <input name="email" type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
+                <input name=" password" type="password" id="inputPassword" class="form-control" placeholder="Password" required >
+                <input name=" cpassword" type="password" id="inputPassword" class="form-control" placeholder="Repeat password" required >
+                <button class="btn btn-lg btn-primary btn-block btn-signin" value="Signup" type="submit">Sign Up</button>
+            </form>
+            <!--zapomenutý heslo-->
+            <a href="login.php" class="forgot-password">
+              Registered already? Log in here.
+              </a>
+              </div>
+        </div>
     </div>
     <!--footer-->
     <footer class="container-fluid text-center">

@@ -23,88 +23,8 @@ session_start();
 
 			mysqli_query($con, $query);
 
-			header("Location: login.php");
+			header("Location: login.html");
 			die;
   }
 	}
 ?>
-
-
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/login.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <title>SPSUL - lol boosting</title>
-    </head>
-    <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="50">
-    <!-- nav bar -->
-    <nav class="navbar navbar-expand-md navbar-dark">
-      <a class="navbar-brand navbar-nav" href="index.html">
-        <img id="logo" src="logo.png" alt="logo" style="width:32px;">Shinobi | Boosting
-      </a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-
-      <div class="collapse navbar-collapse justify-content-xl-end" id="collapsibleNavbar">
-      <ul class="navbar-nav">
-        <li class="nav-item">
-          <a class="nav-link" href="order.html">Order Now</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="faq.html">FaQ</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="boosters.html">Our Boosters</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="contact.html">Contact Us</a>
-        </li>
-        <li class="nav-item" id="review">
-          <a class="nav-link" href="review.html">Review</a>
-        </li>
-        <li class="nav-item " id="login">
-          <a class="nav-link" href="login.php">Login</a>
-        </li>
-      </ul>
-      </div>
-    </nav>
-    <!--container-->
-    <div class="container">
-      <!--karta registrace-->
-        <div class="card card-container" id="card">
-            <div class="text-center">
-              <h1 id="logintext">Register</h1>
-              <!--register formy-->
-            <form method="post" class="form-signin">
-                <input name="user_name" type="text" id="inputName" class="form-control" placeholder="Name" required >
-                <input name="email" type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
-                <input name=" password" type="password" id="inputPassword" class="form-control" placeholder="Password" required >
-                <input name=" cpassword" type="password" id="inputPassword" class="form-control" placeholder="Repeat password" required >
-                <button class="btn btn-lg btn-primary btn-block btn-signin" value="Signup" type="submit">Sign Up</button>
-            </form>
-            <!--zapomenutý heslo-->
-            <a href="login.php" class="forgot-password">
-              Registered already? Log in here.
-              </a>
-              </div>
-        </div>
-    </div>
-    <!--footer-->
-    <footer class="container-fluid text-center">
-      <p>League of Legends is registered trademark of Riot Games, Inc. We are in no way affiliated with,
-         associated with or endorsed by Riot Games, Inc.
-          <br>
-          © 2021-2023 - ShinobiBoosting. All Right Reserved.
-      </p>
-    </footer>
-
-</body>
-</html>
