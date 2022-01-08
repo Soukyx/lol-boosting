@@ -1,3 +1,36 @@
+<?php 
+session_start();
+
+	include("connection.php");
+	include("functions.php");
+
+
+	if($_SERVER['REQUEST_METHOD'] == "POST")
+	{
+		//something was posted
+		$user_name = $_POST['user_name'];
+    $email = $_POST['email'];
+		$password = $_POST['password'];
+    $cpassword = $_POST['cpassword'];
+
+  if($password != $cpassword){
+    echo ("Not matching password");
+  }
+  else{
+			//save to database
+			$user_id = random_num(20);
+			$query = "insert into registration (user_id,user_name, email, password, cpassword) values ('$user_id','$user_name','$email','$password','$cpassword')";
+
+			mysqli_query($con, $query);
+
+			header("Location: login.php");
+			die;
+  }
+	}
+?>
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,7 +44,7 @@
     <title>SPSUL - lol boosting</title>
     </head>
     <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="50">
-    <!-- navbar -->
+    <!-- nav bar -->
     <nav class="navbar navbar-expand-md navbar-dark">
       <a class="navbar-brand navbar-nav" href="index.html">
         <img id="logo" src="logo.png" alt="logo" style="width:32px;">Shinobi | Boosting
@@ -32,42 +65,36 @@
           <a class="nav-link" href="boosters.html">Our Boosters</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="contact.html">Contect Us</a>
+          <a class="nav-link" href="contact.html">Contact Us</a>
         </li>
         <li class="nav-item" id="review">
           <a class="nav-link" href="review.html">Review</a>
         </li>
         <li class="nav-item " id="login">
-          <a class="nav-link" href="login.html">Login</a>
+          <a class="nav-link" href="login.php">Login</a>
         </li>
       </ul>
       </div>
     </nav>
     <!--container-->
     <div class="container">
-      <!--login karta-->
-        <div id="card" class="card card-container">
-          <div id="logintext"class="text-center">
-            <h1>Login</h1>
-            </div>
-            <!--formy na login-->
-            <form class="form-signin">
-                <span id="reauth-email" class="reauth-email"></span>
-                <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
-                <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
-                <div id="remember" class="checkbox">
-                    <label>
-                        <input type="checkbox" value="remember-me"> Remember me
-                    </label>
-                </div>
-                <button class="btn btn-lg btn-primary btn-block btn-signin" type="submit">Sign in</button>
+      <!--karta registrace-->
+        <div class="card card-container" id="card">
+            <div class="text-center">
+              <h1 id="logintext">Register</h1>
+              <!--register formy-->
+            <form method="post" class="form-signin">
+                <input name="user_name" type="text" id="inputName" class="form-control" placeholder="Name" required >
+                <input name="email" type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
+                <input name=" password" type="password" id="inputPassword" class="form-control" placeholder="Password" required >
+                <input name=" cpassword" type="password" id="inputPassword" class="form-control" placeholder="Repeat password" required >
+                <button class="btn btn-lg btn-primary btn-block btn-signin" value="Signup" type="submit">Sign Up</button>
             </form>
-            <a href="#" class="forgot-password">
-                Forgot the password?
-            </a>
-            <a href="register.html" class="forgot-password">
-            Not registered yet?
-            </a>
+            <!--zapomenutý heslo-->
+            <a href="login.php" class="forgot-password">
+              Registered already? Log in here.
+              </a>
+              </div>
         </div>
     </div>
     <!--footer-->
