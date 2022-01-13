@@ -19,7 +19,7 @@ session_start();
   else{
 			//save to database
 			$user_id = random_num(20);
-			$query = "insert into registration (user_id,user_name, email, password, cpassword) values ('$user_id','$user_name','$email','$password','$cpassword')";
+			$query = "insert into users (user_id,user_name, email, password, cpassword) values ('$user_id','$user_name','$email','$password','$cpassword')";
 
 			mysqli_query($con, $query);
 

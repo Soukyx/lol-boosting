@@ -1,21 +1,14 @@
-<?php
-session_start();
-  include("connection.php");
-  include("functions.php");
-
-  $user_data = check_login($con);
-?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/faq.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <title>ShinobiBoosting</title>
+    <title>SPSUL - lol boosting</title>
     </head>
     <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="50">
     <!-- navbar -->
@@ -50,37 +43,45 @@ session_start();
       </ul>
       </div>
     </nav>
-
-
+    <br>
+    <br>
+    <br>
     <!--container-->
     <div class="container">
-      <img src="logo.png" id="homelogo" class="mx-auto d-block">
-      <br>
-      <H1 class="mx-auto text-center">Shinobi | Boosting</H1>
-      <p id="podnadpis" class="mx-auto text-center">League of Legends Elo Boosting</p>
+      <!--faq text kontent-->
+      <div class="textcontent bg-black">
+      <details>
+        <summary>How does your service work?</summary>
+          <p>You may choose one of our many ranked boosting services and customize your order to fulfill all your demands- summoners, champions and roles optimalization, 
+            DuoQ boost or SoloQ boost, live streaming on private Twitch while completing your order or simple good old coaching.</p>
+      </details>
+      <details>
+        <summary>How fast will my order be finished?</summary>
+          <p>We usually do 1-2 divisions a day on all divisions.</p>
+      </details>
+      <details>
+        <summary>How can I be sure my booster won't get me banned?</summary>
+          <p>Our boosters are complete professionals and are not allowed to speak in game.</p>
+      </details>
+      <details>
+        <summary>Can I play on my account while you are working on it?</summary>
+          <p>To complete your order as fast as possible, you won't be allowed to access your account while we are working on it. 
+            There's always going to be a booster finishing your order, however you always have the option to pause the boost so you can play normal games.</p>
+      </details>
+      <details>
+        <summary>Can I tip my booster?</summary>
+          <p>Yes, he gets full amount of the tip.</p>
+      </details>
+      <details>
+        <summary>Which payment methods do you accept?</summary>
+          <p>Right now we proccess payments through PayPal.</p>
+      </div>
+      </details>
+
+       
     </div>
     <br>
-    <hr>
-    <div class="row" style="magin: auto">
-    <div class="textcontent col-sm-6 bg-black">
-      <h2 class="text-left">How it works</h2>
-      <details>
-        <summary>Customize your order</summary>
-          <p>Choose your current and desired rank then choose optionals.</p>
-      </details>
-      <details>
-        <summary>Payment</summary>
-          <p>You can pay only with PayPal.</p>
-      </details>
-      <details>
-        <summary>Access to your account</summary>
-          <p>After you pay, you shouldn't login to your account till order is done.<br> With buying order you need to write down login to your account.</p>
-      </details>
-    </div>
-    <div>
-    <img src="laptop.png" class="float-right mx-auto d-block" id="laptop">
-    </div>
-    </div>
+    <br>
     <!--footer-->
     <footer class="container-fluid text-center">
       <p>League of Legends is registered trademark of Riot Games, Inc. We are in no way affiliated with,

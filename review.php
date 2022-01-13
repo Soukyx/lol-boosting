@@ -8,12 +8,12 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <title>ShinobiBoosting</title>
+    <title>SPSUL - lol boosting</title>
     </head>
     <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="50">
     <!-- navbar -->
     <nav class="navbar navbar-expand-md navbar-dark">
-      <a class="navbar-brand navbar-nav" href="index.html">
+      <a class="navbar-brand navbar-nav" href="index.php">
         <img id="logo" src="logo.png" alt="logo" style="width:32px;">Shinobi | Boosting
       </a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
@@ -23,56 +23,31 @@
       <div class="collapse navbar-collapse justify-content-xl-end" id="collapsibleNavbar">
       <ul class="navbar-nav">
         <li class="nav-item">
-          <a class="nav-link" href="order.html">Order Now</a>
+          <a class="nav-link" href="order.php">Order Now</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="faq.html">FaQ</a>
+          <a class="nav-link" href="faq.php">FaQ</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="boosters.html">Our Boosters</a>
+          <a class="nav-link" href="boosters.php">Our Boosters</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="contact.html">Contact Us</a>
+          <a class="nav-link" href="contact.php">Contact Us</a>
         </li>
         <li class="nav-item" id="review">
-          <a class="nav-link" href="review.html">Review</a>
+          <a class="nav-link" href="review.php">Review</a>
         </li>
         <li class="nav-item " id="login">
-          <a class="nav-link" href="login.html">Login</a>
+          <a class="nav-link" href="logout.php">Log Out</a>
         </li>
       </ul>
       </div>
-    </nav>
-
-
+    </nav>  
     <!--container-->
     <div class="container">
-      <img src="logo.png" id="homelogo" class="mx-auto d-block">
-      <br>
-      <H1 class="mx-auto text-center">Shinobi | Boosting</H1>
-      <p id="podnadpis" class="mx-auto text-center">League of Legends Elo Boosting</p>
-    </div>
-    <br>
-    <hr>
-    <div class="row" style="margin: auto;">
-    <div class="textcontent col-sm-6 bg-black">
-      <h2 class="text-left">How it works</h2>
-      <details>
-        <summary>Customize your order</summary>
-          <p>Choose your current and desired rank then choose optionals.</p>
-      </details>
-      <details>
-        <summary>Payment</summary>
-          <p>You can pay only with PayPal.</p>
-      </details>
-      <details>
-        <summary>Access to your account</summary>
-          <p>After you pay, you shouldn't login to your account till order is done.
-          <br>
-           With buying order you need to write down login to your account.</p>
-      </details>
-    </div>
-    <img src="laptop.png" class="float-right mx-auto d-block" id="laptop">
+        
+
+       
     </div>
     <!--footer-->
     <footer class="container-fluid text-center">

@@ -5,7 +5,7 @@
     footer {
       color: white;
       width:100%;
-      position: fixed;
+      position: relative;
       bottom: 0;
       padding: 15px;
       border-top: solid;
@@ -14,7 +14,7 @@
       overflow: hidden;
       }     
   #myPage {
-    background-color: rgb(22, 20, 20);
+    background-color: black;
     }
   #navbar {
     margin-bottom: 0;

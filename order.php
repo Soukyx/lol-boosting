@@ -13,36 +13,36 @@
     <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="50">
       <!--navbar-->
       <nav class="navbar navbar-expand-md navbar-dark">
-        <a class="navbar-brand navbar-nav" href="index.html">
-          <img id="logo" src="logo.png" alt="logo" style="width:32px;">Shinobi | Boosting
-        </a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-  
-        <div class="collapse navbar-collapse justify-content-xl-end" id="collapsibleNavbar">
-        <ul class="navbar-nav">
-          <li class="nav-item">
-            <a class="nav-link" href="order.html">Order Now</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="faq.html">FaQ</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="boosters.html">Our Boosters</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="contact.html">Contact Us</a>
-          </li>
-          <li class="nav-item" id="review">
-            <a class="nav-link" href="review.html">Review</a>
-          </li>
-          <li class="nav-item " id="login">
-            <a class="nav-link" href="login.html">Login</a>
-          </li>
-        </ul>
-        </div>
-      </nav>
+      <a class="navbar-brand navbar-nav" href="index.php">
+        <img id="logo" src="logo.png" alt="logo" style="width:32px;">Shinobi | Boosting
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse justify-content-xl-end" id="collapsibleNavbar">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="order.php">Order Now</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="faq.php">FaQ</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="boosters.php">Our Boosters</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="contact.php">Contact Us</a>
+        </li>
+        <li class="nav-item" id="review">
+          <a class="nav-link" href="review.php">Review</a>
+        </li>
+        <li class="nav-item " id="login">
+          <a class="nav-link" href="logout.php">Log Out</a>
+        </li>
+      </ul>
+      </div>
+    </nav>
     <!--contaier-->
     <div class="container">
       <!--formy na zadání požadavků u objednávky-->
@@ -51,23 +51,23 @@
         <br>
         <div class="form-group row">
           <div class="form-group col-md-3">
-            <select class="form-control" id="crank" onchange="calculate()">
+            <select class="form-control">
               <option>Select Rank*</option>
-              <option id="itemprice" value="100.000">Iron</option>
-              <option id="itemprice" value="200.000">bronze</option>
-              <option id="itemprice" value="300.000">Silver</option>
-              <option id="itemprice" value="400.000">Gold</option>
-              <option id="itemprice" value="500.000">Platinum</option>
-              <option id="itemprice" value="600.000">Diamond</option>
+              <option>Iron</option>
+              <option>bronze</option>
+              <option>Silver</option>
+              <option>Gold</option>
+              <option>Platinum</option>
+              <option>Diamond</option>
             </select>
           </div>
           <div class="form-group col-md-3">
             <select id="cdivision" onchange="calculate()" class="form-control">
               <option>Select Division*</option>
-              <option id="itemprice" value="1.000">IV</option>
-              <option id="itemprice" value="2.000">III</option>
-              <option id="itemprice" value="3.000">II</option>
-              <option id="itemprice" value="4.000">I</option>
+              <option id="itemprice" value="4.000">IV</option>
+              <option id="itemprice" value="3.000">III</option>
+              <option id="itemprice" value="2.000">II</option>
+              <option id="itemprice" value="1.000">I</option>
             </select>
           </div>
           <div class="form-group col-md-3">
@@ -81,13 +81,13 @@
             </select>
           </div>
           <div class="form-group col-md-3">
-            <select class="form-control" id="gain" onchange="calculate()">
+            <select class="form-control">
               <option>Select LP Gains*</option>
-              <option id="itemprice" value="5.000">1-5</option>
-              <option id="itemprice" value="4.000">6-10</option>
-              <option id="itemprice" value="3.000">10-15</option>
-              <option id="itemprice" value="2.000">15-20</option>
-              <option id="itemprice" value="1.000">20+</option>
+              <option>1-5</option>
+              <option>6-10</option>
+              <option>10-15</option>
+              <option>15-20</option>
+              <option>20+</option>
             </select>
           </div>
         </div>    
@@ -97,23 +97,23 @@
         <br>
         <div class="form-group row">
           <div class="form-group col-md-3">
-            <select class="form-control" id="rank" onchange="calculate()">
+            <select class="form-control">
               <option>Select Rank*</option>
-              <option id="itemprice" value="100.000">Iron</option>
-              <option id="itemprice" value="200.000">bronze</option>
-              <option id="itemprice" value="300.000">Silver</option>
-              <option id="itemprice" value="400.000">Gold</option>
-              <option id="itemprice" value="500.000">Platinum</option>
-              <option id="itemprice" value="600.000">Diamond</option>
+              <option>Iron</option>
+              <option>bronze</option>
+              <option>Silver</option>
+              <option>Gold</option>
+              <option>Platinum</option>
+              <option>Diamond</option>
             </select>
           </div>
           <div class="form-group col-md-3">
             <select class="form-control" id="division" onchange="calculate()">
               <option>Select Division*</option>
-              <option id="itemprice" value="1.000">IV</option>
-              <option id="itemprice" value="2.000">III</option>
-              <option id="itemprice" value="3.000">II</option>
-              <option id="itemprice" value="4.000">I</option>
+              <option id="itemprice" value="4.000">IV</option>
+              <option id="itemprice" value="3.000">III</option>
+              <option id="itemprice" value="2.000">II</option>
+              <option id="itemprice" value="1.000">I</option>
           </select>
           </div>
         </div>    
@@ -146,29 +146,22 @@
           </div>
         </div>
         <br>
-        <p><input type="text" id="result" value="" readonly></p>  
         <br>
         <div class="form-group  col-md-3 pull-right">
           <button class="btn btn-lg btn-primary btn-block btn-signin" type="submit">Order</button>
         </div>    
-        <br>
-        <br>        
-        <br>
-        <br>
+        <p><input type="text" id="result" value="" disabled></p>  
       </form>
       <script type="text/javascript">
         function calculate(price){
-            var crank = document.getElementById("crank").value || 0;
-            var rank = document.getElementById("rank").value || 0;
             var cdivision = document.getElementById("cdivision").value || 0;
+
             var division = document.getElementById("division").value || 0;
             
-            crank = parseFloat(crank).toFixed(2);
-            rank = parseFloat(rank).toFixed(2);
             cdivison = parseFloat(cdivision).toFixed(2);
-            division = parseFloat(division).toFixed(2); 
-
-            var result = parseFloat(rank-crank).toFixed(2);
+            division = parseFloat(division).toFixed(2);
+            
+            var result = parseFloat(cdivision/division*5).toFixed(2);
                             
             document.getElementById("result").value=result;
         }
