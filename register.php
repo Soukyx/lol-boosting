@@ -7,7 +7,7 @@ session_start();
 
 	if($_SERVER['REQUEST_METHOD'] == "POST")
 	{
-		//something was posted
+		//neco bylo poslano
 		$user_name = $_POST['user_name'];
     $email = $_POST['email'];
 		$password = $_POST['password'];
@@ -17,7 +17,7 @@ session_start();
     echo ("Not matching password");
   }
   else{
-			//save to database
+			//ulozeni do databaze
 			$user_id = random_num(20);
 			$query = "insert into users (user_id,user_name, email, password, cpassword) values ('$user_id','$user_name','$email','$password','$cpassword')";
 

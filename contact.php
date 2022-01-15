@@ -1,3 +1,6 @@
+<?php
+include 'mail.php';
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,13 +17,14 @@
     <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="50">
     <!-- navbar -->
     <nav class="navbar navbar-expand-md navbar-dark">
+      <!--logo stranky=odkaz na homepage-->
       <a class="navbar-brand navbar-nav" href="index.php">
         <img id="logo" src="logo.png" alt="logo" style="width:32px;">Shinobi | Boosting
       </a>
+            <!--navbar a collapse pri zmenseni stranky-->
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
         <span class="navbar-toggler-icon"></span>
       </button>
-
       <div class="collapse navbar-collapse justify-content-xl-end" id="collapsibleNavbar">
       <ul class="navbar-nav">
         <li class="nav-item">
@@ -44,47 +48,35 @@
       </ul>
       </div>
     </nav>
-    <!--container-->
+    <!--konec navbaru-->
     <div class="container">
   
-      <!--contact-->
-      <section class="mb-4">
-      
+      <!--zacatek kontakt formu-->
+      <section class="mb-4">    
           <h2 class="h1-responsive font-weight-bold text-center my-4">Contact us</h2>
-          <!--description-->
           <p class="text-center w-responsive mx-auto mb-5">Do you have any questions? Contact us here.</p>
-      
+          
           <div class="row">
-      
-              <!--Grid column-->
               <div class="col-md-12 mb-md-0 mb-5">
                   <form id="contact-form" name="contact-form" action="mail.php" method="POST">
-      
-                      <!--Grid row-->
-                      <div class="row">
-      
-                          <!--Grid column-->
+                      <div class="row">   
+                          <!--jmeno-->
                           <div class="col-md-6">
                               <div class="md-form mb-0">
                                 <label for="name" class="">Your name</label>
                                   <input type="text" id="name" name="name" class="form-control">
                               </div>
-                          </div>
-                          <!--Grid column-->
-      
-                          <!--Grid column-->
+                          </div>    
+                          <!--email-->
                           <div class="col-md-6">
                               <div class="md-form mb-0">
                                 <label for="email" class="">Your email</label>
                                   <input type="text" id="email" name="email" class="form-control">
                               </div>
                           </div>
-                          <!--Grid column-->
-      
                       </div>
-                      <!--Grid row-->
       
-                      <!--Grid row-->
+                      <!--predmet-->
                       <div class="row">
                           <div class="col-md-12">
                               <div class="md-form mb-0">
@@ -93,31 +85,27 @@
                               </div>
                           </div>
                       </div>
-                      <!--Grid row-->
-      
-                      <!--Grid row-->
+
                       <div class="row">
-      
-                          <!--Grid column-->
+                          <!--zprava-->
                           <div class="col-md-12">
       
                               <div class="md-form">
                                 <label for="message">Your message</label>
-                                  <textarea type="text" id="message" name="message" rows="2" class="form-control md-textarea"></textarea>
+                                  <textarea type="text" id="message" name="message" rows="5" class="form-control md-textarea"></textarea>
                               </div>
       
                           </div>
                       </div>
                       <br>
-                      <!--Grid row-->
+                      <!--odeslat-->
                       <div class="text-center text-md-left">
                         <input type="submit" name="submit" value="Submit">
                       </div>
                   </form>
               </div>
-              <!--Grid column-->
       
-              <!--Grid column-->
+              <!--kontakt info zacatek-->
               <div class="row col-sm-12">
                 <div class="col-md-4 text-center">
                      <i class="fas fa-map-marker-alt mt-4 fa-2x"></i>
@@ -136,12 +124,12 @@
               </div>
               </div>
               </div>
-              <!--Grid column-->
+              <!--kontakt info konec-->
       
           </div>
       
       </section>
-
+      <!--konec kontakt formu-->
        
     </div>
     <!--footer-->

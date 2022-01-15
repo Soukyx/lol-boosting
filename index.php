@@ -20,13 +20,14 @@ session_start();
     <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="50">
     <!-- navbar -->
     <nav class="navbar navbar-expand-md navbar-dark">
+      <!--logo stranky=odkaz na homepage-->
       <a class="navbar-brand navbar-nav" href="index.php">
         <img id="logo" src="logo.png" alt="logo" style="width:32px;">Shinobi | Boosting
       </a>
+            <!--navbar a collapse pri zmenseni stranky-->
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
         <span class="navbar-toggler-icon"></span>
       </button>
-
       <div class="collapse navbar-collapse justify-content-xl-end" id="collapsibleNavbar">
       <ul class="navbar-nav">
         <li class="nav-item">
@@ -50,6 +51,7 @@ session_start();
       </ul>
       </div>
     </nav>
+    <!--konec navbaru-->
 
 
     <!--container-->
