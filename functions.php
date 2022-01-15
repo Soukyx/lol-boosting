@@ -7,7 +7,7 @@ function check_login($con)
 	{
 
 		$id = $_SESSION['user_id'];
-		$query = "select * from registration where user_id = '$id' limit 1";
+		$query = "select * from lolboosting where user_id = '$id' limit 1";
 
 		$result = mysqli_query($con,$query);
 		if($result && mysqli_num_rows($result) > 0)
@@ -18,9 +18,6 @@ function check_login($con)
 		}
 	}
 
-	//redirect to login
-	header("Location: login.php");
-	die;
 
 }
 
