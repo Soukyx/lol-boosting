@@ -11,7 +11,7 @@ h4 {
   }
   footer {
     color: white;
-    position: relative;
+    position: fixed;
     width:100%;
     bottom: 0;
     padding: 15px;
