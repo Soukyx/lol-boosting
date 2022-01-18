@@ -49,7 +49,7 @@
     <div class="container">
       <!--formy na zadání požadavků u objednávky-->
       <form>
-        <H1 style="text-align: center;">Current Rank</H1>
+        <H1 class="text-center">Current Rank</H1>
         <br>
         <div class="form-group row">
           <div class="form-group col-md-3">
@@ -79,7 +79,7 @@
         </div>    
       </form>
       <form>
-        <H1 style="text-align: center;">Desired Rank</H1>
+        <H1 class="text-center">Desired Rank</H1>
         <br>
         <div class="form-group row">
           <div class="form-group col-md-3"> 
@@ -109,7 +109,7 @@
         </div>
       </form>
       <form>
-        <h1 style="text-align: center;">Options</h1>
+        <h1 class="text-center">Options</h1>
         <br>
         <div class="form-group row">
           <div class="form-group col-md-3"> 
@@ -160,7 +160,7 @@
             cdivison = parseFloat(cdivision).toFixed(2);
             division = parseFloat(division).toFixed(2); 
 
-            var result = parseFloat((rank-crank)-(cdivision-division)).toFixed(2);
+            var result = parseFloat((rank-crank)+(7*division)).toFixed(2);
                             
             document.getElementById("result").value=result;
         }

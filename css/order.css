@@ -11,7 +11,7 @@ h4 {
   }
   footer {
     color: white;
-    position: fixed;
+    position: relative;
     width:100%;
     bottom: 0;
     padding: 15px;
@@ -80,4 +80,7 @@ footer a {
   -webkit-transition: all 0.218s;
   transition: all 0.218s;
   }
+
+  select#crank option[value="600.000"] { background-image:url(diamond.png); }
+
 
