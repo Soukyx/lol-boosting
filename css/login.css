@@ -112,11 +112,14 @@
     color: #fff !important;
     background-color: #29292c !important;
 }
+.bg {
+    background-color: rgba(0, 0, 0, 0.7);
+}
 footer {
     
     color: white;
     width:100%;
-    position: relative;
+    position:static;
     bottom: 0;
     padding: 15px;
     border-top: solid;
