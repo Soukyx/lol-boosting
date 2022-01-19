@@ -17,8 +17,14 @@ session_start();
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <title>ShinobiBoosting</title>
     </head>
-    <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="50">
+    <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="50" style="background-image: url(gwen.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;"
+    >
     <!-- navbar -->
+    <div style="background-color:rgba(0, 0, 0, 0.7);">
     <nav class="navbar navbar-expand-md navbar-dark">
       <!--logo stranky=odkaz na homepage-->
       <a class="navbar-brand navbar-nav" href="index.php">
@@ -53,17 +59,19 @@ session_start();
     </nav>
     <!--konec navbaru-->
 
-
-    <!--container-->
-    <div class="container">
+   <!--container-->
+   <div class="container">
       <img src="logo.png" id="homelogo" class="mx-auto d-block">
       <br>
       <H1 class="mx-auto text-center">Shinobi | Boosting</H1>
       <p id="podnadpis" class="mx-auto text-center">League of Legends Elo Boosting</p>
+      
     </div>
-    <br>
-    <hr>
-    <div class="row" style="magin: auto">
+    
+    </div>
+    <div class="content-bg">
+      <br>
+    <div id="content" class="row" style="margin: auto;">
     <div class="textcontent col-sm-6 bg-black">
       <h2 class="text-left">How it works</h2>
       <details>
@@ -76,14 +84,18 @@ session_start();
       </details>
       <details>
         <summary>Access to your account</summary>
-          <p>After you pay, you shouldn't login to your account till order is done.<br> With buying order you need to write down login to your account.</p>
+          <p>After you pay, you shouldn't login to your account till order is done.
+          <br>
+           With buying order you need to write down login to your account.</p>
       </details>
     </div>
     <div>
     <img src="laptop.png" class="float-right mx-auto d-block" id="laptop">
     </div>
     </div>
+    </div>
     <!--footer-->
+    <div style="background-color:rgba(0, 0, 0, 0.7);">
     <footer class="container-fluid text-center">
       <p>League of Legends is registered trademark of Riot Games, Inc. We are in no way affiliated with,
          associated with or endorsed by Riot Games, Inc.
@@ -91,6 +103,6 @@ session_start();
           © 2021-2023 - ShinobiBoosting. All Right Reserved.
       </p>
     </footer>
-
+</div>
 </body>
 </html>

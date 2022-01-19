@@ -14,7 +14,14 @@ include 'mail.php';
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
     <title>SPSUL - lol boosting</title>
     </head>
-    <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="50">
+    <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="50" style="background-image: url(gwen.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;"
+    >
+    <!-- navbar -->
+    <div style="background-color:rgba(0, 0, 0, 0.7);">
     <!-- navbar -->
     <nav class="navbar navbar-expand-md navbar-dark">
       <!--logo stranky=odkaz na homepage-->
@@ -50,9 +57,9 @@ include 'mail.php';
     </nav>
     <!--konec navbaru-->
     <div class="container">
-  
-      <!--zacatek kontakt formu-->
-      <section class="mb-4">    
+<!--zacatek kontakt formu-->
+<div id="card" class="card card-container">
+      <section class="mb-4">   
           <h2 class="h1-responsive font-weight-bold text-center my-4">Contact us</h2>
           <p class="text-center w-responsive mx-auto mb-5">Do you have any questions? Contact us here.</p>
           
@@ -99,30 +106,34 @@ include 'mail.php';
                       </div>
                       <br>
                       <!--odeslat-->
-                      <div class="text-center text-md-left">
-                        <input type="submit" name="submit" value="Submit">
+                      <div class="text-center">
+                        <input class="btn btn-lg btn-primary btn-signin" type="submit" name="submit" value="Submit">
                       </div>
+                      
                   </form>
-              </div>
-      
-              <!--kontakt info zacatek-->
-              <div class="row col-sm-12">
-                <div class="col-md-4 text-center">
+                  <br>
+                  <hr>
+                                <!--kontakt info zacatek-->
+              <div class="row">
+                <div class="text-center col-sm">
                      <i class="fas fa-map-marker-alt mt-4 fa-2x"></i>
                           <p>Teplice, CZ</p>
                       
                 </div>
-                <div class="col-md-4 text-center">
+                <div class="text-center col-sm">
                       <i class="fas fa-phone mt-4 fa-2x"></i>
                           <p>666 172 852</p>
                       
               </div>
-              <div class="col-md-4 text-center">
+              <div class="text-center col-sm">
                       <i class="fas fa-envelope mt-4 fa-2x"></i>
                           <p>shinobiboosting@gmail.com</p>
                       
               </div>
               </div>
+              </div>
+      
+
               </div>
               <!--kontakt info konec-->
       
@@ -130,7 +141,7 @@ include 'mail.php';
       
       </section>
       <!--konec kontakt formu-->
-       
+    
     </div>
     <!--footer-->
     <footer class="container-fluid text-center">
@@ -140,5 +151,6 @@ include 'mail.php';
           © 2021-2023 - ShinobiBoosting. All Right Reserved.
       </p>
     </footer>
+  </div>
 </body>
 </html>

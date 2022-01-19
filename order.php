@@ -17,10 +17,16 @@ session_start();
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <title>SPSUL - lol boosting</title>
     </head>
-    <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="50">
-      <!--navbar-->
+    <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="50" style="background-image: url(gwen.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;"
+    >
     <!-- navbar -->
-    <nav class="navbar navbar-expand-md navbar-dark">
+    <div style="background-color:rgba(0, 0, 0, 0.7);">
+    <nav class="navbar navbar-expand-md navbar-dark" style="  border-bottom:solid 1px #ccc;
+    border-color: white;"> 
       <!--logo stranky=odkaz na homepage-->
       <a class="navbar-brand navbar-nav" href="index.php">
         <img id="logo" src="logo.png" alt="logo" style="width:32px;">Shinobi | Boosting
@@ -54,10 +60,13 @@ session_start();
     </nav>
     <!--konec navbaru-->
     <!--contaier-->
+   <!--contaier-->
+   <div style="background-color:rgba(0, 0, 0, 0.8);">
     <div class="container">
+      <br>
       <!--formy na zadání požadavků u objednávky-->
       <form>
-        <H1 style="text-align: center;">Current Rank</H1>
+        <H1 id="cr" class="text-center">Current Rank</H1>
         <br>
         <div class="form-group row">
           <div class="form-group col-md-3">
@@ -76,10 +85,10 @@ session_start();
           <div class="form-group col-md-3">
             <select id="cdivision" onchange="calculate()" class="form-control">
               <option>Select Division*</option>
-              <option id="itemprice" value="4">IV</option>
-              <option id="itemprice" value="3">III</option>
-              <option id="itemprice" value="2">II</option>
-              <option id="itemprice" value="1">I</option>
+              <option id="itemprice" value="4.0">IV</option>
+              <option id="itemprice" value="3.0">III</option>
+              <option id="itemprice" value="2.0">II</option>
+              <option id="itemprice" value="1.0">I</option>
             </select>
           </div>
           <div class="form-group col-md-3"> 
@@ -87,7 +96,7 @@ session_start();
         </div>    
       </form>
       <form>
-        <H1 style="text-align: center;">Desired Rank</H1>
+        <H1 class="text-center">Desired Rank</H1>
         <br>
         <div class="form-group row">
           <div class="form-group col-md-3"> 
@@ -106,10 +115,10 @@ session_start();
           <div class="form-group col-md-3">
             <select class="form-control" id="division" onchange="calculate()">
               <option>Select Division*</option>
-              <option id="itemprice" value="1">IV</option>
-              <option id="itemprice" value="2">III</option>
-              <option id="itemprice" value="3">II</option>
-              <option id="itemprice" value="4">I</option>
+              <option id="itemprice" value="4.0">IV</option>
+              <option id="itemprice" value="3.0">III</option>
+              <option id="itemprice" value="2.0">II</option>
+              <option id="itemprice" value="1.0">I</option>
           </select>
           </div>
         </div>
@@ -117,7 +126,7 @@ session_start();
         </div>
       </form>
       <form>
-        <h1 style="text-align: center;">Options</h1>
+        <h1 class="text-center">Options</h1>
         <br>
         <div class="form-group row">
           <div class="form-group col-md-3"> 
@@ -141,11 +150,13 @@ session_start();
         <br>
         <h4><input type="text" id="result" value="" readonly> $</h4>
         <br>
+        <h4>You need to be logged in to order.</h4>
+        <br>
         <div class="form-group row">
           <div class="form-group col-md-4"> 
           </div>    
         <div class="col-md-4">
-        <button class="btn btn-lg btn-primary btn-block btn-signin" type="submit">Order</button>
+        <button class="btn btn-lg btn-primary btn-block btn-signin" type="submit" disabled>Order</button>
         </div>
         <div class="col-md-4"> 
         </div>
@@ -161,18 +172,23 @@ session_start();
             var cdivision = document.getElementById("cdivision").value || 0;
             var division = document.getElementById("division").value || 0;
             
-            crank = parseFloat(crank).toFixed(2);
-            rank = parseFloat(rank).toFixed(2);
-            cdivison = parseFloat(cdivision).toFixed(2);
-            division = parseFloat(division).toFixed(2); 
+            crank = parseFloat(crank).toFixed(0);
+            rank = parseFloat(rank).toFixed(0);
+            cdivison = parseFloat(cdivision).toFixed(0);
+            division = parseFloat(division).toFixed(0); 
 
-            var result = parseFloat((rank-crank)-(cdivision-division)).toFixed(2);
-                            
-            document.getElementById("result").value=result;
-        }
+            var result = parseFloat((rank-crank)+(7*cdivision)-(7*division)).toFixed(0);
+            if (result<0){
+              document.getElementById("NaN").value=result;}             
+            else {
+              document.getElementById("result").value=result;}
+            }
     </script>
     </div>
+  </div>
+</div>
     <!--footer-->
+    <div style="background-color:rgba(0, 0, 0, 0.7);">
     <footer class="container-fluid text-center bg-transparent">
       <p>League of Legends is registered trademark of Riot Games, Inc. We are in no way affiliated with,
          associated with or endorsed by Riot Games, Inc.
@@ -180,5 +196,7 @@ session_start();
           © 2021-2023 - ShinobiBoosting. All Right Reserved.
       </p>
     </footer>
+  </div>
+  </div>
 </body>
 </html>

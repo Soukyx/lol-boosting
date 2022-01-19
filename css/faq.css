@@ -5,7 +5,10 @@
     .container{
       min-height: 100%;
       padding-bottom:60px;
+      margin-bottom: 5%;
+      margin-top: 5%;
     }
+  
     footer {
       color: white;
       position: relative;

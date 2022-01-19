@@ -16,10 +16,21 @@
     border-top: solid;
     border-color: #d5d5d5;
     border-width: 1px;
+    overflow: hidden;
     }     
+.content-bg {
+    background-color:rgba(0, 0, 0,0.9); 
+    border-top:solid 1px #ccc;
+    border-color: white;
+}   
 #homelogo {
   width: 180px;
   
+}
+body, html {
+  width: 100%;
+  height: 100%;
+  position: absolute;
 }
 h1 {
   color: #d5d5d5;
@@ -97,4 +108,5 @@ details {
 #laptop {
   width: 500px;
   max-width: 100%;
+  margin-bottom: 10%;
 }

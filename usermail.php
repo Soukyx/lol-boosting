@@ -1,5 +1,6 @@
 
 <?php
+
 use PHPMailer\PHPMailer\PHPMailer;
 
 require_once 'phpmailer/Exception.php';
@@ -33,7 +34,7 @@ if(isset($_POST['submit'])){
     $mail->Body = "<h3>Name : $user_name <br>Email: $email <br>Message : $message</h3>";
 
     $mail->send();
-    header("Location: contact.html");
+    header("Location: contact.php");
 
 }
 ?>

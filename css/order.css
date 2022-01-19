@@ -30,6 +30,12 @@ h4 {
     border-left:solid 1px #ccc;
     border-color: white;
   }
+.container{
+  margin-bottom: 5%;
+}
+#cr{
+  margin-top: 5%;
+}
 #navbar {
   margin-bottom: 0;
   border-bottom:solid 1px #ccc;

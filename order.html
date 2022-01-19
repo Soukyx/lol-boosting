@@ -57,9 +57,10 @@
     <div style="background-color:rgba(0, 0, 0, 0.9);">
     <div class="container">
       <br>
+      
       <!--formy na zadání požadavků u objednávky-->
       <form>
-        <H1 class="text-center">Current Rank</H1>
+        <H1 id="cr" class="text-center">Current Rank</H1>
         <br>
         <div class="form-group row">
           <div class="form-group col-md-3">
@@ -78,10 +79,10 @@
           <div class="form-group col-md-3">
             <select id="cdivision" onchange="calculate()" class="form-control">
               <option>Select Division*</option>
-              <option id="itemprice" value="4">IV</option>
-              <option id="itemprice" value="3">III</option>
-              <option id="itemprice" value="2">II</option>
-              <option id="itemprice" value="1">I</option>
+              <option id="itemprice" value="4.0">IV</option>
+              <option id="itemprice" value="3.0">III</option>
+              <option id="itemprice" value="2.0">II</option>
+              <option id="itemprice" value="1.0">I</option>
             </select>
           </div>
           <div class="form-group col-md-3"> 
@@ -108,10 +109,10 @@
           <div class="form-group col-md-3">
             <select class="form-control" id="division" onchange="calculate()">
               <option>Select Division*</option>
-              <option id="itemprice" value="1">IV</option>
-              <option id="itemprice" value="2">III</option>
-              <option id="itemprice" value="3">II</option>
-              <option id="itemprice" value="4">I</option>
+              <option id="itemprice" value="4.0">IV</option>
+              <option id="itemprice" value="3.0">III</option>
+              <option id="itemprice" value="2.0">II</option>
+              <option id="itemprice" value="1.0">I</option>
           </select>
           </div>
         </div>
@@ -165,15 +166,17 @@
             var cdivision = document.getElementById("cdivision").value || 0;
             var division = document.getElementById("division").value || 0;
             
-            crank = parseFloat(crank).toFixed(2);
-            rank = parseFloat(rank).toFixed(2);
-            cdivison = parseFloat(cdivision).toFixed(2);
-            division = parseFloat(division).toFixed(2); 
+            crank = parseFloat(crank).toFixed(0);
+            rank = parseFloat(rank).toFixed(0);
+            cdivison = parseFloat(cdivision).toFixed(0);
+            division = parseFloat(division).toFixed(0); 
 
-            var result = parseFloat((rank-crank)+(7*division)).toFixed(2);
-                            
-            document.getElementById("result").value=result;
-        }
+            var result = parseFloat((rank-crank)+(7*cdivision)-(7*division)).toFixed(0);
+            if (result<0){
+              document.getElementById("NaN").value=result;}             
+            else {
+              document.getElementById("result").value=result;}
+            }
     </script>
     </div>
   </div>
