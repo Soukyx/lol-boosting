@@ -1,6 +1,6 @@
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" >
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -11,7 +11,12 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <title>SPSUL - lol boosting</title>
     </head>
-    <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="50">
+    <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="50" style="background-image: url(gwen.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;">
+    <div style="background-color: rgba(0, 0, 0, 0.7);">
     <!-- navbar -->
     <nav class="navbar navbar-expand-md navbar-dark">
       <!--logo stranky=odkaz na homepage-->
@@ -46,25 +51,47 @@
       </div>
     </nav>
     <!--konec navbaru-->
-    <!--container-->
     <div class="container">
       <!--karta registrace-->
-        <div class="card card-container" id="card">
-            <div class="text-center">
-              <h1 id="logintext">Register</h1>
-              <!--register formy-->
-            <form action="register.php" method="post" class="form-signin">
-                <input name="user_name" type="text" id="inputName" class="form-control" placeholder="Name" required >
-                <input name="email" type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
-                <input name=" password" type="password" id="inputPassword" class="form-control" placeholder="Password" required >
-                <input name=" cpassword" type="password" id="inputPassword" class="form-control" placeholder="Repeat password" required >
-                <button class="btn btn-lg btn-primary btn-block btn-signin" value="Signup" type="submit">Sign Up</button>
-            </form>
-            <a href="login.html" class="forgot-password">
-              Registered already? Log in here.
-              </a>
-              </div>
+      <form action="register.php" method="post" class="form-signin">
+        <div class="card-container col-md-6 " id="card">
+          <div class="text-center">
+            <h1 id="logintext">Register</h1>
+          </div>
+            <!--register formy-->
+            <div class="col-md-12">
+            <div class="md-form mb-0">
+            <h4>Name</h4>
+              <input name="user_name" type="text" id="inputName" class="form-control" placeholder="Name" required >
+            </div>
+            </div>
+            <div class="col-md-12">
+            <div class="md-form mb-0">
+            <h4>Email</h4>
+              <input name="email" type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
+            </div>
+            <div class="row">
+              <div class="col-md-6 md-form mb-0">
+              <div class="text-center">
+            <h4>Password</h4>
+              <input name=" password" type="password" id="inputPassword" class="form-control" placeholder="Password" required >
+            </div>
+            </div>
+            <div class="col-md-6 md-form mb-0">
+              <div class="text-center">
+            <h4>Confirm Password</h4>
+              <input name=" cpassword" type="password" id="inputPassword" class="form-control" placeholder="Confirm Password" required >
+            </div>
+            </div>
         </div>
+          <br>
+              <button class="btn btn-lg btn-primary btn-block btn-signin" value="Signup" type="submit">Sign Up</button>
+              <a href="login.html" class="forgot-password">
+                Registered already? Log in here.
+                </a>
+            </div>
+        </div>
+            </form>
     </div>
     <!--footer-->
     <footer class="container-fluid text-center">
@@ -74,6 +101,6 @@
           © 2021-2023 - ShinobiBoosting. All Right Reserved.
       </p>
     </footer>
-
+  </div>
 </body>
 </html>

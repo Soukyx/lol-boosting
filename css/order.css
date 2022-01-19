@@ -32,8 +32,8 @@ h4 {
   }
 #navbar {
   margin-bottom: 0;
-  background-color: #2d2d30;
-  border: 0;  
+  border-bottom:solid 1px #ccc;
+  border-color: white;
   }
   .navbar li a, .navbar .navbar-brand { 
     color: #d5d5d5 !important;
