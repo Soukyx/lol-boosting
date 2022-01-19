@@ -150,19 +150,20 @@ session_start();
         <br>
         <h4><input type="text" id="result" value="" readonly> $</h4>
         <br>
-        <h4>You need to be logged in to order.</h4>
         <br>
         <div class="form-group row">
           <div class="form-group col-md-4"> 
           </div>    
         <div class="col-md-4">
-        <button class="btn btn-lg btn-primary btn-block btn-signin" type="submit" disabled>Order</button>
+        <button class="btn btn-lg btn-primary btn-block btn-signin" type="submit">Order</button>
         </div>
         <div class="col-md-4"> 
         </div>
         </div>
         </div>    
-        
+        <br>
+        <br>
+        <br>   
         <br>
       </form>
       <script type="text/javascript">
