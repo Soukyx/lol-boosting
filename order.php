@@ -148,7 +148,7 @@ session_start();
           </div>
         </div>
         <br>
-        <h4><input type="text" id="result" value="" readonly> $</h4>
+        <h4><input type="text" id="result" class="text-center" readonly> $</h4>
         <br>
         <br>
         <div class="form-group row">
