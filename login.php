@@ -18,7 +18,6 @@ session_start();
 			//cti z databaze
 			$query = "select * from users where user_name = '$user_name' limit 1";
 			$result = mysqli_query($con, $query);
-
 			if($result)
 			{
 				if($result && mysqli_num_rows($result) > 0)
@@ -28,18 +27,25 @@ session_start();
 					
 					if($user_data['password'] === $password)
 					{
-
+						$query = "select * from users where usertype = '$usertype' limit 1";
+						if($query['usertype']=="admin"){
+							$_SESSION['user_id'] = $user_data['user_id'];
+							header("Location:index1.php");
+							die;
+						}
+						else{
 						$_SESSION['user_id'] = $user_data['user_id'];
 						header("Location:index.php");
 						die;
+						}
 					}
 				}
 			}
 			
-			echo "wrong username or password!";
+			header('location:login1.php?error=1');
 		}else
 		{
-			echo "wrong username or password!";
+			header('location:login1.php?error=1');
 		}
 	}
 

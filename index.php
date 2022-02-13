@@ -65,7 +65,8 @@ session_start();
       <br>
       <H1 class="mx-auto text-center">Shinobi | Boosting</H1>
       <p id="podnadpis" class="mx-auto text-center">League of Legends Elo Boosting</p>
-      
+      <br>
+      <h1 class="text-center" style="color:#00aaff">Hello, <?php echo $user_data['user_name'];?>!</h1>
     </div>
     
     </div>

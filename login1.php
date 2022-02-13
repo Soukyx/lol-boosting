@@ -16,7 +16,7 @@
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;">
-    <div class="bg">
+    <div style="background-color: rgba(0, 0, 0, 0.7);">
     <!-- navbar -->
     <nav class="navbar navbar-expand-md navbar-dark">
       <!--logo stranky=odkaz na homepage-->
@@ -45,7 +45,7 @@
           <a class="nav-link" href="review.html">Review</a>
         </li>
         <li class="nav-item " id="login">
-          <a class="nav-link" href="login.html">Login</a>
+          <a class="nav-link" href="login1.php">Login</a>
         </li>
       </ul>
       </div>
@@ -67,6 +67,11 @@
                 <h4>Password</h4>
                 <input name="password" type="password" id="inputPassword" class="form-control" placeholder="Password" required>
                 <br>
+                <?php
+                if(isset($_GET['error'])==true){
+                  echo'<p>Wrong Name or Password.</p>';
+                }
+                ?>
                 <button class="btn btn-lg btn-primary btn-block btn-signin" type="submit">Sign in</button>
             </form>
             <a href="register.html" class="forgot-password">
@@ -81,8 +86,6 @@
          associated with or endorsed by Riot Games, Inc.
           <br>
           © 2021-2023 - ShinobiBoosting. All Right Reserved.
-          <br>
-          <br>
       </p>
     </footer>
   </div>

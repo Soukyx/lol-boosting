@@ -46,7 +46,7 @@
           <a class="nav-link" href="review.html">Review</a>
         </li>
         <li class="nav-item " id="login">
-          <a class="nav-link" href="login.html">Login</a>
+          <a class="nav-link" href="login1.php">Login</a>
         </li>
       </ul>
       </div>
@@ -142,7 +142,7 @@
           </div>
         </div>
         <br>
-        <h4><input type="text" id="result" class="text-center" readonly> $</h4>
+        <h4><input type="text" id="result" value="" readonly> $</h4>
         <br>
         <h4>You need to be logged in to order.</h4>
         <br>
@@ -173,7 +173,7 @@
 
             var result = parseFloat((rank-crank)+(7*cdivision)-(7*division)).toFixed(0);
             if (result<0){
-              document.getElementById("Not valide order.").value=result;}             
+              document.getElementById("NaN").value=result;}             
             else {
               document.getElementById("result").value=result;}
             }

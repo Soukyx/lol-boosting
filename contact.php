@@ -1,4 +1,9 @@
 <?php
+session_start();
+include("connection.php");
+include("functions.php");
+
+$user_data = check_login($con);
 include 'mail.php';
 ?>
 <!DOCTYPE html>
@@ -71,14 +76,14 @@ include 'mail.php';
                           <div class="col-md-6">
                               <div class="md-form mb-0">
                                 <label for="name" class="">Your name</label>
-                                  <input type="text" id="name" name="name" class="form-control">
+                                  <input type="text" id="name" name="name" value="<?php echo $user_data['user_name']; ?>" class="form-control" disabled>
                               </div>
                           </div>    
                           <!--email-->
                           <div class="col-md-6">
                               <div class="md-form mb-0">
                                 <label for="email" class="">Your email</label>
-                                  <input type="text" id="email" name="email" class="form-control">
+                                  <input type="text" id="email" name="email" value="<?php echo $user_data['email']; ?>" class="form-control" disabled>
                               </div>
                           </div>
                       </div>
