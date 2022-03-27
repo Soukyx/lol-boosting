@@ -27,20 +27,21 @@ session_start();
 					
 					if($user_data['password'] === $password)
 					{
-						$query = "select * from users where usertype = '$usertype' limit 1";
-						if($query['usertype']=="admin"){
+
+
+						if($user_data['usertype'] =='user'){
 							$_SESSION['user_id'] = $user_data['user_id'];
-							header("Location:index1.php");
-							die;
-						}
-						else{
-						$_SESSION['user_id'] = $user_data['user_id'];
 						header("Location:index.php");
 						die;
+						}						
+							elseif($user_data['usertype'] =='admin'){
+								$_SESSION['user_id'] = $user_data['user_id'];
+						header("Location:adminindex.php");
+						die;
 						}
+							}
 					}
 				}
-			}
 			
 			header('location:login1.php?error=1');
 		}else

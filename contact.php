@@ -55,7 +55,7 @@ include 'mail.php';
           <a class="nav-link" href="review.php">Review</a>
         </li>
         <li class="nav-item " id="login">
-          <a class="nav-link" href="logout.php">Log Out</a>
+        <a class="nav-link" href="profile.php">Profile</a>
         </li>
       </ul>
       </div>
