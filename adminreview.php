@@ -32,10 +32,10 @@ include 'backend/database.php';
     background-attachment: fixed;
     background-size: cover;"
     >
-    <!-- navbar -->
+<div style="background-color:rgba(0, 0, 0, 0.7);">
     <nav class="navbar navbar-expand-md navbar-dark">
       <!--logo stranky=odkaz na homepage-->
-      <a class="navbar-brand navbar-nav" href="index.php">
+      <a class="navbar-brand navbar-nav" href="adminindex.php">
         <img id="logo" src="logo.png" alt="logo" style="width:32px;">Shinobi | Boosting
       </a>
             <!--navbar a collapse pri zmenseni stranky-->
@@ -45,58 +45,74 @@ include 'backend/database.php';
       <div class="collapse navbar-collapse justify-content-xl-end" id="collapsibleNavbar">
       <ul class="navbar-nav">
         <li class="nav-item">
-          <a class="nav-link" href="order.php">Order Now</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="faq.php">FaQ</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="boosters.php">Our Boosters</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="contact.php">Contact Us</a>
+          <a class="nav-link" href="adminboosters.php">Our Boosters</a>
         </li>
         <li class="nav-item" id="review">
-          <a class="nav-link" href="review.php">Review</a>
+          <a class="nav-link" href="adminreview.php">Review</a>
         </li>
         <li class="nav-item " id="login">
-        <a class="nav-link" href="profile.php">Profile</a>
+          <a class="nav-link" href="adminindex.php">Profile</a>
         </li>
       </ul>
-      </div>
     </nav>
-    <!--konec navbaru-->
-    <div class="container">
+    
+</div>
+<div class="container">
     <div id="card" class="card card-container">
 	<p id="success"></p>
-  
+        <div class="table-wrapper">
             <div class="table-title">
                 <div class="row">
                     <div class="col-sm-6">
 						<h2>Manage Reviews</h2>
 					</div>
 					<div class="col-sm-6">
-						<a href="#addEmployeeModal" class="btn btn-success float-right" data-toggle="modal"> <span>Add New Review</span></a>			
+						<a href="#addEmployeeModal" class="btn btn-success " data-toggle="modal"> <span>Add New Review</span></a>
+						<a href="JavaScript:void(0);" class="btn btn-danger" id="delete_multiple"><span>Delete</span></a>						
 					</div>
                 </div>
             </div>
+            <table class="table table-striped table-hover">
+                    <tr>
+						<th>
+							<span class="custom-checkbox">
+								<input type="checkbox" id="selectAll">
+								<label for="selectAll"></label>
+							</span>
+						</th>
+						<th>ID</th>
+                        <th>NAME</th>
+                        <th>REVIEW</th>
+                    </tr>
 				<tbody>
-				<hr>
+
 				<?php
 				$result = mysqli_query($conn,"SELECT * FROM reviews");
 					$i=1;
 					while($row = mysqli_fetch_array($result)) {
 				?>
 				<tr id="<?php echo $row["review_id"]; ?>">
-					<h5><?php echo $row["name"]; ?></h5>
-					<div class="text-justify"><td><?php echo $row["user_review"]; ?></td></div>
-            <br><hr>
+				<td>
+							<span class="custom-checkbox">
+								<input type="checkbox" class="user_checkbox" data-user-id="<?php echo $row["review_id"]; ?>">
+								<label for="checkbox2"></label>
+							</span>
+						</td>
+					<td><?php echo $i; ?></td>
+					<td><?php echo $row["name"]; ?></td>
+					<td><?php echo $row["user_review"]; ?></td>
+
+					<td>
+						<a href="#deleteEmployeeModal" class="delete" data-id="<?php echo $row["review_id"]; ?>" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" 
+						 title="Delete">&#xE872;</i></a>
+                    </td>
 				</tr>
 				<?php
 				$i++;
 				}
 				?>
 				</tbody>
+			</table>
 			
         </div>
     </div>
@@ -128,12 +144,30 @@ include 'backend/database.php';
 			</div>
 		</div>
 	</div>
-  <footer class="container-fluid text-center">
-      <p>League of Legends is registered trademark of Riot Games, Inc. We are in no way affiliated with,
-         associated with or endorsed by Riot Games, Inc.
-          <br>
-          © 2021-2023 - ShinobiBoosting. All Right Reserved.
-      </p>
-    </footer>
+<!-- Delete Modal HTML -->
+<div id="deleteEmployeeModal" class="modal fade">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<form>
+						
+					<div class="modal-header">						
+						<h4 class="modal-title">Delete Review</h4>
+						<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+					</div>
+					<div class="modal-body">
+						<input type="hidden" id="id_d" name="review_id" class="form-control">					
+						<p>Are you sure you want to delete these Records?</p>
+						<p class="text-warning"><small>This action cannot be undone.</small></p>
+					</div>
+					<div class="modal-footer">
+						<input type="button" class="btn btn-default" data-dismiss="modal" value="Cancel">
+						<button type="button" class="btn btn-danger" id="delete">Delete</button>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+			</div>
+			</div>
 </body>
-</html>                                		 
+</html>                                		                            
