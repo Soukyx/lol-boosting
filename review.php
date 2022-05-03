@@ -75,8 +75,8 @@ include 'backend/database.php';
                     <div class="col-sm-6">
 						<h2>Manage Reviews</h2>
 					</div>
-					<div class="col-sm-6">
-						<a href="#addEmployeeModal" class="btn btn-success float-right" data-toggle="modal"> <span>Add New Review</span></a>			
+					<div class="col-sm-6 justify-align-right">
+          <a href="#addEmployeeModal" class="btn btn-success " data-toggle="modal"> <span>Add New Review</span></a>		
 					</div>
                 </div>
             </div>
@@ -106,13 +106,13 @@ include 'backend/database.php';
 			<div class="modal-content">
 				<form id="user_form">
 					<div class="modal-header">						
-						<h4 class="modal-title">Add User</h4>
+						<h4 class="modal-title">Add Review</h4>
 						<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
 					</div>
 					<div class="modal-body">					
 						<div class="form-group">
 							<label>NAME</label>
-							<input type="text" id="name" name="name" class="form-control" required>
+							<input type="text" id="name" name="name" value="<?php echo $user_data['user_name']; ?>" class="form-control" readonly>
 						</div>
 						<div class="form-group">
 							<label>REVIEW</label>

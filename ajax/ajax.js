@@ -58,12 +58,13 @@
 			cache: false,
 			data:{
 				type:3,
-				staff_id: $("#id_d").val()
+				id: $("#id_d").val()
 			},
 			success: function(dataResult){
 					$('#deleteEmployeeModal').modal('hide');
 					$("#"+dataResult).remove();
-			
+					alert('Data deleted successfully !'); 
+					location.reload();	
 			}
 		});
 	});
@@ -93,6 +94,7 @@
 						var ids = response.split(",");
 						for (var i=0; i < ids.length; i++ ) {	
 							$("#"+ids[i]).remove(); 
+							location.reload();		
 						}	
 					} 
 				}); 
