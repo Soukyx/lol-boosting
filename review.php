@@ -73,7 +73,7 @@ include 'backend/database.php';
             <div class="table-title">
                 <div class="row">
                     <div class="col-sm-6">
-						<h2>Manage Reviews</h2>
+						<h2>Reviews</h2>
 					</div>
 					<div class="col-sm-6 justify-align-right">
           <a href="#addEmployeeModal" class="btn btn-success " data-toggle="modal"> <span>Add New Review</span></a>		

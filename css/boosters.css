@@ -2,7 +2,7 @@
 .navbar {
     margin-bottom: 0;
     border-radius: 0;
-    
+    background-color:rgba(0, 0, 0, 0.7);
     }
   .container{
     color: white;
@@ -16,9 +16,59 @@
     color:white;
 }
 
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  height: 100vh;
+  width: 100%;
+}
+
+h1{
+  font-family: sans-serif;
+  text-align: center;
+  font-size: 30px;
+  color: #222;
+}
+
+.profile-pic-div{
+  width: 100%;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 1px solid white;
+}
+
+#photo{
+  height: 100%;
+  width: 100%;
+}
+
+#file{
+  display: none;
+}
+
+#uploadBtn{
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  background: rgba(0, 0, 0, 0.7);
+  color: wheat;
+  line-height: 30px;
+  font-family: sans-serif;
+  font-size: 15px;
+  cursor: pointer;
+  display: none;
+}
   footer {
     color: white;
-    position: fixed;
+    position: relative;
     width:100%;
     bottom: 0;
     padding: 15px;
@@ -50,6 +100,12 @@
     margin: 0 auto 25px;
     margin-top: 5%;
     background-color:rgb(0,0,0,0.8);
+}
+
+
+.title {
+  color: grey;
+  font-size: 18px;
 }
   #myPage {
     background-image: url("gwen.jpg");

@@ -15,6 +15,7 @@ session_start();
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <title>SPSUL - lol boosting</title>
     </head>
     <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="50" style="background-image: url(gwen.jpg);
@@ -59,32 +60,37 @@ session_start();
     <!--konec navbaru-->
     <!--container-->
     <div class="container">
+      
     <div id="card" class="card card-container">
+      
+    <h1 class="text-center">Our Boosters</h1>
     <div class="table-wrapper">
             <div class="table-title">
             <table class="table table-striped table-hover">
+            <div class="container">
+        <div class="row">
     <?php
 				$result = mysqli_query($conn,"SELECT * FROM staff");
 					while($row = mysqli_fetch_array($result)) {
 				?>
-        <div>
-					<td><?php echo $row["staff_name"];?></td>  
+          <div id="card" class="card col-sm-2 m-3 text-center">
+          <img src="upload/<?=$row['pp']?>"
+    		     class="img-fluid rounded-circle">
+                    <h2><?php echo $row["staff_name"];?></h2>
+                    <p class="title"><?php echo $row["descr"]; ?></p>
 
-					<td><?php echo $row["descr"]; ?></td>
-
-					<td>
-							<i class="material-icons update" data-toggle="tooltip"
-							data-name="<?php echo $row["staff_name"]; ?>"
-							data-email="<?php echo $row["descr"]; ?>">
-              </td>
-				</tr>
+          </Div>
 				<?php
 				}
 				?>
+        </div>
+      </div>
         </table>
       </div></div>
       </div>
     </div>
+
+        <script src="ajax/app.js"></script>
     <!--footer-->
     <footer class="container-fluid text-center">
       <p>League of Legends is registered trademark of Riot Games, Inc. We are in no way affiliated with,

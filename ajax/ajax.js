@@ -25,6 +25,7 @@
 		$('#id_u').val(staff_id);
 		$('#name_u').val(staff_name);
 		$('#email_u').val(descr);
+		$('#file_u').val(pp);
 	});
 
 	$(document).on('click','#update',function(e) {

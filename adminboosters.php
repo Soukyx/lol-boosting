@@ -91,6 +91,10 @@ include 'backend/database.php';
 					$i=1;
 					while($row = mysqli_fetch_array($result)) {
 				?>
+				<form 
+    	      action="backend/upload.php" 
+    	      method="post"
+    	      enctype="multipart/form-data">
 				<tr id="<?php echo $row["staff_id"]; ?>">
 				<td>
 							<span class="custom-checkbox">
@@ -104,16 +108,20 @@ include 'backend/database.php';
 
 					<td>
 						<a href="#editEmployeeModal" class="edit" data-toggle="modal">
+							
 							<i class="material-icons update" data-toggle="tooltip" 
+							
 							data-id="<?php echo $row["staff_id"]; ?>"
 							data-name="<?php echo $row["staff_name"]; ?>"
 							data-email="<?php echo $row["descr"]; ?>"
+							
 							title="Edit">&#xE254;</i>
 						</a>
 						<a href="#deleteEmployeeModal" class="delete" data-id="<?php echo $row["staff_id"]; ?>" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" 
-						 title="Delete">&#xE872;</i></a>
+						 title="Delete">&#xE872;</i></a>		   
                     </td>
 				</tr>
+					</form>
 				<?php
 				$i++;
 				}
@@ -140,7 +148,13 @@ include 'backend/database.php';
 						<div class="form-group">
 							<label>DESCRIPTION</label>
 							<input type="text" id="email" name="descr" class="form-control" required>
-						</div>				
+						</div>	
+						<div class="form-group">
+							<label>PROFILE PICTURE</label>
+							<input type="file"
+								class="form-control"
+								name="pp">
+						</div>			
 					</div>
 					<div class="modal-footer">
 					    <input type="hidden" value="1" name="type">
@@ -168,8 +182,14 @@ include 'backend/database.php';
 						</div>
 						<div class="form-group">
 							<label>DESCRIPTION</label>
-							<input type="email" id="email_u" name="descr" class="form-control" required>
+							<input type="text" id="email_u" name="descr" class="form-control" required>
 						</div>				
+						<div class="form-group">
+							<label>PROFILE PICTURE</label>
+							<input type="file" id="file_u"
+								class="form-control"
+								name="pp">
+						</div>	
 					</div>
 					<div class="modal-footer">
 					<input type="hidden" value="2" name="type">

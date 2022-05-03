@@ -60,28 +60,22 @@ session_start();
     <div id="card" class="card card-container">
     <div class="table-wrapper">
             <div class="table-title">
-                    <div class="col-sm-6">
-						<h2>Our Boosters</h2>
-					</div>
             <table class="table table-striped table-hover">
+            <div class="container">
+        <div class="row">
     <?php
 				$result = mysqli_query($conn,"SELECT * FROM staff");
 					while($row = mysqli_fetch_array($result)) {
 				?>
-        <div>
-					<td><?php echo $row["staff_name"];?></td>  
-
-					<td><?php echo $row["descr"]; ?></td>
-
-					<td>
-							<i class="material-icons update" data-toggle="tooltip"
-							data-name="<?php echo $row["staff_name"]; ?>"
-							data-email="<?php echo $row["descr"]; ?>">
-              </td>
-				</tr>
+          <div id="card" class="card col-sm-2 m-3">
+                    <h2><?php echo $row["staff_name"];?></h2>
+                    <p class="title"><?php echo $row["descr"]; ?></p>
+          </Div>
 				<?php
 				}
 				?>
+        </div>
+      </div>
         </table>
       </div></div>
       </div>
