@@ -91,10 +91,6 @@ include 'backend/database.php';
 					$i=1;
 					while($row = mysqli_fetch_array($result)) {
 				?>
-				<form 
-    	      action="backend/upload.php" 
-    	      method="post"
-    	      enctype="multipart/form-data">
 				<tr id="<?php echo $row["staff_id"]; ?>">
 				<td>
 							<span class="custom-checkbox">
@@ -148,13 +144,7 @@ include 'backend/database.php';
 						<div class="form-group">
 							<label>DESCRIPTION</label>
 							<input type="text" id="email" name="descr" class="form-control" required>
-						</div>	
-						<div class="form-group">
-							<label>PROFILE PICTURE</label>
-							<input type="file"
-								class="form-control"
-								name="pp">
-						</div>			
+						</div>				
 					</div>
 					<div class="modal-footer">
 					    <input type="hidden" value="1" name="type">
@@ -184,12 +174,6 @@ include 'backend/database.php';
 							<label>DESCRIPTION</label>
 							<input type="text" id="email_u" name="descr" class="form-control" required>
 						</div>				
-						<div class="form-group">
-							<label>PROFILE PICTURE</label>
-							<input type="file" id="file_u"
-								class="form-control"
-								name="pp">
-						</div>	
 					</div>
 					<div class="modal-footer">
 					<input type="hidden" value="2" name="type">

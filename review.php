@@ -15,8 +15,9 @@ include 'backend/database.php';
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
 	<title>ShinobiBoosting - Profile</title>
-  <link rel="stylesheet" href="css/boosters.css">
+  <link rel="stylesheet" href="css/review.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://kit.fontawesome.com/da437b991a.js" crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto|Varela+Round">
@@ -25,6 +26,7 @@ include 'backend/database.php';
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 	<script src="ajax/review.js"></script>
+  <script src="ajax/star.js"></script>
 </head>
 <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="50" style="background-image: url(gwen.jpg);
     background-position: center center;
@@ -75,7 +77,7 @@ include 'backend/database.php';
                     <div class="col-sm-6">
 						<h2>Reviews</h2>
 					</div>
-					<div class="col-sm-6 justify-align-right">
+					<div class="col-sm-4 justify-align-right float-right">
           <a href="#addEmployeeModal" class="btn btn-success " data-toggle="modal"> <span>Add New Review</span></a>		
 					</div>
                 </div>
@@ -114,6 +116,28 @@ include 'backend/database.php';
 							<label>NAME</label>
 							<input type="text" id="name" name="name" value="<?php echo $user_data['user_name']; ?>" class="form-control" readonly>
 						</div>
+            <section class='rating-widget'>
+                  <!-- Rating Stars Box -->
+                  <div class='rating-stars text-center'>
+                    <ul id='stars'>
+                      <li class='star' title='Poor' data-value='1'>
+                      <i class="fa fa-star fa-fw"></i>
+                      </li>
+                      <li class='star' title='Fair' data-value='2'>
+                      <i class="fa fa-star fa-fw"></i>
+                      </li>
+                      <li class='star' title='Good' data-value='3'>
+                      <i class="fa fa-star fa-fw"></i>
+                      </li>
+                      <li class='star' title='Excellent' data-value='4'>
+                      <i class="fa fa-star fa-fw"></i>
+                      </li>
+                      <li class='star' title='WOW!!!' data-value='5'>
+                      <i class="fa fa-star fa-fw"></i>
+                      </li>
+                    </ul>
+                  </div>
+      </section>
 						<div class="form-group">
 							<label>REVIEW</label>
 							<input type="text" id="email" name="user_review" class="form-control" required>
@@ -135,5 +159,6 @@ include 'backend/database.php';
           © 2021-2023 - ShinobiBoosting. All Right Reserved.
       </p>
     </footer>
+
 </body>
 </html>                                		 

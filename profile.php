@@ -4,6 +4,7 @@
 
   include("connection.php");
   include("functions.php");
+  include 'backend/database.php';
 
   $user_data = check_login($con);
 ?>
@@ -65,9 +66,18 @@
 </div>
     <!--konec navbaru-->
     <div class="container">
-    <div id="card" class="card card-container">
+    <div id="card" class="card col-sm-6 text-center">
+            <div class="text-center">
       <h1>My profile</h1>
+    
+      <hr>
       <br>
+      <?php
+				$result = mysqli_query($conn,"SELECT * FROM users");
+					while($row = mysqli_fetch_array($result)) {
+				?>
+      <img src="upload/<?=$row['pp']?>" class="img-fluid rounded-circle" alt="Rounded Image" style="  width:150px; height:150px;">
+            <br>
       <?php
 
         $query = "SELECT * FROM users WHERE user_name = '".$user_data['user_name']."' AND password = '".$user_data['password']."'";
@@ -92,13 +102,24 @@
       ?>
     
       <br>
-      <div class="col-md-4">
+      <div class="container">
+      <div class="row">
+      <div class="text-center col">
+      <div class="col-md-12">
         <a class="btn btn-lg btn-primary btn-block btn-signin" href="changepassword.php">Change Password</a>
         </div>
         <br>
-        <div class="col-md-4">
+        <div class="col-md-12">
         <a class="btn btn-lg btn-primary btn-block btn-signin" href="logout.php">Log Out</a>
         </div>
+      </div>
+      </div>
+      </div>
+        <?php
+				}
+				?>
+      </div>
+      </div>
       </div>
       </div>
     <footer class="container-fluid text-center">

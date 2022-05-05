@@ -19,6 +19,7 @@
 	<title>ShinobiBoosting - Profile</title>
   <link rel="stylesheet" href="css/profile.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://kit.fontawesome.com/da437b991a.js" crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
@@ -58,63 +59,56 @@
 
     <!--konec navbaru-->
     <div class="container">
-    <div id="card" class="card card-container">
-      <h1>My profile</h1>
+    <div id="card" class="card card-container col-md-4">
+    <div class="text-center">
+      <h1>Admin</h1>
       <br>
-      
-      <form class="navbar-form navbar-right" action="searchresults.php" method="GET">
+      <div class="row">
+      <div class="text-center col-md-12">
+      <form class="navbar-form navbar-right col-md-12" action="searchresults.php" method="GET">
 
         <div class="search-area">
           <div class="form-group">
-
+   
             <div class="search-wrap">
 
-              <label for="searchbox" class="sr-only">Search:</label>
-              <input type="text" class="form-control" name="searchbox" id="searchbox" placeholder="Search users" required autocomplete="off">
-              
+            <label for="searchbox" class="sr-only">Search:</label>
+  <div class="input-group">
+  <input type="text" class="form-control col-md-12" name="searchbox" id="searchbox" placeholder="Search users" required autocomplete="off">
+    <div class="input-group-append">
+      <button class="btn btn-secondary" name="search" value="Search" type="submit">
+        <i class="fa fa-search"></i>
+      </button>
+    </div>
+  </div>
               <div class="search-results hide"></div>
 
             </div>
             
 
           </div>
-          <div class="col-md-4">
-          <input type="submit" name="search" id="search-btn" value="Search" class="btn btn-lg btn-primary btn-block btn-signin">
-          </div>
         </div>
         <br>
     </form>
-      <?php
-
-        $query = "SELECT * FROM users WHERE user_name = '".$user_data['user_name']."' AND password = '".$user_data['password']."'";
-
-        
-
-        if($result = mysqli_query($con, $query)) {
-
-          $row = mysqli_fetch_assoc($result);
-
-        
-          echo "<div><h4><strong>Name:</strong> <span>".$user_data['user_name']."</span></h2></div>";
-          echo "<div><h4><strong>Email:</strong> <span>".$user_data['email']."</span></h2></div>";
-          echo "<div><h4><strong>User:</strong> <span>".$user_data['usertype']."</span></h2></div>";
-
-        } else {
-
-          die("Error with the query in the database");
-
-        }
-
-      ?>
-    
+    <br>
       <br>
-      <div class="col-md-4">
+      <div class="container">
+      <div class="row">
+      <div class="text-center col">
+      <div class="col-md-12">
         <a class="btn btn-lg btn-primary btn-block btn-signin" href="changepassword.php">Change Password</a>
         </div>
         <br>
-        <div class="col-md-4">
+        <br>
+        <div class="col-md-12">
         <a class="btn btn-lg btn-primary btn-block btn-signin" href="logout.php">Log Out</a>
         </div>
+      </div>
+      </div>
+      </div>
+      </div>        
+        </div>
+</div>  
       </div>
       </div>
     <footer class="container-fluid text-center">
