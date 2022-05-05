@@ -1,6 +1,6 @@
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" >
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -36,49 +36,67 @@
           <a class="nav-link" href="faq.html">FaQ</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="boosters1.php">Our Boosters</a>
+          <a class="nav-link" href="boosters.html">Our Boosters</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="contact.html">Contact Us</a>
         </li>
         <li class="nav-item" id="review">
-          <a class="nav-link" href="review1.php">Review</a>
+          <a class="nav-link" href="review.html">Review</a>
         </li>
         <li class="nav-item " id="login">
-          <a class="nav-link" href="login1.php">Login</a>
+          <a class="nav-link" href="login.html">Login</a>
         </li>
       </ul>
       </div>
     </nav>
     <!--konec navbaru-->
-    <!--container-->
     <div class="container">
-      <!--login karta-->
-        <div id="card" class="card card-container">
-          <div id="logintext"class="text-center">
-            <h1>Login</h1>
+      <!--karta registrace-->
+      <form action="register.php" method="post" class="form-signin" enctype="multipart/form-data">
+        <div class="card-container col-md-6 " id="card">
+          <div class="text-center">
+            <h1 id="logintext">Register</h1>
+          </div>
+            <!--register formy-->
+            <div class="col-md-12">
+            <div class="md-form mb-0">
+		  <div class="mb-3">
+		    <h4 class="form-label">Profile Picture</h4>
+		    <input type="file" 
+		           class="form-control"
+		           name="pp">
+            <h4>Name</h4>
+              <input name="user_name" type="text" id="inputName" class="form-control" placeholder="Name" required >
             </div>
-            <!--formy na login-->
-            <form action="login.php" class="form-signin" method="post">
-              <br>
-                <h4>Name</h4>
-                <input name="user_name" type="text" id="inputName" class="form-control" placeholder="Name" required autofocus>
-              
-                <h4>Password</h4>
-                <input name="password" type="password" id="inputPassword" class="form-control" placeholder="Password" required>
-                <br>
-                <?php
-                if(isset($_GET['error'])==true){
-                  echo'<p>Wrong Name or Password.</p>';
-                }
-                ?>
-                <button class="btn btn-lg btn-primary btn-block btn-signin" type="submit">Sign in</button>
+            </div>
+            <div class="col-md-12">
+            <div class="md-form mb-0">
+            <h4>Email</h4>
+              <input name="email" type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
+            </div>
+            <div class="row">
+              <div class="col-md-6 md-form mb-0">
+              <div class="text-center">
+            <h4>Password</h4>
+              <input name=" password" type="password" id="inputPassword" class="form-control" placeholder="Password" required >
+            </div>
+            </div>
+            <div class="col-md-6 md-form mb-0">
+              <div class="text-center">
+            <h4>Confirm Password</h4>
+              <input name=" cpassword" type="password" id="inputPassword" class="form-control" placeholder="Confirm Password" required >
+            </div>
+            </div>
+        </div>
+          <br>
+              <button class="btn btn-lg btn-primary btn-block btn-signin" value="Signup" type="submit">Sign Up</button>
+              <a href="login.html" class="forgot-password">
+                Registered already? Log in here.
+                </a>
+            </div>
+        </div>
             </form>
-            <a href="register1.php" class="forgot-password">
-            Not registered yet?
-            </a>
-            <br>
-    </div>
     </div>
     <!--footer-->
     <footer class="container-fluid text-center">
@@ -86,7 +104,7 @@
          associated with or endorsed by Riot Games, Inc.
           <br>
           © 2021-2023 - ShinobiBoosting. All Right Reserved.
-      </p>
+      </p>    
     </footer>
   </div>
 </body>

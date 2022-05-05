@@ -1,12 +1,9 @@
 <?php 
+session_start();
+include("connection.php");
+include("functions.php");
 
-  session_start();
-
-  include("connection.php");
-  include("functions.php");
-  include 'backend/database.php';
-
-  $user_data = check_login($con);
+$user_data = check_login($con);
 ?>
 
 <!DOCTYPE html>
@@ -68,15 +65,15 @@
     <div class="container">
     <div id="card" class="card col-sm-6 text-center">
             <div class="text-center">
-      <h1>My profile</h1>
+      <h1>My Profile</h1>
     
       <hr>
       <br>
       <?php
-				$result = mysqli_query($conn,"SELECT * FROM users");
+				$result = mysqli_query($con,"SELECT * FROM users");
 					while($row = mysqli_fetch_array($result)) {
 				?>
-      <img src="upload/<?=$row['pp']?>" class="img-fluid rounded-circle" alt="Rounded Image" style="  width:150px; height:150px;">
+      <img src="upload/<?=$user_data['pp']?>" class="img-fluid rounded-circle" alt="Rounded Image" style="  width:150px; height:150px;">
             <br>
       <?php
 
@@ -86,7 +83,7 @@
 
         if($result = mysqli_query($con, $query)) {
 
-          $row = mysqli_fetch_assoc($result);
+          $user_data = mysqli_fetch_assoc($result);
 
         
           echo "<div><h4><strong>Name:</strong> <span>".$user_data['user_name']."</span></h2></div>";
@@ -106,8 +103,22 @@
       <div class="row">
       <div class="text-center col">
       <div class="col-md-12">
+        <form  enctype="multipart/form-data" method="post" action="backend/changepp.php">
+      <h4 class="form-label">Update Picture</h4>
+		    <input type="file" 
+		           class="form-control"
+		           name="pp">
+      </div>        <br>
+        <div class="col-md-12">
+        <button class="btn btn-lg btn-primary btn-block btn-signin" type="submit">Upload New Picture</button>
+        </div>
+      </form>
+               <br>
+               
+      <div class="col-md-12">
         <a class="btn btn-lg btn-primary btn-block btn-signin" href="changepassword.php">Change Password</a>
         </div>
+        
         <br>
         <div class="col-md-12">
         <a class="btn btn-lg btn-primary btn-block btn-signin" href="logout.php">Log Out</a>

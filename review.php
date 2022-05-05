@@ -89,6 +89,7 @@ include 'backend/database.php';
 					$i=1;
 					while($row = mysqli_fetch_array($result)) {
 				?>
+        
 				<tr id="<?php echo $row["review_id"]; ?>">
 					<h5><?php echo $row["name"]; ?></h5>
 					<div class="text-justify"><td><?php echo $row["user_review"]; ?></td></div>

@@ -26,17 +26,17 @@ function random_num($length)
 {
 
 	$text = "";
-	if($length < 5)
+	if($length < 6)
 	{
-		$length = 5;
+		$length = 6;
 	}
 
-	$len = rand(4,$length);
+	$len = rand(9,$length);
 
 	for ($i=0; $i < $len; $i++) { 
 		# code...
 
-		$text .= rand(0,9);
+		$text .= rand(1,9);
 	}
 
 	return $text;

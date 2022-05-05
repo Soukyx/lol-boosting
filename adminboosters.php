@@ -145,6 +145,7 @@ include 'backend/database.php';
 							<label>DESCRIPTION</label>
 							<input type="text" id="email" name="descr" class="form-control" required>
 						</div>				
+						
 					</div>
 					<div class="modal-footer">
 					    <input type="hidden" value="1" name="type">

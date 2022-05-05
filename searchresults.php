@@ -15,10 +15,11 @@ $user_data = check_login($con);
 <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/profile.css">
+    <link rel="stylesheet" href="css/admin.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="ajax/admin.js"></script>
     <title>SPSUL - lol boosting</title>
 
 </head>
@@ -90,6 +91,10 @@ $user_data = check_login($con);
     ?>
   
 <br>
+<div class="col-md-4">
+      <a class="btn btn-lg btn-primary btn-block" href="#deleteUserModal" class="delete" data-id="<?php echo $row["id"]; ?>" data-toggle="modal">Delete User</a>
+    </div>
+    <br>
   <div class="col-md-12">
       <a class="btn btn-lg btn-primary btn-block" href="adminindex.php">Exit</a>
     </div>

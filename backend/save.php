@@ -5,6 +5,7 @@ if(count($_POST)>0){
 	if($_POST['type']==1){
 		$staff_name=$_POST['staff_name'];
 		$descr=$_POST['descr'];
+			
 		$sql = "insert into staff (staff_name, descr) values ('$staff_name','$descr')";
 		if (mysqli_query($conn, $sql)) {
 			echo json_encode(array("statusCode"=>200));
