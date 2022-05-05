@@ -1,6 +1,7 @@
 .navbar {
     margin-bottom: 0;
     border-radius: 0;
+    background-color:rgba(0, 0, 0, 0.7);
     }
   .container{
     min-height: 100%;
@@ -26,8 +27,12 @@
   h1 {
     color: #d5d5d5;
   }
+  .inf {
+    color: #d5d5d5; 
+    font-size:large;    
+  }
   p {
-    color: #d5d5d5;     
+    color: #d5d5d5;  
   }
   label{
     color: #d5d5d5;
@@ -39,8 +44,7 @@
     padding: 20px 25px 30px;
     margin: 0 auto 25px;
     margin-top: 5%;
-    background-color:black;
-    opacity: 90%;
+    background-color:rgb(22, 22, 22);
     border-radius: 30px;
 }
   #myPage {

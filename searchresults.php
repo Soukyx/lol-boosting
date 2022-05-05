@@ -2,7 +2,7 @@
 
 
 session_start();
-
+include 'backend/database.php';
 include("connection.php");
 include("functions.php");
 
@@ -28,8 +28,30 @@ $user_data = check_login($con);
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;">
-<div class="container">
-    <div id="card" class="card card-container">
+    <!-- navbar -->
+    <nav class="navbar navbar-expand-md navbar-dark">
+      <!--logo stranky=odkaz na homepage-->
+      <a class="navbar-brand navbar-nav" href="adminindex.php">
+        <img id="logo" src="logo.png" alt="logo" style="width:32px;">Shinobi | Boosting
+      </a>
+            <!--navbar a collapse pri zmenseni stranky-->
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-xl-end" id="collapsibleNavbar">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="adminboosters.php">Our Boosters</a>
+        </li>
+        <li class="nav-item" id="review">
+          <a class="nav-link" href="adminreview.php">Review</a>
+        </li>
+        <li class="nav-item " id="login">
+          <a class="nav-link" href="adminindex.php">Profile</a>
+        </li>
+      </ul>
+    </nav>
+    
 
   <section>
 
@@ -39,10 +61,12 @@ $user_data = check_login($con);
 
         $s = $_GET['searchbox'];
 
-        $query = "SELECT user_name, email, usertype FROM users WHERE user_name = '$s' OR user_name = '$s' ORDER BY id DESC LIMIT 5";
+        $query = "SELECT user_name, email, usertype, pp FROM users WHERE user_name = '$s' OR user_name = '$s' ORDER BY id DESC LIMIT 5";
     ?>
 
     <div class="container">
+    <div id="card" class="card card-container col-md-4">
+    <div class="text-center">
       <h4 class="title">Search results for "<?php echo $s; ?>".</h4>
 
 
@@ -65,13 +89,20 @@ $user_data = check_login($con);
             while($user_data = mysqli_fetch_assoc($result)) {
 
           ?>
+      <?php
 
+				?>
+        <br>
               <li>
-                <div class="result-box box-left">
-                  <div class='info'><p>Name: <?php echo $user_data['user_name']; ?></p></div>
-                  <div class='info'><p>Email: <?php echo $user_data['email']; ?></p></div>
-                  <div class='info'><p>Usertype: <?php echo $user_data['usertype']; ?></p></div>
-                </div>
+   
+
+                  <div class='info'><img src="upload/<?=$user_data['pp']?>" class="img-fluid rounded-circle" alt="Rounded Image" style="width:150px; height:150px;"></div>
+                  <br>
+                  <div class='info'><p class="inf">Name: <?php echo $user_data['user_name']; ?></p></div>
+                  <div class='info'><p class="inf">Email: <?php echo $user_data['email']; ?></p></div>
+                  <div class='info'><p class="inf">Usertype: <?php echo $user_data['usertype']; ?></p></div>
+
+          
               </li>
 
           <?php
@@ -91,19 +122,18 @@ $user_data = check_login($con);
     ?>
   
 <br>
-<div class="col-md-4">
-      <a class="btn btn-lg btn-primary btn-block" href="#deleteUserModal" class="delete" data-id="<?php echo $row["id"]; ?>" data-toggle="modal">Delete User</a>
+<div class="col-md-12">
+      <a class="btn btn-lg btn-primary btn-block" href="#deleteUserModal" class="delete" data-id="<?php echo $row["user_id"]; ?>" data-toggle="modal">Delete User</a>
     </div>
     <br>
   <div class="col-md-12">
       <a class="btn btn-lg btn-primary btn-block" href="adminindex.php">Exit</a>
     </div>
-  
-
+    </div>
+    </div>
   </section>
 
-    </div>
-    </div>
+
     <footer class="container-fluid text-center">
       <p>League of Legends is registered trademark of Riot Games, Inc. We are in no way affiliated with,
          associated with or endorsed by Riot Games, Inc.

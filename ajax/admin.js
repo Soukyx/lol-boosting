@@ -5,7 +5,7 @@ $(document).on("click", "#delete", function() {
         cache: false,
         data:{
             type:3,
-            id: $("#id_d").val()
+            user_id: $("#id_d").val()
         },
         success: function(dataResult){
                 $('#deleteUserModal').modal('hide');
