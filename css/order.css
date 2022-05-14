@@ -1,3 +1,65 @@
+.col img{
+  height:100%;
+  width: 100%;
+  cursor: pointer;
+  transition: transform 1s;
+  object-fit: cover;
+}
+.col h5{
+  color: #d5d5d5;
+  height:100%;
+  width: 200px;
+  cursor: pointer;
+  transition: transform 1s;
+  object-fit: cover;
+  background-color: rgb(33,33,33);
+  border-radius: 5px;
+  padding: 15px 15px 15px 15px;
+}
+.col h4{
+  color: #d5d5d5;
+  height:65px;
+  width: 65px;
+  cursor: pointer;
+  transition: transform 1s;
+  object-fit: cover;
+  background-color: rgb(33,33,33);
+  border-radius: 5px;
+  padding: 15px 15px 15px 15px;
+}
+.col label{
+  overflow: hidden;
+  position: relative;
+}
+.imgbgchk:checked + label>.tick_container{
+  opacity: 1;
+  
+}
+.imgbgchk:checked + label>img{
+  transform: scale(1.25);
+  opacity: 0.3;
+}
+.imgbgchk:checked + label>h4{
+  transform: scale(1.25);
+  opacity: 0.3;
+}
+.imgbgchk:checked + label>h5{
+  transform: scale(1.25);
+  opacity: 0.3;
+}
+.tick_container {
+  color: #33aaff;
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  cursor: pointer;
+  text-align: center;
+}
+
 h4 {
   color: #33aaff;
   text-align: center;
@@ -9,6 +71,9 @@ h4 {
   h1 {
     color: #33aaff;
   }
+  h3 {
+    color: #d5d5d5;;
+  }
   footer {
     color: white;
     position: relative;
@@ -19,6 +84,33 @@ h4 {
     border-color: #d5d5d5;
     border-width: 1px;
     }
+    #card {
+      padding: 20px 25px 30px;
+      margin-top: 5%;
+      margin-bottom: 5%;
+      background-color:rgb(22, 22, 22);   
+      border-bottom-left-radius: 25px;
+      border-top-left-radius: 25px;
+  }
+  #nadpis3 {
+    color: white;
+  }
+  hr {
+    background-color:#d5d5d5;
+    width:100%;
+  }
+  #card2 {
+    padding: 20px 25px 30px;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    background-color:rgb(44, 44, 44);   
+    border-bottom-right-radius: 25px;
+    border-top-right-radius: 25px;
+}
+p{
+  color: #d5d5d5;
+  font-weight: 250;
+}
 #myPage {
   background-color: black;
   }
@@ -32,6 +124,23 @@ h4 {
   }
 .container{
   margin-bottom: 5%;
+}
+#nadpis {
+  color: #d5d5d5;
+}
+#homelogo {
+  width: 180px;
+  
+}
+#podnadpis {
+  color: #d5d5d5;
+  font-size: 20px;
+  font-weight: 200;
+}
+#podnadpis2 {
+  color: #d5d5d5;
+  font-size: 30px;
+  font-weight: 200;
 }
 #cr{
   margin-top: 5%;

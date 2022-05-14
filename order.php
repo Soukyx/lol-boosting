@@ -12,6 +12,7 @@ session_start();
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/order.css">
+    <script src="https://kit.fontawesome.com/da437b991a.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
@@ -24,9 +25,9 @@ session_start();
     background-size: cover;"
     >
     <!-- navbar -->
-    <div style="background-color:rgba(0, 0, 0, 0.7);">
-    <nav class="navbar navbar-expand-md navbar-dark" style="  border-bottom:solid 1px #ccc;
-    border-color: white;"> 
+    <div style="background-color:rgba(0, 0, 0, 0.7); border-bottom:solid 1px #ccc;
+    border-color: white;">
+    <nav class="navbar navbar-expand-md navbar-dark"> 
       <!--logo stranky=odkaz na homepage-->
       <a class="navbar-brand navbar-nav" href="index.php">
         <img id="logo" src="logo.png" alt="logo" style="width:32px;">Shinobi | Boosting
@@ -58,114 +59,411 @@ session_start();
       </ul>
       </div>
     </nav>
-    <!--konec navbaru-->
-    <!--contaier-->
-   <!--contaier-->
-   <div style="background-color:rgba(0, 0, 0, 0.8);">
-    <div class="container">
+    <br>
+    <img src="logo.png" id="homelogo" class="mx-auto d-block">
       <br>
+    <h1 id="nadpis" class="mx-auto text-center">Shinobi | Boosting</h1>
+    <p id="podnadpis" class="mx-auto text-center">League of Legends Elo Boosting</p>
+      <br>
+    <h3 id="podnadpis2" class="mx-auto text-center">The booster will login and play from your account until you reach your desired rank.</h3>
+    
+    <br>
+    <br>
+</div>
+<div style="background-color:rgb(33, 33, 33); margin: auto;" class="row">
+
+<br>
+      <div id="card2" class="card card-container col-md-7 h-50">
+<div class="row text-center">
+<div class="col-md-10 offset-md-1 col-lg-8 offset-lg-2">
+<h1 id="nadpis">Why choose us?</h1>
+<br>
+<br>
+</div>
+
+</div>
+
+<div class="row gx-lg-8 gx-xl-12 gy-8">
+<div class="col-md-6">
+<div class="d-flex flex-row">
+<div class="col-md-2">
+<h1>
+<i class="fa-fw fa fa-user-shield"></i>
+</h1> </div>
+<div>
+<h4 class="float-left" id="nadpis3">Appear Offline</h4>
+<p class="float-left">No one on your friend list will see the booster playing on your account.</p>
+</div>
+</div>
+</div>
+
+<div class="col-md-6">
+<div class="d-flex flex-row">
+<div class="col-md-2">
+<h1>
+<i class="fa-fw fa fa-globe"></i>
+</h1></div>
+<div>
+<h4 class="float-left" id="nadpis3">VPN Encryption</h4>
+<p class="float-left">Keep your account safe with our free vpn encryption services.</p>
+</div>
+</div>
+</div>
+
+<div class="col-md-6">
+<div class="d-flex flex-row">
+<div class="col-md-2">
+<h1>
+<i class="fa-fw fa fa-map"></i>
+</h1>
+</div>
+<div>
+<h4 class="float-left" id="nadpis3">Order Tracking</h4>
+<p class="float-left">Track your elo boost's progress easily on your personal client area.</p>
+</div>
+</div>
+</div>
+
+<div class="col-md-6">
+<div class="d-flex flex-row">
+<div class="col-md-2">
+<h1>
+<i class="fa-fw fa fa-sliders"></i>
+</h1>
+</div>
+<div>
+<h4 class="float-left" id="nadpis3">Free Extra Options</h4>
+<p class="float-left">Custom roles and champions, offline mode, VPN and much more for free.</p>
+</div>
+</div>
+</div>
+
+<div class="col-md-6">
+<div class="d-flex flex-row">
+<div class="col-md-2">
+<h1>
+<i class="fa-fw fa fa-percent"></i>
+</h1>
+</div>
+<div>
+<h4 class="float-left" id="nadpis3">Loyalty Rewards</h4>
+<p class="float-left">Win free LoL accounts, exclusive discounts, and insane giveaways.</p>
+</div>
+</div>
+</div>
+
+<div class="col-md-6">
+<div class="d-flex flex-row">
+<div class="col-md-2">
+<h1>
+<i class="fa-fw fa fa-laptop"></i>
+</h1>
+</div>
+<div>
+<h4 class="float-left" id="nadpis3">24/7 Live Support</h4>
+<p class="float-left">Our customer support team is here for you 24/7/365.</p>
+</div>
+</div>
+</div>
+
+
+</div>
+      </div>
+      <div class="col-md-1"></div>
+    <!--konec navbaru-->
+      <div id="card" class="card card-container col-md-4">
+        <div class="text-center" style="margin: auto;">
       <!--formy na zadání požadavků u objednávky-->
       <form>
+      <div class="form-group col-md-12" style="margin: auto;">
         <H1 id="cr" class="text-center">Current Rank</H1>
+        <h5 style="font-weight:200; color: #d5d5d5;;">Please select your Current Rank and Division.</h5>
         <br>
-        <div class="form-group row">
-          <div class="form-group col-md-3">
-          </div>
-          <div class="form-group col-md-3">
-            <select class="form-control" id="crank" onchange="calculate()">
-              <option>Select Rank*</option>
-              <option id="itemprice" value="100.000">Iron</option>
-              <option id="itemprice" value="200.000">bronze</option>
-              <option id="itemprice" value="300.000">Silver</option>
-              <option id="itemprice" value="400.000">Gold</option>
-              <option id="itemprice" value="500.000">Platinum</option>
-              <option id="itemprice" value="600.000">Diamond</option>
-            </select>
-          </div>
-          <div class="form-group col-md-3">
-            <select id="cdivision" onchange="calculate()" class="form-control">
-              <option>Select Division*</option>
-              <option id="itemprice" value="4.0">IV</option>
-              <option id="itemprice" value="3.0">III</option>
-              <option id="itemprice" value="2.0">II</option>
-              <option id="itemprice" value="1.0">I</option>
-            </select>
-          </div>
-          <div class="form-group col-md-3"> 
-          </div>
-        </div>    
-      </form>
-      <form>
+      </div>
+<div class="col-md-12 row" style="margin: auto;">
+<div class="col text-center col-md-2">
+<input class="d-none imgbgchk" type="radio" name="desired-tier" id="ciron" value="100.000" onchange="calculate()" checked="checked">
+<label for="ciron"><img class="rank-select-mini" src="https://www.gameboost.eu/assets/img/ranks/lol/mini/iron.png"><div class="tick_container">
+              <div class="tick"><i class="fa fa-check"></i></div>
+            </div>
+</label>
+</div>
+<div class="col text-center col-md-2">
+<input class="d-none imgbgchk" type="radio" name="desired-tier" id="cbronze" value="200.000" onchange="calculate()" >
+<label for="cbronze"><img class="rank-select-mini" src="https://www.gameboost.eu/assets/img/ranks/lol/mini/bronze.png"><div class="tick_container">
+              <div class="tick"><i class="fa fa-check"></i></div>
+            </div>
+</label>
+</div>
+<div class="col text-center col-md-2">
+<input class="d-none imgbgchk" type="radio" name="desired-tier" id="csilver" value="300.000" onchange="calculate()" >
+<label for="csilver"><img class="rank-select-mini" src="https://www.gameboost.eu/assets/img/ranks/lol/mini/silver.png"><div class="tick_container">
+              <div class="tick"><i class="fa fa-check"></i></div>
+            </div>
+</label>
+</div>
+<div class="col text-center col-md-2">
+<input class="d-none imgbgchk" type="radio" name="desired-tier" id="cgold" value="400.000" onchange="calculate()" >
+<label for="cgold"><img class="rank-select-mini" src="https://www.gameboost.eu/assets/img/ranks/lol/mini/gold.png"><div class="tick_container">
+              <div class="tick"><i class="fa fa-check"></i></div>
+            </div>
+</label>
+</div>
+<div class="col text-center col-md-2">
+<input class="d-none imgbgchk" type="radio" name="desired-tier" id="cplatinum" value="500.000" onchange="calculate()" >
+<label for="cplatinum"><img class="rank-select-mini" src="https://www.gameboost.eu/assets/img/ranks/lol/mini/platinum.png"><div class="tick_container">
+              <div class="tick"><i class="fa fa-check"></i></div>
+            </div>
+</label>
+</div>
+<div class="col text-center col-md-2">
+<input class="d-none imgbgchk" type="radio" name="desired-tier" id="cdiamond" value="600.000" onchange="calculate()" >
+<label for="cdiamond">
+  <img class="rank-select-mini" src="https://www.gameboost.eu/assets/img/ranks/lol/mini/diamond.png">
+  <div class="tick_container">
+              <div class="tick"><i class="fa fa-check"></i></div>
+            </div>
+</label>
+</div>
+<br>
+</div>
+<br>
+<div class="col-md-12 row" id="desired-divisions" style="margin: auto;">
+<div class="col text-center col-md-3">
+<input class="d-none imgbgchk" type="radio" name="desired-division" value="4.0" id="civ" onchange="calculate()" checked>
+<label for="civ">  
+<h4>IV</h4>
+<div class="tick_container">
+              <div class="tick"><i class="fa fa-check"></i></div>
+            </div>
+</label>
+</Div>
+<div class="col text-center col-md-3">
+<input class="d-none imgbgchk" type="radio" name="desired-division" value="3.0" id="ciii" onchange="calculate()" >  
+<label for="ciii">   
+<h4>III</h4>
+<div class="tick_container">
+              <div class="tick"><i class="fa fa-check"></i></div>
+            </div>
+</label>
+</div>
+<div class="col text-center col-md-3">
+<input class="d-none imgbgchk" type="radio" name="desired-division" value="2.0" id="cii" onchange="calculate()" > 
+<label for="cii">  
+<h4>II</h4>  
+<div class="tick_container">
+              <div class="tick"><i class="fa fa-check"></i></div>
+            </div>
+</label>
+</div>
+<div class="col text-center col-md-3">
+<input class="d-none imgbgchk" type="radio" name="desired-division" value="1.0" id="ci" onchange="calculate()" >
+<label for="ci">  
+<h4>I</h4>  
+<div class="tick_container">
+              <div class="tick"><i class="fa fa-check"></i></div>
+            </div>
+</label>
+</div>
+</div>
+<div class="col-12" style="margin: auto;">
+<h4>Queue Type</h4>
+<br>
+<div class="row col-md-12" style="margin: auto;">
+  <div class="col text-centercol-md-4">
+<input type="radio" name="queueType" id="solo-duo" value="solo_duo" class="d-none imgbgchk" checked/>
+<label for="solo-duo"><h5>Solo-Duo</h5><div class="tick_container">
+              <div class="tick"><i class="fa fa-check"></i></div>
+            </div>
+</label>
+</div>
+<div class="col text-centercol-md-4">
+<input type="radio" name="queueType" id="flex" value="flex" class="d-none imgbgchk" />
+<label for="flex"><h5>Flex</h5><div class="tick_container">
+              <div class="tick"><i class="fa fa-check"></i></div>
+            </div>
+</label>
+</div>
+</div>
+<br>
+<br>
+<hr>
+<br>
+
+      <div class="form-group col-md-12">
         <H1 class="text-center">Desired Rank</H1>
-        <br>
-        <div class="form-group row">
-          <div class="form-group col-md-3"> 
-          </div>
-          <div class="form-group col-md-3">
-            <select class="form-control" id="rank" onchange="calculate()">
-              <option>Select Rank*</option>
-              <option id="itemprice" value="100.000">Iron</option>
-              <option id="itemprice" value="200.000">bronze</option>
-              <option id="itemprice" value="300.000">Silver</option>
-              <option id="itemprice" value="400.000">Gold</option>
-              <option id="itemprice" value="500.000">Platinum</option>
-              <option id="itemprice" value="600.000">Diamond</option>
-            </select>
-          </div>
-          <div class="form-group col-md-3">
-            <select class="form-control" id="division" onchange="calculate()">
-              <option>Select Division*</option>
-              <option id="itemprice" value="4.0">IV</option>
-              <option id="itemprice" value="3.0">III</option>
-              <option id="itemprice" value="2.0">II</option>
-              <option id="itemprice" value="1.0">I</option>
-          </select>
-          </div>
+        <h5 style="font-weight:200;color: #d5d5d5;">Please select your Desired Rank and Division.</h5>
+      </div>
+      <div class="col-md-12 row" style="margin: auto;">
+ 
+      <div class="col text-center col-md-2">
+<input class="d-none imgbgchk" type="radio" name="current-tier" id="iron" value="100.000" onchange="calculate()" checked>
+<label for="iron">
+<img class="rank-select-mini" src="https://www.gameboost.eu/assets/img/ranks/lol/mini/iron.png">
+<div class="tick_container">
+              <div class="tick"><i class="fa fa-check"></i></div>
+            </div>
+</label>
+</div>
+
+  <div class="col text-center col-md-2">
+<input class="d-none imgbgchk" type="radio" name="current-tier" id="bronze" value="200.000" onchange="calculate()">
+<label for="bronze">
+<img class="rank-select-mini" src="https://www.gameboost.eu/assets/img/ranks/lol/mini/bronze.png">
+<div class="tick_container">
+              <div class="tick"><i class="fa fa-check"></i></div>
+            </div>
+</label>
+</div>
+
+<div class="col text-center col-md-2">
+<input class="d-none imgbgchk" type="radio" name="current-tier" id="silver" value="300.000" onchange="calculate()">
+<label for="silver">
+<img class="rank-select-mini" src="https://www.gameboost.eu/assets/img/ranks/lol/mini/silver.png">
+<div class="tick_container">
+              <div class="tick"><i class="fa fa-check"></i></div>
+            </div>
+</label>
+</div>
+<div class="col text-center col-md-2">
+<input class="d-none imgbgchk" type="radio" name="current-tier" id="gold" value="400.000" onchange="calculate()">
+<label for="gold">
+<img class="rank-select-mini" src="https://www.gameboost.eu/assets/img/ranks/lol/mini/gold.png">
+<div class="tick_container">
+              <div class="tick"><i class="fa fa-check"></i></div>
+            </div>
+</label>
+</div>
+<div class="col text-center col-md-2">
+<input class="d-none imgbgchk" type="radio" name="current-tier" id="platinum" value="500.000" onchange="calculate()">
+<label for="platinum">
+<img class="rank-select-mini" src="https://www.gameboost.eu/assets/img/ranks/lol/mini/platinum.png">
+<div class="tick_container">
+              <div class="tick"><i class="fa fa-check"></i></div>
+            </div>
+</label>
+</div>
+<div class="col text-center col-md-2">
+<input class="d-none imgbgchk" type="radio" name="current-tier" id="diamond" value="600.000" onchange="calculate()">
+<label for="diamond">
+<img class="rank-select-mini" src="https://www.gameboost.eu/assets/img/ranks/lol/mini/diamond.png">
+<div class="tick_container">
+              <div class="tick"><i class="fa fa-check"></i></div>
+            </div>
+</label>
+</div>
+</div>
+<br>
+<div class="col-md-12 row" id="current-divisions" style="margin: auto;">
+<div class="col text-center col-md-3">
+<input class="d-none imgbgchk" type="radio" name="current-division" value="4.0" id="iv" onchange="calculate()" checked>  
+<label for="iv">
+<h4>IV</h4>
+<div class="tick_container">
+              <div class="tick"><i class="fa fa-check"></i></div>
+            </div>
+</label>
+</Div>
+<div class="col text-center col-md-3">
+<input class="d-none imgbgchk" type="radio" name="current-division" value="3.0" id="iii" onchange="calculate()" >  
+<label for="iii">   <h4>III</h4>
+<div class="tick_container">
+              <div class="tick"><i class="fa fa-check"></i></div>
+            </div>
+</label>
+</div>
+<div class="col text-center col-md-3">
+<input class="d-none imgbgchk" type="radio" name="current-division" value="2.0" id="ii" onchange="calculate()" > 
+<label for="ii">  
+<h4>II</h4>  
+<div class="tick_container">
+              <div class="tick"><i class="fa fa-check"></i></div>
+            </div>
+</label>
+</div>
+<div class="col text-center col-md-3">
+<input class="d-none imgbgchk" type="radio" name="current-division" value="1.0" id="i" onchange="calculate()" >
+<label for="i">  
+<h4>I</h4>  
+<div class="tick_container">
+              <div class="tick"><i class="fa fa-check"></i></div>
+            </div>
+</label>
+</div>
+</div>
+<div class="form-group col-md-12">
+        <h4>Server</h4>
+      </div>
+        <div class="form-group row col-md-12" style="margin: auto;">
+        <div class="form-group col-md-2">
         </div>
-        <div class="form-group col-md-3"> 
-        </div>
-      </form>
-      <form>
-        <h1 class="text-center">Options</h1>
-        <br>
-        <div class="form-group row">
-          <div class="form-group col-md-3"> 
-          </div>
-          <div class="form-group col-md-3">
-            <select class="form-control">
+          <div class="form-group col-md-8">
+            <select class="form-control text-center" style="background-color: rgb(33,33,33); border-color: rgb(33,33,33); color: #d5d5d5;">
               <option>Select Server*</option>
               <option>NA</option>
               <option>EUW</option>
               <option>EUNE</option>
             </select>
           </div>
-          <div class="form-group col-md-3">
-            <select class="form-control">
-              <option>Select Queue*</option>
-              <option>Ranked Solo/Duo</option>
-              <option>Ranked Flex</option>
-            </select>
-          </div>
+          <div class="form-group col-md-2">
+          </Div>
         </div>
-        <br>
-        <h4><input type="text" id="result" value="" readonly> $</h4>
+<hr>
+        <div class="form-group col-md-12" style="margin: auto;">
+        <h4>Your price:</h4>
+        <div class="row col-md-12">
+        <div class="col-md-4">
+        </div>
+        <div class="col-md-6 row">
+        <input class="col-md-10" type="text" id="result" value="" readonly><h4 class="col-md-2" >$</h4>
+        </div>
+        <div class="col-md-4">
+        </div>
+        </div>
+        </div>
         <br>
         <br>
         <div class="form-group row">
-          <div class="form-group col-md-4"> 
-          </div>    
-        <div class="col-md-4">
-        <button class="btn btn-lg btn-primary btn-block btn-signin" type="submit">Order</button>
+        <div class="col-md-12">
+<!-- Replace "test" with your own sandbox Business account app client ID -->
+<script src="https://www.paypal.com/sdk/js?client-id=AfSn5KBMa2airN1Eyn-8WCwJQIX0fKt0mUeUN7Os1gmd-VPSZftT0dO2WTgZSrxIo82cWRXsS1mXGlh5&currency=USD"></script>
+    <!-- Set up a container element for the button -->
+    <div id="paypal-button-container"></div>
+    <script>
+       var amountt= document.getElementById("result").value; 
+        console.log(amountt);
+      paypal.Buttons({
+        // Sets up the transaction when a payment button is clicked
+        createOrder: (data, actions) => {
+          return actions.order.create({
+            purchase_units: [{
+              amount: {
+                value: result // Can also reference a variable or function
+              }
+            }]
+          });
+        },
+        // Finalize the transaction after payer approval
+        onApprove: (data, actions) => {
+          return actions.order.capture().then(function(orderData) {
+            // Successful capture! For dev/demo purposes:
+            console.log('Capture result', orderData, JSON.stringify(orderData, null, 2));
+            const transaction = orderData.purchase_units[0].payments.captures[0];
+            alert(`Transaction ${transaction.status}: ${transaction.id}\n\nSee console for all available details`);
+            // When ready to go live, remove the alert and show a success message within this page. For example:
+            // const element = document.getElementById('paypal-button-container');
+            // element.innerHTML = '<h3>Thank you for your payment!</h3>';
+            // Or go to another URL:  actions.redirect('thank_you.html');
+          });
+        }
+      }).render('#paypal-button-container');
+    </script>
         </div>
-        <div class="col-md-4"> 
         </div>
-        </div>
-        </div>    
-        <br>
-        <br>
-        <br>   
-        <br>
+           
+
       </form>
+    </div>
       <script type="text/javascript">
         function calculate(price){
             var crank = document.getElementById("crank").value || 0;
@@ -178,26 +476,30 @@ session_start();
             cdivison = parseFloat(cdivision).toFixed(0);
             division = parseFloat(division).toFixed(0); 
 
-            var result = parseFloat((rank-crank)+(7*cdivision)-(7*division)).toFixed(0);
-            if (result<0){
-              document.getElementById("NaN").value=result;}             
-            else {
-              document.getElementById("result").value=result;}
+            for(var i=parseFloat((rank-crank)+(7*cdivision)-(7*division)).toFixed(0); i < i.length; i++){
+
             }
+                          if (i++>0){
+              document.getElementById("result").value=i++;}             
+            else {
+              document.getElementById("result").placeholder="Select value";}
+        }   
+
     </script>
-    </div>
   </div>
-</div>
+  <br>
+          </Div>
+      </div>
     <!--footer-->
-    <div style="background-color:rgba(0, 0, 0, 0.7);">
-    <footer class="container-fluid text-center bg-transparent">
+    <div style="background-color:black;">
+    <footer class="container-fluid text-center bg-transparent position-sticky">
+      <br>
       <p>League of Legends is registered trademark of Riot Games, Inc. We are in no way affiliated with,
          associated with or endorsed by Riot Games, Inc.
           <br>
           © 2021-2023 - ShinobiBoosting. All Right Reserved.
       </p>
     </footer>
-  </div>
-  </div>
+          </div>
 </body>
 </html>
