@@ -59,7 +59,8 @@ include 'mail.php';
         </li>
       </ul>
       </div>
-    </nav>
+</nav>
+    
     <!--konec navbaru-->
     <div class="container">
 <!--zacatek kontakt formu-->
@@ -72,7 +73,7 @@ include 'mail.php';
               <div class="col-md-12 mb-md-0 mb-5">
                   <form id="contact-form" name="contact-form" action="mail.php" method="POST">
                       <div class="row">   
-                          <!--jmeno-->
+                          <!--jmeno-->  
                           <div class="col-md-6">
                               <div class="md-form mb-0">
                                 <label for="name" class="">Your name</label>
@@ -109,6 +110,15 @@ include 'mail.php';
       
                           </div>
                       </div>
+                      <br>
+                      <div class="form-group">
+            <input type="text" name="vercode" class="form-control" placeholder="Verfication Code" required="required">
+        </div>
+        <div class="form-group small clearfix">
+            <label class="checkbox-inline">Verification Code</label>
+            &nbsp;&nbsp;<img src="backend/captcha.php" >
+        </div> 
+
                       <br>
                       <!--odeslat-->
                       <div class="text-center">

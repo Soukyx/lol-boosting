@@ -17,7 +17,15 @@
     border-top: solid;
     border-color: #d5d5d5;
     border-width: 1px;
-    }    
+    } 
+    #sb {
+      color: #d5d5d5;
+    }   
+    #searchresult{
+    background-color:rgb(50, 50, 50);
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    }
   #homelogo {
     width: 180px;
   }

@@ -77,11 +77,13 @@
   <input type="text" class="form-control col-md-12" name="searchbox" id="searchbox" placeholder="Search users" required autocomplete="off">
     <div class="input-group-append">
       <button class="btn btn-secondary" name="search" value="Search" type="submit">
-        <i class="fa fa-search"></i>
+        <i id="sb" class="fa fa-search"></i>
       </button>
     </div>
   </div>
-              <div class="search-results hide"></div>
+  
+              <div id="searchresult" class="search-results hide"></div>
+              
 
             </div>
             

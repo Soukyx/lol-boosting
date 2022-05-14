@@ -130,19 +130,19 @@ include 'backend/database.php';
 	<!-- Add Modal HTML -->
 	<div id="addEmployeeModal" class="modal fade">
 		<div class="modal-dialog">
-			<div class="modal-content">
+			<div class="modal-content"  style="background-color: rgb(22, 22, 22);">
 				<form id="user_form">
 					<div class="modal-header">						
-						<h4 class="modal-title">Add User</h4>
+						<h4 class="modal-title" style="color: #d5d5d5;">Add User</h4>
 						<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
 					</div>
 					<div class="modal-body">					
 						<div class="form-group">
-							<label>NAME</label>
+							<label  style="color: #d5d5d5;">NAME</label>
 							<input type="text" id="name" name="staff_name" class="form-control" required>
 						</div>
 						<div class="form-group">
-							<label>DESCRIPTION</label>
+							<label  style="color: #d5d5d5;">DESCRIPTION</label>
 							<input type="text" id="email" name="descr" class="form-control" required>
 						</div>				
 						
@@ -159,20 +159,20 @@ include 'backend/database.php';
 	<!-- Edit Modal HTML -->
 	<div id="editEmployeeModal" class="modal fade">
 		<div class="modal-dialog">
-			<div class="modal-content">
+			<div class="modal-content"  style="background-color: rgb(22, 22, 22);">
 				<form id="update_form">
 					<div class="modal-header">						
-						<h4 class="modal-title">Edit User</h4>
+						<h4 class="modal-title"  style="color: #d5d5d5;">Edit User</h4>
 						<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
 					</div>
 					<div class="modal-body">
 						<input type="hidden" id="id_u" name="staff_id" class="form-control" required>					
 						<div class="form-group">
-							<label>Name</label>
+							<label  style="color: #d5d5d5;">Name</label>
 							<input type="text" id="name_u" name="staff_name" class="form-control" required>
 						</div>
 						<div class="form-group">
-							<label>DESCRIPTION</label>
+							<label style="color: #d5d5d5;">DESCRIPTION</label>
 							<input type="text" id="email_u" name="descr" class="form-control" required>
 						</div>				
 					</div>
@@ -188,11 +188,11 @@ include 'backend/database.php';
 	<!-- Delete Modal HTML -->
 	<div id="deleteEmployeeModal" class="modal fade">
 		<div class="modal-dialog">
-			<div class="modal-content">
+			<div class="modal-content"  style="background-color: rgb(22, 22, 22);">
 				<form>
 						
 					<div class="modal-header">						
-						<h4 class="modal-title">Delete Employee</h4>
+						<h4 class="modal-title" style="color: #d5d5d5;">Delete Employee</h4>
 						<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
 					</div>
 					<div class="modal-body">
@@ -201,7 +201,7 @@ include 'backend/database.php';
 						<p class="text-warning"><small>This action cannot be undone.</small></p>
 					</div>
 					<div class="modal-footer">
-						<input type="button" class="btn btn-default" data-dismiss="modal" value="Cancel">
+						<input type="button" class="btn btn-default" style="color: #d5d5d5;" data-dismiss="modal" value="Cancel">
 						<button type="button" class="btn btn-danger" id="delete">Delete</button>
 					</div>
 				</form>

@@ -106,15 +106,15 @@ include 'backend/database.php';
 	<!-- Add Modal HTML -->
 	<div id="addEmployeeModal" class="modal fade">
 		<div class="modal-dialog">
-			<div class="modal-content">
+			<div class="modal-content"  style="background-color: rgb(22, 22, 22);">
 				<form id="user_form">
 					<div class="modal-header">						
-						<h4 class="modal-title">Add Review</h4>
+						<h4 class="modal-title" style="color: #d5d5d5;">Add Review</h4>
 						<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
 					</div>
 					<div class="modal-body">					
 						<div class="form-group">
-							<label>NAME</label>
+							<label style="color: #d5d5d5;">NAME</label>
 							<input type="text" id="name" name="name" value="<?php echo $user_data['user_name']; ?>" class="form-control" readonly>
 						</div>
             <section class='rating-widget'>
@@ -140,7 +140,7 @@ include 'backend/database.php';
                   </div>
       </section>
 						<div class="form-group">
-							<label>REVIEW</label>
+							<label style="color: #d5d5d5;">REVIEW</label>
 							<input type="text" id="email" name="user_review" class="form-control" required>
 						</div>				
 					</div>

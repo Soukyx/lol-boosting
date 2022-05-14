@@ -26,8 +26,8 @@ if(isset($_POST['submit'])){
     $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
     $mail->Port = '587';
 
-    $mail->setFrom('shinobiboosting@gmail.com'); // adresa co mi poslouží jako SMTP server
-    $mail->addAddress('shinobiboosting@gmail.com'); // adresa kam to bude chodit
+    $mail->setFrom('.com'); // adresa co mi poslouží jako SMTP server
+    $mail->addAddress('.com'); // adresa kam to bude chodit
 
     $mail->isHTML(true);
     $mail->Subject = $subject;

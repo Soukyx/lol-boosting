@@ -1,4 +1,5 @@
 
+
 <?php
 use PHPMailer\PHPMailer\PHPMailer;
 
@@ -15,8 +16,16 @@ if(isset($_POST['submit'])){
   $email = $_POST['email'];
   $subject = $_POST['subject'];
   $message = $_POST['message'];
+  session_start();
+	if ($_POST["vercode"] != $_SESSION["vercode"] OR $_SESSION["vercode"]=='')  {
+    echo "<script>alert('Incorrect verification code');</script>" ;
+        header("Location: contact.php");
 
- 
+    } 
+	else{
+
+	
+
     $mail->isSMTP();
     $mail->Host = 'smtp.gmail.com';
     $mail->SMTPAuth = true;
@@ -33,7 +42,9 @@ if(isset($_POST['submit'])){
     $mail->Body = "<h3>Name : $user_name <br>Email: $email <br>Message : $message</h3>";
 
     $mail->send();
-    header("Location: contact.html");
+    echo "<script>alert('Verification code match !');</script>" ;
 
+    header("Location: contact.php");
+  }
 }
 ?>

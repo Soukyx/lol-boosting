@@ -87,7 +87,6 @@ $user_data = check_login($con);
             echo "<ul class='profile-results'>";
 
             while($user_data = mysqli_fetch_assoc($result)) {
-
           ?>
       <?php
 

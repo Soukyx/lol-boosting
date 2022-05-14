@@ -15,7 +15,7 @@ include 'backend/database.php';
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
 	<title>ShinobiBoosting - Profile</title>
-  <link rel="stylesheet" href="css/boosters.css">
+  <link rel="stylesheet" href="css/review.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
@@ -25,6 +25,7 @@ include 'backend/database.php';
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 	<script src="ajax/review.js"></script>
+	<script src="ajax/star.js"></script>
 </head>
 <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="50" style="background-image: url(gwen.jpg);
     background-position: center center;
@@ -119,20 +120,42 @@ include 'backend/database.php';
 	<!-- Add Modal HTML -->
 	<div id="addEmployeeModal" class="modal fade">
 		<div class="modal-dialog">
-			<div class="modal-content">
+			<div class="modal-content" style="background-color: rgb(22, 22, 22);">
 				<form id="user_form">
 					<div class="modal-header">						
-						<h4 class="modal-title">Add User</h4>
+						<h4 class="modal-title" style="color: #d5d5d5;">Add User</h4>
 						<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
 					</div>
 					<div class="modal-body">					
 						<div class="form-group">
-							<label>NAME</label>
+							<labe  style="color: #d5d5d5;"l>NAME</label>
 							<input type="text" id="name" name="name" class="form-control" required>
 						</div>
+						<section class='rating-widget'>
+                  <!-- Rating Stars Box -->
+                  <div class='rating-stars text-center'>
+                    <ul id='stars'>
+                      <li class='star' title='Poor' data-value='1'>
+                      <i class="fa fa-star fa-fw"></i>
+                      </li>
+                      <li class='star' title='Fair' data-value='2'>
+                      <i class="fa fa-star fa-fw"></i>
+                      </li>
+                      <li class='star' title='Good' data-value='3'>
+                      <i class="fa fa-star fa-fw"></i>
+                      </li>
+                      <li class='star' title='Excellent' data-value='4'>
+                      <i class="fa fa-star fa-fw"></i>
+                      </li>
+                      <li class='star' title='WOW!!!' data-value='5'>
+                      <i class="fa fa-star fa-fw"></i>
+                      </li>
+                    </ul>
+                  </div>
+      </section>
 						<div class="form-group">
-							<label>REVIEW</label>
-							<input type="text" id="email" name="user_review" class="form-control" required>
+							<label  style="color: #d5d5d5;">REVIEW</label>
+							<input type="textarea" id="email" name="user_review" class="form-control" required>
 						</div>				
 					</div>
 					<div class="modal-footer">
@@ -145,22 +168,22 @@ include 'backend/database.php';
 		</div>
 	</div>
 <!-- Delete Modal HTML -->
-<div id="deleteEmployeeModal" class="modal fade">
-		<div class="modal-dialog">
-			<div class="modal-content">
+<div id="deleteEmployeeModal" class="modal fade" >
+		<div class="modal-dialog" >
+			<div class="modal-content"  style="background-color: rgb(22, 22, 22);">
 				<form>
 						
 					<div class="modal-header">						
-						<h4 class="modal-title">Delete Review</h4>
+						<h4 class="modal-title"style="color: #d5d5d5;">Delete Review</h4>
 						<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
 					</div>
 					<div class="modal-body">
 						<input type="hidden" id="id_d" name="review_id" class="form-control">					
-						<p>Are you sure you want to delete these Records?</p>
+						<p  style="color: #d5d5d5;">Are you sure you want to delete these Records?</p>
 						<p class="text-warning"><small>This action cannot be undone.</small></p>
 					</div>
 					<div class="modal-footer">
-						<input type="button" class="btn btn-default" data-dismiss="modal" value="Cancel">
+						<input type="button" style="color: #d5d5d5;" class="btn btn-default" data-dismiss="modal" value="Cancel">
 						<button type="button" class="btn btn-danger" id="delete">Delete</button>
 					</div>
 				</form>
