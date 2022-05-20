@@ -8,7 +8,7 @@
     padding-bottom:60px;
   }
 .card-container.card {
-    max-width: 350px;
+    max-width: 400px;
     padding: 40px 40px;
 }
 
@@ -20,22 +20,35 @@
     user-select: none;
     cursor: default;
 }
+a:hover {
+    border-color: transparent;
+    color: #33aaff;
+}
+h2{
+    border-color: transparent;
+}
 
 /* login karta */
+p {
+    Color: #d5d5d5; 
+}
 #card {
     Color: #d5d5d5; 
     padding: 20px 25px 30px;
     margin: 0 auto 25px;
     margin-top: 15%;
     margin-bottom:15%;
-    background-color:rgba(0, 0, 0, 0.9);
-    opacity: 90%;
-    border-radius: 10px;
+    background-color:rgba(0, 0, 0, 0);
+    border-color:rgba(0, 0, 0, 0);
 }
 #logo {
     padding-right: 2px;
   }
 
+#homelogo {
+
+    width: 500px;
+}
 
 .form-signin #inputName,
 .form-signin #inputEmail,
@@ -43,8 +56,16 @@
     direction: ltr;
     height: 44px;
     font-size: 16px;
+    background-color: rgb(44, 44, 44);
 }
-
+.form-signin:hover,
+.form-signin:active,
+.form-signin:focus{
+    background-color: rgb(44, 44, 44);
+}  
+h1 {
+    color: #d5d5d5;
+  }
 .form-signin input[type=email],
 .form-signin input[type=password],
 .form-signin input[type=text],
@@ -54,21 +75,30 @@
     margin-bottom: 10px;
     z-index: 1;
     position: relative;
+    border-top: rgb(44, 44, 44);
+    border-left: rgb(44, 44, 44);
+    border-right: rgb(44, 44, 44);
+    border-bottom-color: #00aaff;
+    border-radius: 0;
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
+    background-color: rgb(44, 44, 44);
 }
 
 .form-signin .form-control:focus {
-    border-color: black;
-    outline: 0;
+    border-top: rgb(44, 44, 44);
+    border-left: rgb(44, 44, 44);
+    border-right: rgb(44, 44, 44);
+    border-bottom-color: #00aaff;
+    outline: none;
+    box-shadow: 0px 15px 20px -15px #00aaff;    
+    
 }
-#logintext {
-    border-color: #d5d5d5;
-    border-bottom: solid;
-    border-width: 1px;
-    padding-bottom: 5px;
+hr{
+    background-color: #d5d5d5;
 }
+
 .btn.btn-signin {
     color: white;
     background-color: #00aaff;
@@ -87,20 +117,31 @@
 }
 .btn.btn-signin:hover{
     color:white;
+    text-decoration: none;
 }
 .forgot-password {
     color: #d5d5d5;
+    text-decoration: none;
 }
 
 .forgot-password:hover,
 .forgot-password:active,
 .forgot-password:focus{
     color: #fff;
+    text-decoration: none;
 }  
 #navbar {
     margin-bottom: 0;
     border: 0;  
     
+}
+* { 
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html, body {
+    min-height: 100%;
 }
 .navbar li a, .navbar .navbar-brand { 
     color: #d5d5d5 !important;
@@ -113,10 +154,10 @@
     background-color: #29292c !important;
 }
 footer {
-    
+    background-color: black;
     color: white;
     width:100%;
-    position: relative;
+    position: fixed;
     bottom: 0;
     padding: 15px;
     border-top: solid;

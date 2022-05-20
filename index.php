@@ -64,12 +64,18 @@ session_start();
       <img src="logo.png" id="homelogo" class="mx-auto d-block">
       <br>
       <H1 class="mx-auto text-center">Shinobi | Boosting</H1>
-      <p id="podnadpis" class="mx-auto text-center">League of Legends Elo Boosting</p>
+      <p id="podnadpis" class="mx-auto text-center">We provide high quality elo boosting, for the cheapest price, at the highest speed.</p>
       <br>
-      <h1 class="text-center" style="color:#00aaff">Hello, <?php echo $user_data['user_name'];?>!</h1>
+      <h3 id="podnadpis2" class="mx-auto text-center">Welcome to homepage.</h3>      
+    </div> 
+    <div style="background-color: rgb(22, 22, 22); ">
+    <hr>
+    <br>
+    <h1 class="text-center" style="color:#00aaff">Hello, <?php echo $user_data['user_name'];?>!</h1>
+    <br>
+    <br></div>
     </div>
-    
-    </div>
+
     <div class="content-bg">
       <br>
     <div id="content" class="row" style="margin: auto;">
@@ -96,7 +102,7 @@ session_start();
     </div>
     </div>
     <!--footer-->
-    <div style="background-color:rgba(0, 0, 0, 0.7);">
+    <div style="background-color:black;">
     <footer class="container-fluid text-center">
       <p>League of Legends is registered trademark of Riot Games, Inc. We are in no way affiliated with,
          associated with or endorsed by Riot Games, Inc.

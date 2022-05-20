@@ -26,7 +26,7 @@ include 'mail.php';
     background-size: cover;"
     >
     <!-- navbar -->
-    <div style="background-color:rgba(0, 0, 0, 0.7);">
+    <div id="navbar" style="background-color:rgba(0, 0, 0, 0.7);">
     <!-- navbar -->
     <nav class="navbar navbar-expand-md navbar-dark">
       <!--logo stranky=odkaz na homepage-->
@@ -60,7 +60,17 @@ include 'mail.php';
       </ul>
       </div>
 </nav>
+<br>
+    <img src="logo.png" id="homelogo" class="mx-auto d-block">
+      <br>
+    <h1 id="nadpis" class="mx-auto text-center">Shinobi | Boosting</h1>
+    <p id="podnadpis" class="mx-auto text-center">League of Legends Elo Boosting</p>
+      <br>
     
+    <br>
+</div>
+<div style="background-color: rgba(44, 44, 44);">
+<br>  
     <!--konec navbaru-->
     <div class="container">
 <!--zacatek kontakt formu-->
@@ -116,7 +126,7 @@ include 'mail.php';
         </div>
         <div class="form-group small clearfix">
             <label class="checkbox-inline">Verification Code</label>
-            &nbsp;&nbsp;<img src="backend/captcha.php" >
+              <img src="backend/captcha.php" >
         </div> 
 
                       <br>
@@ -156,7 +166,7 @@ include 'mail.php';
       
       </section>
       <!--konec kontakt formu-->
-    
+</div>
     </div>
     <!--footer-->
     <footer class="container-fluid text-center">
@@ -166,6 +176,5 @@ include 'mail.php';
           © 2021-2023 - ShinobiBoosting. All Right Reserved.
       </p>
     </footer>
-  </div>
 </body>
 </html>

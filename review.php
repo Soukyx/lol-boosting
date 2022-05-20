@@ -34,6 +34,7 @@ include 'backend/database.php';
     background-attachment: fixed;
     background-size: cover;"
     >
+    <div style="background-color:rgba(0, 0, 0, 0.7); border-bottom:solid 1px #ccc;">
     <!-- navbar -->
     <nav class="navbar navbar-expand-md navbar-dark">
       <!--logo stranky=odkaz na homepage-->
@@ -67,7 +68,19 @@ include 'backend/database.php';
       </ul>
       </div>
     </nav>
+    <img src="logo.png" id="homelogo" class="mx-auto d-block">
+      <br>
+    <h1 id="nadpis" class="mx-auto text-center">Shinobi | Boosting</h1>
+    <p id="podnadpis" class="mx-auto text-center">League of Legends Elo Boosting</p>
+      <br>
+    <h3 id="podnadpis2" class="mx-auto text-center">Customer satisfaction is our main goal. See what our customers are saying.</h3>
+    
+    <br>
+    <br>
+    </div>
     <!--konec navbaru-->
+    <div style="background-color:rgba(33, 33, 33);">
+    <br>
     <div class="container">
     <div id="card" class="card card-container">
 	<p id="success"></p>
@@ -106,7 +119,7 @@ include 'backend/database.php';
 	<!-- Add Modal HTML -->
 	<div id="addEmployeeModal" class="modal fade">
 		<div class="modal-dialog">
-			<div class="modal-content"  style="background-color: rgb(22, 22, 22);">
+			<div class="modal-content"  style="background-color: rgb(44, 44, 44);">
 				<form id="user_form">
 					<div class="modal-header">						
 						<h4 class="modal-title" style="color: #d5d5d5;">Add Review</h4>
@@ -153,6 +166,7 @@ include 'backend/database.php';
 			</div>
 		</div>
 	</div>
+      </div>
   <footer class="container-fluid text-center">
       <p>League of Legends is registered trademark of Riot Games, Inc. We are in no way affiliated with,
          associated with or endorsed by Riot Games, Inc.

@@ -71,10 +71,24 @@ session_start();
     <br>
 </div>
 <div style="background-color:rgb(33, 33, 33); margin: auto;" class="row">
+<br>
 
 <br>
-      <div id="card2" class="card card-container col-md-7 h-50">
+      <div id="card2" class="card card-container col-md-7 h-100">
 <div class="row text-center">
+<div class="col-md-6">
+<h3>Before</h3>
+</div>
+<div class="col-md-6">
+<h3>After</h3>
+</div>
+  <div class="col-md-6">
+<img id="img" src="https://www.gameboost.eu/assets/img/ranks/lol/high/unranked.png" alt="">
+</div>
+<div class="col-md-6">
+<img id="img2" src="https://www.gameboost.eu/assets/img/ranks/lol/high/unranked.png" alt="">
+</div>
+<hr>
 <div class="col-md-10 offset-md-1 col-lg-8 offset-lg-2">
 <h1 id="nadpis">Why choose us?</h1>
 <br>
@@ -82,7 +96,6 @@ session_start();
 </div>
 
 </div>
-
 <div class="row gx-lg-8 gx-xl-12 gy-8">
 <div class="col-md-6">
 <div class="d-flex flex-row">
@@ -168,7 +181,9 @@ session_start();
 
 
 </div>
+
       </div>
+
       <div class="col-md-1"></div>
     <!--konec navbaru-->
       <div id="card" class="card card-container col-md-4">
@@ -182,42 +197,42 @@ session_start();
       </div>
 <div class="col-md-12 row" style="margin: auto;">
 <div class="col text-center col-md-2">
-<input class="d-none imgbgchk" type="radio" name="desired-tier" id="ciron" value="100.000" onchange="calculate()" checked="checked">
+<input class="d-none imgbgchk" type="radio" name="crank" id="ciron" value="100.000" onchange="calculate()" >
 <label for="ciron"><img class="rank-select-mini" src="https://www.gameboost.eu/assets/img/ranks/lol/mini/iron.png"><div class="tick_container">
               <div class="tick"><i class="fa fa-check"></i></div>
             </div>
 </label>
 </div>
 <div class="col text-center col-md-2">
-<input class="d-none imgbgchk" type="radio" name="desired-tier" id="cbronze" value="200.000" onchange="calculate()" >
+<input class="d-none imgbgchk" type="radio" name="crank" id="cbronze" value="200.000" onchange="calculate()" >
 <label for="cbronze"><img class="rank-select-mini" src="https://www.gameboost.eu/assets/img/ranks/lol/mini/bronze.png"><div class="tick_container">
               <div class="tick"><i class="fa fa-check"></i></div>
             </div>
 </label>
 </div>
 <div class="col text-center col-md-2">
-<input class="d-none imgbgchk" type="radio" name="desired-tier" id="csilver" value="300.000" onchange="calculate()" >
+<input class="d-none imgbgchk" type="radio" name="crank" id="csilver" value="300.000" onchange="calculate()" >
 <label for="csilver"><img class="rank-select-mini" src="https://www.gameboost.eu/assets/img/ranks/lol/mini/silver.png"><div class="tick_container">
               <div class="tick"><i class="fa fa-check"></i></div>
             </div>
 </label>
 </div>
 <div class="col text-center col-md-2">
-<input class="d-none imgbgchk" type="radio" name="desired-tier" id="cgold" value="400.000" onchange="calculate()" >
+<input class="d-none imgbgchk" type="radio" name="crank" id="cgold" value="400.000" onchange="calculate()" >
 <label for="cgold"><img class="rank-select-mini" src="https://www.gameboost.eu/assets/img/ranks/lol/mini/gold.png"><div class="tick_container">
               <div class="tick"><i class="fa fa-check"></i></div>
             </div>
 </label>
 </div>
 <div class="col text-center col-md-2">
-<input class="d-none imgbgchk" type="radio" name="desired-tier" id="cplatinum" value="500.000" onchange="calculate()" >
+<input class="d-none imgbgchk" type="radio" name="crank" id="cplatinum" value="500.000" onchange="calculate()" >
 <label for="cplatinum"><img class="rank-select-mini" src="https://www.gameboost.eu/assets/img/ranks/lol/mini/platinum.png"><div class="tick_container">
               <div class="tick"><i class="fa fa-check"></i></div>
             </div>
 </label>
 </div>
 <div class="col text-center col-md-2">
-<input class="d-none imgbgchk" type="radio" name="desired-tier" id="cdiamond" value="600.000" onchange="calculate()" >
+<input class="d-none imgbgchk" type="radio" name="crank" id="cdiamond" value="600.000" onchange="calculate()" >
 <label for="cdiamond">
   <img class="rank-select-mini" src="https://www.gameboost.eu/assets/img/ranks/lol/mini/diamond.png">
   <div class="tick_container">
@@ -230,7 +245,7 @@ session_start();
 <br>
 <div class="col-md-12 row" id="desired-divisions" style="margin: auto;">
 <div class="col text-center col-md-3">
-<input class="d-none imgbgchk" type="radio" name="desired-division" value="4.0" id="civ" onchange="calculate()" checked>
+<input class="d-none imgbgchk" type="radio" name="cdivision" value="4.0" id="civ" onchange="calculate()" >
 <label for="civ">  
 <h4>IV</h4>
 <div class="tick_container">
@@ -239,7 +254,7 @@ session_start();
 </label>
 </Div>
 <div class="col text-center col-md-3">
-<input class="d-none imgbgchk" type="radio" name="desired-division" value="3.0" id="ciii" onchange="calculate()" >  
+<input class="d-none imgbgchk" type="radio" name="cdivision" value="3.0" id="ciii" onchange="calculate()" >  
 <label for="ciii">   
 <h4>III</h4>
 <div class="tick_container">
@@ -248,7 +263,7 @@ session_start();
 </label>
 </div>
 <div class="col text-center col-md-3">
-<input class="d-none imgbgchk" type="radio" name="desired-division" value="2.0" id="cii" onchange="calculate()" > 
+<input class="d-none imgbgchk" type="radio" name="cdivision" value="2.0" id="cii" onchange="calculate()" > 
 <label for="cii">  
 <h4>II</h4>  
 <div class="tick_container">
@@ -257,7 +272,7 @@ session_start();
 </label>
 </div>
 <div class="col text-center col-md-3">
-<input class="d-none imgbgchk" type="radio" name="desired-division" value="1.0" id="ci" onchange="calculate()" >
+<input class="d-none imgbgchk" type="radio" name="cdivision" value="1.0" id="ci" onchange="calculate()" >
 <label for="ci">  
 <h4>I</h4>  
 <div class="tick_container">
@@ -271,7 +286,7 @@ session_start();
 <br>
 <div class="row col-md-12" style="margin: auto;">
   <div class="col text-centercol-md-4">
-<input type="radio" name="queueType" id="solo-duo" value="solo_duo" class="d-none imgbgchk" checked/>
+<input type="radio" name="queueType" id="solo-duo" value="solo_duo" class="d-none imgbgchk" />
 <label for="solo-duo"><h5>Solo-Duo</h5><div class="tick_container">
               <div class="tick"><i class="fa fa-check"></i></div>
             </div>
@@ -297,7 +312,7 @@ session_start();
       <div class="col-md-12 row" style="margin: auto;">
  
       <div class="col text-center col-md-2">
-<input class="d-none imgbgchk" type="radio" name="current-tier" id="iron" value="100.000" onchange="calculate()" checked>
+<input class="d-none imgbgchk" type="radio" name="rank" id="iron" value="100.000" onchange="calculate()" >
 <label for="iron">
 <img class="rank-select-mini" src="https://www.gameboost.eu/assets/img/ranks/lol/mini/iron.png">
 <div class="tick_container">
@@ -307,7 +322,7 @@ session_start();
 </div>
 
   <div class="col text-center col-md-2">
-<input class="d-none imgbgchk" type="radio" name="current-tier" id="bronze" value="200.000" onchange="calculate()">
+<input class="d-none imgbgchk" type="radio" name="rank" id="bronze" value="200.000" onchange="calculate()">
 <label for="bronze">
 <img class="rank-select-mini" src="https://www.gameboost.eu/assets/img/ranks/lol/mini/bronze.png">
 <div class="tick_container">
@@ -317,7 +332,7 @@ session_start();
 </div>
 
 <div class="col text-center col-md-2">
-<input class="d-none imgbgchk" type="radio" name="current-tier" id="silver" value="300.000" onchange="calculate()">
+<input class="d-none imgbgchk" type="radio" name="rank" id="silver" value="300.000" onchange="calculate()">
 <label for="silver">
 <img class="rank-select-mini" src="https://www.gameboost.eu/assets/img/ranks/lol/mini/silver.png">
 <div class="tick_container">
@@ -326,7 +341,7 @@ session_start();
 </label>
 </div>
 <div class="col text-center col-md-2">
-<input class="d-none imgbgchk" type="radio" name="current-tier" id="gold" value="400.000" onchange="calculate()">
+<input class="d-none imgbgchk" type="radio" name="rank" id="gold" value="400.000" onchange="calculate()">
 <label for="gold">
 <img class="rank-select-mini" src="https://www.gameboost.eu/assets/img/ranks/lol/mini/gold.png">
 <div class="tick_container">
@@ -335,7 +350,7 @@ session_start();
 </label>
 </div>
 <div class="col text-center col-md-2">
-<input class="d-none imgbgchk" type="radio" name="current-tier" id="platinum" value="500.000" onchange="calculate()">
+<input class="d-none imgbgchk" type="radio" name="rank" id="platinum" value="500.000" onchange="calculate()">
 <label for="platinum">
 <img class="rank-select-mini" src="https://www.gameboost.eu/assets/img/ranks/lol/mini/platinum.png">
 <div class="tick_container">
@@ -344,7 +359,7 @@ session_start();
 </label>
 </div>
 <div class="col text-center col-md-2">
-<input class="d-none imgbgchk" type="radio" name="current-tier" id="diamond" value="600.000" onchange="calculate()">
+<input class="d-none imgbgchk" type="radio" name="rank" id="diamond" value="600.000" onchange="calculate()">
 <label for="diamond">
 <img class="rank-select-mini" src="https://www.gameboost.eu/assets/img/ranks/lol/mini/diamond.png">
 <div class="tick_container">
@@ -356,7 +371,7 @@ session_start();
 <br>
 <div class="col-md-12 row" id="current-divisions" style="margin: auto;">
 <div class="col text-center col-md-3">
-<input class="d-none imgbgchk" type="radio" name="current-division" value="4.0" id="iv" onchange="calculate()" checked>  
+<input class="d-none imgbgchk" type="radio" name="division" value="4.0" id="iv" onchange="calculate()" >  
 <label for="iv">
 <h4>IV</h4>
 <div class="tick_container">
@@ -365,7 +380,7 @@ session_start();
 </label>
 </Div>
 <div class="col text-center col-md-3">
-<input class="d-none imgbgchk" type="radio" name="current-division" value="3.0" id="iii" onchange="calculate()" >  
+<input class="d-none imgbgchk" type="radio" name="division" value="3.0" id="iii" onchange="calculate()" >  
 <label for="iii">   <h4>III</h4>
 <div class="tick_container">
               <div class="tick"><i class="fa fa-check"></i></div>
@@ -373,7 +388,7 @@ session_start();
 </label>
 </div>
 <div class="col text-center col-md-3">
-<input class="d-none imgbgchk" type="radio" name="current-division" value="2.0" id="ii" onchange="calculate()" > 
+<input class="d-none imgbgchk" type="radio" name="division" value="2.0" id="ii" onchange="calculate()" > 
 <label for="ii">  
 <h4>II</h4>  
 <div class="tick_container">
@@ -382,7 +397,7 @@ session_start();
 </label>
 </div>
 <div class="col text-center col-md-3">
-<input class="d-none imgbgchk" type="radio" name="current-division" value="1.0" id="i" onchange="calculate()" >
+<input class="d-none imgbgchk" type="radio" name="division" value="1.0" id="i" onchange="calculate()" >
 <label for="i">  
 <h4>I</h4>  
 <div class="tick_container">
@@ -411,12 +426,13 @@ session_start();
 <hr>
         <div class="form-group col-md-12" style="margin: auto;">
         <h4>Your price:</h4>
-        <div class="row col-md-12">
+        <div class="row col-md-12" >
         <div class="col-md-4">
         </div>
-        <div class="col-md-6 row">
-        <input class="col-md-10" type="text" id="result" value="" readonly><h4 class="col-md-2" >$</h4>
-        </div>
+        <div class="col-md-12 row justify-content-center" >
+        <div class="col-md-2"></Div>
+     <h3 class="text-center justify-content-center" style="color: #d5d5d5; "><input  type="text" id="result" value="" class="col-md-8" readonly style="background-color: rgb(22,22,22); border: none; color: #d5d5d5;" onchange="calculate()"></h3>
+      </div>
         <div class="col-md-4">
         </div>
         </div>
@@ -425,70 +441,42 @@ session_start();
         <br>
         <div class="form-group row">
         <div class="col-md-12">
-<!-- Replace "test" with your own sandbox Business account app client ID -->
-<script src="https://www.paypal.com/sdk/js?client-id=AfSn5KBMa2airN1Eyn-8WCwJQIX0fKt0mUeUN7Os1gmd-VPSZftT0dO2WTgZSrxIo82cWRXsS1mXGlh5&currency=USD"></script>
-    <!-- Set up a container element for the button -->
-    <div id="paypal-button-container"></div>
-    <script>
-       var amountt= document.getElementById("result").value; 
-        console.log(amountt);
-      paypal.Buttons({
-        // Sets up the transaction when a payment button is clicked
-        createOrder: (data, actions) => {
-          return actions.order.create({
-            purchase_units: [{
-              amount: {
-                value: result // Can also reference a variable or function
-              }
-            }]
-          });
-        },
-        // Finalize the transaction after payer approval
-        onApprove: (data, actions) => {
-          return actions.order.capture().then(function(orderData) {
-            // Successful capture! For dev/demo purposes:
-            console.log('Capture result', orderData, JSON.stringify(orderData, null, 2));
-            const transaction = orderData.purchase_units[0].payments.captures[0];
-            alert(`Transaction ${transaction.status}: ${transaction.id}\n\nSee console for all available details`);
-            // When ready to go live, remove the alert and show a success message within this page. For example:
-            // const element = document.getElementById('paypal-button-container');
-            // element.innerHTML = '<h3>Thank you for your payment!</h3>';
-            // Or go to another URL:  actions.redirect('thank_you.html');
-          });
-        }
-      }).render('#paypal-button-container');
-    </script>
+        <script src="https://www.paypal.com/sdk/js?client-id=AfSn5KBMa2airN1Eyn-8WCwJQIX0fKt0mUeUN7Os1gmd-VPSZftT0dO2WTgZSrxIo82cWRXsS1mXGlh5&currency=USD"></script>
+        <div id="paypal-button-container"></div>
         </div>
         </div>
-           
-
-      </form>
-    </div>
-      <script type="text/javascript">
+        <script>
         function calculate(price){
-            var crank = document.getElementById("crank").value || 0;
-            var rank = document.getElementById("rank").value || 0;
-            var cdivision = document.getElementById("cdivision").value || 0;
-            var division = document.getElementById("division").value || 0;
+            var crank = document.querySelector('input[name=crank]:checked').value || 0;
+            var rank = document.querySelector('input[name=rank]:checked').value || 0;
+            var cdivision = document.querySelector('input[name=cdivision]:checked').value || 0;
+            var division = document.querySelector('input[name=division]:checked').value || 0;
+
             
-            crank = parseFloat(crank).toFixed(0);
-            rank = parseFloat(rank).toFixed(0);
-            cdivison = parseFloat(cdivision).toFixed(0);
-            division = parseFloat(division).toFixed(0); 
+            crank = parseInt(crank).toFixed(0);
+            rank = parseInt(rank).toFixed(0);
+            cdivison = parseInt(cdivision).toFixed(0);
+            division = parseInt(division).toFixed(0); 
 
-            for(var i=parseFloat((rank-crank)+(7*cdivision)-(7*division)).toFixed(0); i < i.length; i++){
+            var i=parseInt((rank-crank)+(7*cdivision)-(7*division))
 
-            }
-                          if (i++>0){
-              document.getElementById("result").value=i++;}             
+            
+                          if (i>0){
+              document.getElementById("result").value=i + " $"; 
+               }
             else {
-              document.getElementById("result").placeholder="Select value";}
+              document.getElementById("result").placeholder="Invalid values!";}
         }   
+</script>
+      </form>
+      
+    </div>
 
-    </script>
+    
   </div>
   <br>
           </Div>
+          
       </div>
     <!--footer-->
     <div style="background-color:black;">
@@ -501,5 +489,56 @@ session_start();
       </p>
     </footer>
           </div>
+          <script src="ajax/script.js"></script>
 </body>
 </html>
+<!-- Replace "test" with your own sandbox Business account app client ID -->
+
+    <!-- Set up a container element for the button -->
+
+    <script>    
+      paypal.Buttons({
+        style:{
+          color:'blue',
+          shape:'pill'
+      },
+        // Sets up the transaction when a payment button is clicked
+        createOrder: function(data, actions){  
+          var crank = document.querySelector('input[name=crank]:checked').value || 0;
+            var rank = document.querySelector('input[name=rank]:checked').value || 0;
+            var cdivision = document.querySelector('input[name=cdivision]:checked').value || 0;
+            var division = document.querySelector('input[name=division]:checked').value || 0;
+
+            
+            crank = parseInt(crank).toFixed(0);
+            rank = parseInt(rank).toFixed(0);
+            cdivison = parseInt(cdivision).toFixed(0);
+            division = parseInt(division).toFixed(0); 
+
+            var i=parseInt((rank-crank)+(7*cdivision)-(7*division))
+          return actions.order.create({
+            purchase_units: [{
+              amount: {
+                value: i// Can also reference a variable or function
+              }
+            }]
+          });
+        },
+        // Finalize the transaction after payer approval
+        onApprove: function(data, actions){
+          return actions.order.capture().then(function(orderData) {
+            // Successful capture! For dev/demo purposes:
+            console.log('Capture result', orderData, JSON.stringify(orderData, null, 2));
+            var transaction = orderData.purchase_units[0].payments.captures[0];
+            alert(`Transaction ${transaction.status}: ${transaction.id}\n\nSee console for all available details`);
+            // When ready to go live, remove the alert and show a success message within this page. For example:
+            // const element = document.getElementById('paypal-button-container');
+            // element.innerHTML = '<h3>Thank you for your payment!</h3>';
+            // Or go to another URL:  actions.redirect('thank_you.html');
+          });
+        }
+      }).render('#paypal-button-container');
+
+
+
+    </script>

@@ -2,6 +2,10 @@
     margin-bottom: 0;
     border-radius: 0;
     }
+    #navbar{
+      border-bottom:solid 1px #ccc;
+      border-color: white;
+    }
   .container{
     min-height: 100%;
     padding-bottom:60px;
@@ -15,6 +19,7 @@
     border-top: solid;
     border-color: #d5d5d5;
     border-width: 1px;
+    background-color: black;
     }    
   #homelogo {
     width: 180px;
@@ -24,6 +29,10 @@
   }
   h1 {
     color: #d5d5d5;
+  }
+  #homelogo {
+    width: 250px;
+    
   }
   p {
     color: #d5d5d5;     
@@ -38,8 +47,7 @@
     padding: 20px 25px 30px;
     margin: 0 auto 25px;
     margin-top: 5%;
-    background-color:rgb(0,0,0,0.8);
-    opacity: 90%;
+    background-color:rgb(28, 28,28);
     border-radius: 30px;
 }
   #myPage {

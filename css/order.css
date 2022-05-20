@@ -47,6 +47,11 @@
   transform: scale(1.25);
   opacity: 0.3;
 }
+img {
+  display: block;
+  width:150px;
+  margin: auto;
+}
 .tick_container {
   color: #33aaff;
   transition: .5s ease;
@@ -122,6 +127,10 @@ p{
     border-left:solid 1px #ccc;
     border-color: white;
   }
+  #homelogo {
+    width: 250px;
+    
+  }
 .container{
   margin-bottom: 5%;
 }
@@ -129,7 +138,7 @@ p{
   color: #d5d5d5;
 }
 #homelogo {
-  width: 180px;
+  width: 250px;
   
 }
 #podnadpis {
@@ -196,6 +205,6 @@ footer a {
   transition: all 0.218s;
   }
 
-  select#crank option[value="600.000"] { background-image:url(diamond.png); }
+  
 
 

@@ -146,7 +146,7 @@
   </section>
       </div>
       </div>
-  <footer class="container-fluid text-center">
+  <footer class="container-fluid text-center" style="position: fixed;">
       <p>League of Legends is registered trademark of Riot Games, Inc. We are in no way affiliated with,
          associated with or endorsed by Riot Games, Inc.
           <br>

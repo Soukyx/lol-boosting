@@ -25,7 +25,7 @@
     border-color: white;
 }   
 #homelogo {
-  width: 180px;
+  width: 250px;
   
 }
 body, html {
@@ -66,6 +66,11 @@ footer a {
 }
 #review {
   padding-right:6px;
+}
+#podnadpis2 {
+  color: #d5d5d5;
+  font-size: 30px;
+  font-weight: 200;
 }
 #login {
   padding-left: 6px;

@@ -25,7 +25,7 @@ session_start();
     background-size: cover;"
     >
     <!-- navbar -->
-    <div style="background-color:rgba(0, 0, 0, 0.7);">
+    <div style="background-color:rgba(0, 0, 0, 0.7); border-bottom:solid 1px #ccc;">
     <nav class="navbar navbar-expand-md navbar-dark">
       <!--logo stranky=odkaz na homepage-->
       <a class="navbar-brand navbar-nav" href="index.php">
@@ -56,56 +56,73 @@ session_start();
         <a class="nav-link" href="profile.php">Profile</a>
         </li>
       </ul>
+      
       </div>
     </nav>
+    <img src="logo.png" id="homelogo" class="mx-auto d-block">
+      <br>
+    <h1 id="nadpis" class="mx-auto text-center">Shinobi | Boosting</h1>
+    <p id="podnadpis" class="mx-auto text-center">League of Legends Elo Boosting</p>
+      <br>
+    <h3 id="podnadpis2" class="mx-auto text-center">Our most frequently answered questions.</h3>
+    
+    <br>
     <!--konec navbaru-->
     <br>
-    <br>
-    <br>
+
     <!--container-->
+</div>
+<div style="background-color:rgba(44, 44, 44); margin: auto;">
+<br>
     <div class="container">
       <!--faq text kontent-->
+      <div id="card" class="card card-container">
       <div class="textcontent bg-black">
       <details>
         <summary>How does your service work?</summary>
           <p>You may choose one of our many ranked boosting services and customize your order to fulfill all your demands- summoners, champions and roles optimalization, 
             DuoQ boost or SoloQ boost, live streaming on private Twitch while completing your order or simple good old coaching.</p>
       </details>
+      <hr>
       <details>
         <summary>How fast will my order be finished?</summary>
           <p>We usually do 1-2 divisions a day on all divisions.</p>
       </details>
+      <hr>
       <details>
         <summary>How can I be sure my booster won't get me banned?</summary>
           <p>Our boosters are complete professionals and are not allowed to speak in game.</p>
       </details>
+      <hr>
       <details>
         <summary>Can I play on my account while you are working on it?</summary>
           <p>To complete your order as fast as possible, you won't be allowed to access your account while we are working on it. 
             There's always going to be a booster finishing your order, however you always have the option to pause the boost so you can play normal games.</p>
       </details>
+      <hr>
       <details>
         <summary>Can I tip my booster?</summary>
           <p>Yes, he gets full amount of the tip.</p>
       </details>
+      <hr>
       <details>
         <summary>Which payment methods do you accept?</summary>
           <p>Right now we proccess payments through PayPal.</p>
-      </div>
       </details>
-
+      <hr>
        
     </div>
+</div>
     <br>
     <br>
+</div>
     <!--footer-->
-    <footer class="container-fluid text-center">
+    <footer class="container-fluid text-center" style="background-color: black;">
       <p>League of Legends is registered trademark of Riot Games, Inc. We are in no way affiliated with,
          associated with or endorsed by Riot Games, Inc.
           <br>
           © 2021-2023 - ShinobiBoosting. All Right Reserved.
       </p>
     </footer>
-    </div>
 </body>
 </html>

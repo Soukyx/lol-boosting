@@ -24,7 +24,7 @@
 		var descr=$(this).attr("data-email");
 		$('#id_u').val(staff_id);
 		$('#name_u').val(staff_name);
-		$('#email_u').val(descr);
+		$('#descr_u').val(descr);
 	});
 
 	$(document).on('click','#update',function(e) {

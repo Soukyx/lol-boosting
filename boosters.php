@@ -25,7 +25,9 @@ session_start();
     background-size: cover;"
     >
     <!-- navbar -->
-    <nav class="navbar navbar-expand-md navbar-dark" style="    background-color:rgba(0, 0, 0, 0.7);">
+    <div style="background-color:rgba(0, 0, 0, 0.7); border-bottom:solid 1px #ccc;
+    border-color: white;">
+    <nav class="navbar navbar-expand-md navbar-dark">
       <!--logo stranky=odkaz na homepage-->
       <a class="navbar-brand navbar-nav" href="index.php">
         <img id="logo" src="logo.png" alt="logo" style="width:32px;">Shinobi | Boosting
@@ -57,13 +59,27 @@ session_start();
       </ul>
       </div>
     </nav>
+    <br>
+    <img src="logo.png" id="homelogo" class="mx-auto d-block">
+      <br>
+    <h1 id="nadpis" class="mx-auto text-center">Shinobi | Boosting</h1>
+    <p id="podnadpis" class="mx-auto text-center">League of Legends Elo Boosting</p>
+      <br>
+    <h3 id="podnadpis2" class="mx-auto text-center">The booster will login and play from your account until you reach your desired rank.</h3>
+    
+    <br>
+    <br>
+</div>
     <!--konec navbaru-->
     <!--container-->
+<div style="background-color:rgb(33, 33, 33); margin: auto;">
+<br>
     <div class="container">
       
     <div id="card" class="card card-container">
       
     <h1 class="text-center">Our Boosters</h1>
+    <hr>
     <div class="table-wrapper">
             <div class="table-title">
             <table class="table table-striped table-hover">
@@ -73,7 +89,7 @@ session_start();
 				$result = mysqli_query($conn,"SELECT * FROM staff");
 					while($row = mysqli_fetch_array($result)) {
 				?>
-          <div id="card" class="card col-sm-2 m-3 text-center">
+          <div id="card2" class="card col-sm-2 m-3 text-center">
             <div class="text-center">
           <img src="upload/<?=$row['pp']?>" class="img-fluid rounded-circle" alt="Rounded Image" style="  width:150px; height:150px;">
           <hr>          
@@ -90,7 +106,7 @@ session_start();
       </div></div>
       </div>
     </div>
-
+      </div>
     <!--footer-->
     <footer class="container-fluid text-center">
       <p>League of Legends is registered trademark of Riot Games, Inc. We are in no way affiliated with,
