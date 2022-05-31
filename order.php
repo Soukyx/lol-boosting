@@ -65,6 +65,8 @@ session_start();
     <h1 id="nadpis" class="mx-auto text-center">Shinobi | Boosting</h1>
     <p id="podnadpis" class="mx-auto text-center">League of Legends Elo Boosting</p>
       <br>
+      <h1 class="text-center" style="color:#00aaff">Hello, <?php echo $user_data['user_name'];?>!</h1>
+      <br>
     <h3 id="podnadpis2" class="mx-auto text-center">The booster will login and play from your account until you reach your desired rank.</h3>
     
     <br>
@@ -189,8 +191,9 @@ session_start();
       <div id="card" class="card card-container col-md-4">
         <div class="text-center" style="margin: auto;">
       <!--formy na zadání požadavků u objednávky-->
-      <form>
+      <form action="backend/orderdb.php" method="post" enctype="multipart/form-data">
       <div class="form-group col-md-12" style="margin: auto;">
+      <input type="hidden" id="user_name" name="user_name" value="<?php echo $user_data['user_name']; ?>" class="form-control" readonly>
         <H1 id="cr" class="text-center">Current Rank</H1>
         <h5 style="font-weight:200; color: #d5d5d5;;">Please select your Current Rank and Division.</h5>
         <br>
@@ -413,7 +416,7 @@ session_start();
         <div class="form-group col-md-2">
         </div>
           <div class="form-group col-md-8">
-            <select class="form-control text-center" style="background-color: rgb(33,33,33); border-color: rgb(33,33,33); color: #d5d5d5;">
+            <select name="server" class="form-control text-center" style="background-color: rgb(33,33,33); border-color: rgb(33,33,33); color: #d5d5d5;" required >
               <option>Select Server*</option>
               <option>NA</option>
               <option>EUW</option>
@@ -431,7 +434,7 @@ session_start();
         </div>
         <div class="col-md-12 row justify-content-center" >
         <div class="col-md-2"></Div>
-     <h3 class="text-center justify-content-center" style="color: #d5d5d5; "><input  type="text" id="result" value="" class="col-md-8" readonly style="background-color: rgb(22,22,22); border: none; color: #d5d5d5;" onchange="calculate()"></h3>
+     <h3 class="text-center justify-content-center" style="color: #d5d5d5; "><input  type="text" name="price" id="result" value="" class="col-md-8" readonly style="background-color: rgb(22,22,22); border: none; color: #d5d5d5;" onchange="calculate()"></h3>
       </div>
         <div class="col-md-4">
         </div>
@@ -442,7 +445,7 @@ session_start();
         <div class="form-group row">
         <div class="col-md-12">
         <script src="https://www.paypal.com/sdk/js?client-id=AfSn5KBMa2airN1Eyn-8WCwJQIX0fKt0mUeUN7Os1gmd-VPSZftT0dO2WTgZSrxIo82cWRXsS1mXGlh5&currency=USD"></script>
-        <div id="paypal-button-container"></div>
+
         </div>
         </div>
         <script>
@@ -468,8 +471,10 @@ session_start();
               document.getElementById("result").placeholder="Invalid values!";}
         }   
 </script>
+
       </form>
-      
+      <div id="paypal-button-container" type="submit"></div>
+      <input type="submit">
     </div>
 
     
@@ -530,6 +535,10 @@ session_start();
             // Successful capture! For dev/demo purposes:
             console.log('Capture result', orderData, JSON.stringify(orderData, null, 2));
             var transaction = orderData.purchase_units[0].payments.captures[0];
+            var ajax = new XMLHttpRequest();
+            ajax.open('get', 'backend/orderdb.php', true);
+            ajax.send();
+
             alert(`Transaction ${transaction.status}: ${transaction.id}\n\nSee console for all available details`);
             // When ready to go live, remove the alert and show a success message within this page. For example:
             // const element = document.getElementById('paypal-button-container');

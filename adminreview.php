@@ -84,6 +84,7 @@ include 'backend/database.php';
 						<th>ID</th>
                         <th>NAME</th>
                         <th>REVIEW</th>
+						<th>RATE</th>
                     </tr>
 				<tbody>
 
@@ -100,8 +101,9 @@ include 'backend/database.php';
 							</span>
 						</td>
 					<td><?php echo $i; ?></td>
-					<td><?php echo $row["name"]; ?></td>
+					<td><?php echo $row["user_name"]; ?></td>
 					<td><?php echo $row["user_review"]; ?></td>
+					<td><?php echo $row["user_rate"]; ?></td>
 
 					<td>
 						<a href="#deleteEmployeeModal" class="delete" data-id="<?php echo $row["review_id"]; ?>" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" 
@@ -129,33 +131,15 @@ include 'backend/database.php';
 					<div class="modal-body">					
 						<div class="form-group">
 							<labe  style="color: #d5d5d5;"l>NAME</label>
-							<input type="text" id="name" name="name" class="form-control" required>
+							<input type="text" id="name" name="user_name" class="form-control" required>
 						</div>
-						<section class='rating-widget'>
-                  <!-- Rating Stars Box -->
-                  <div class='rating-stars text-center'>
-                    <ul id='stars'>
-                      <li class='star' title='Poor' data-value='1'>
-                      <i class="fa fa-star fa-fw"></i>
-                      </li>
-                      <li class='star' title='Fair' data-value='2'>
-                      <i class="fa fa-star fa-fw"></i>
-                      </li>
-                      <li class='star' title='Good' data-value='3'>
-                      <i class="fa fa-star fa-fw"></i>
-                      </li>
-                      <li class='star' title='Excellent' data-value='4'>
-                      <i class="fa fa-star fa-fw"></i>
-                      </li>
-                      <li class='star' title='WOW!!!' data-value='5'>
-                      <i class="fa fa-star fa-fw"></i>
-                      </li>
-                    </ul>
-                  </div>
-      </section>
+						<div class="form-group">
+							<label style="color: #d5d5d5;">RATE 1 TO 10</label> 
+							<input type="number" id="rate" name="user_rate" class="form-control" min="1" max="10" >
+						</div>
 						<div class="form-group">
 							<label  style="color: #d5d5d5;">REVIEW</label>
-							<input type="textarea" id="email" name="user_review" class="form-control" required>
+							<textarea type="text" id="email" name="user_review" class="form-control md-textarea" required></textarea>
 						</div>				
 					</div>
 					<div class="modal-footer">
