@@ -1,39 +1,35 @@
 <?php 
+session_start();
 include 'database.php';
 
- 
-// If file upload form is submitted 
-$status = $statusMsg = ''; 
-if(isset($_POST["submit"])){ 
-    $status = 'error'; 
-    if(!empty($_FILES["image"]["name"])) { 
-        // Get file info 
-        $fileName = basename($_FILES["image"]["name"]); 
-        $fileType = pathinfo($fileName, PATHINFO_EXTENSION); 
+
+      if (isset($_FILES['pp']['name']) AND !empty($_FILES['pp']['name'])) {
          
-        // Allow certain file formats 
-        $allowTypes = array('jpg','png','jpeg','gif'); 
-        if(in_array($fileType, $allowTypes)){ 
-            $image = $_FILES['image']['tmp_name']; 
-            $imgContent = addslashes(file_get_contents($image)); 
+        $staff_id=$_POST['staff_id'];
+         $img_name = $_FILES['pp']['name'];
+         $tmp_name = $_FILES['pp']['tmp_name'];
+         $error = $_FILES['pp']['error'];
          
-            // Insert image content into database 
-            $insert = $db->query("INSERT into staff (image) VALUES ('$imgContent')"); 
-             
-            if($insert){ 
-                $status = 'success'; 
-                $statusMsg = "File uploaded successfully."; 
-            }else{ 
-                $statusMsg = "File upload failed, please try again."; 
-            }  
-        }else{ 
-            $statusMsg = 'Sorry, only JPG, JPEG, PNG, & GIF files are allowed to upload.'; 
-        } 
-    }else{ 
-        $statusMsg = 'Please select an image file to upload.'; 
-    } 
-} 
- 
-// Display status message 
-echo $statusMsg; 
-?>
+         if($error === 0){
+            $img_ex = pathinfo($img_name, PATHINFO_EXTENSION);
+            $img_ex_to_lc = strtolower($img_ex);
+
+            $allowed_exs = array('jpg', 'jpeg', 'png');
+            if(in_array($img_ex_to_lc, $allowed_exs)){
+               $new_img_name = uniqid($user_name, true).'.'.$img_ex_to_lc;
+               $img_upload_path = '../upload/'.$new_img_name;
+               move_uploaded_file($tmp_name, $img_upload_path);
+
+               $sql = "UPDATE `staff` SET `pp`='$new_img_name' WHERE staff_id=$staff_id";
+
+                
+			   mysqli_query($conn, $sql);
+		   
+			   header("Location: ../adminboosters.php");
+			   die;
+            }
+        }
+        }   
+         
+        ?>
+        

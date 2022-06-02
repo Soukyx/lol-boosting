@@ -101,6 +101,7 @@ include 'backend/database.php';
 					<td><?php echo $i; ?></td>
 					<td><?php echo $row["staff_name"]; ?></td>
 					<td><?php echo $row["descr"]; ?></td>
+      </form></td>
 
 					<td>
 						<a href="#editEmployeeModal" class="edit" data-toggle="modal">
@@ -145,7 +146,12 @@ include 'backend/database.php';
 							<label  style="color: #d5d5d5;">DESCRIPTION</label>
 							<input type="text" id="email" name="descr" class="form-control" required>
 						</div>				
-						
+						<div class="form-group">
+							<label  style="color: #d5d5d5;">IMAGE</label>
+							<input type="file" 
+		           class="form-control"
+		           name="pp" style="background-color: rgb(44, 44, 44); border: none;">
+						</div>	
 					</div>
 					<div class="modal-footer">
 					    <input type="hidden" value="1" name="type">
