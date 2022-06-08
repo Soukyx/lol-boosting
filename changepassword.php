@@ -1,51 +1,44 @@
-<?php 
+<?php
 
-  session_start();
+session_start();
 
-  include("connection.php");
-  include("functions.php");
-  $user_data = check_login($con);
-  if(isset($_POST['update'])) {
+include("connection.php");
+include("functions.php");
+$user_data = check_login($con);
+if (isset($_POST['update'])) {
 
-    $oldpass = ($_POST['oldpass']);
-    $newpass = ($_POST['newpass']);
-    $confirmpass = ($_POST['confirmpass']);
+  $oldpass = ($_POST['oldpass']);
+  $newpass = ($_POST['newpass']);
+  $confirmpass = ($_POST['confirmpass']);
 
-    $query = "SELECT password FROM users WHERE password = '$oldpass'";
-    $result = mysqli_query($con, $query);
+  $query = "SELECT password FROM users WHERE password = '$oldpass'";
+  $result = mysqli_query($con, $query);
 
-    if(mysqli_num_rows($result) > 0) {
+  if (mysqli_num_rows($result) > 0) {
 
-      if($newpass == $confirmpass) {
+    if ($newpass == $confirmpass) {
 
-        $query = "UPDATE users SET password = '$newpass' WHERE user_id='".$user_data['user_id']."'";
+      $query = "UPDATE users SET password = '$newpass' WHERE user_id='" . $user_data['user_id'] . "'";
 
-        if($result = mysqli_query($con, $query)) {
+      if ($result = mysqli_query($con, $query)) {
 
-          $user_data['prompt'] = "Password updated.";
-          $user_data['password'] = $newpass;
-          header("location:profile.php");
-          exit;
-
-        } else {
-
-          die("Error with the query");
-
-        }
-
+        $user_data['prompt'] = "Password updated.";
+        $user_data['password'] = $newpass;
+        header("location:profile.php");
+        exit;
       } else {
 
-        $user_data['errprompt'] = "The new passwords you entered doesn't match.";;
-
+        die("Error with the query");
       }
-
     } else {
 
-      $user_data['errprompt'] = "You've entered a wrong old password.";
-
+      $user_data['errprompt'] = "The new passwords you entered doesn't match.";;
     }
+  } else {
 
+    $user_data['errprompt'] = "You've entered a wrong old password.";
   }
+}
 
 
 
@@ -53,67 +46,84 @@
 
 <!DOCTYPE html>
 <html>
+
 <head>
 
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-	<title>Change Password - ShinobiBoosting</title>
+  <title>Change Password - ShinobiBoosting</title>
   <link rel="stylesheet" href="css/profile.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </head>
+
 <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="50" style="background-image: url(gwen.jpg);
     background-position: center center;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    background-size: cover;"
-    >
- <!-- navbar -->
- <div style="background-color:rgba(0, 0, 0, 0.7);">
+    background-size: cover;">
+  <!-- navbar -->
+  <div style="background-color:rgba(0, 0, 0, 0.7);">
     <nav class="navbar navbar-expand-md navbar-dark">
       <!--logo stranky=odkaz na homepage-->
       <a class="navbar-brand navbar-nav" href="index.php">
         <img id="logo" src="logo.png" alt="logo" style="width:32px;">Shinobi | Boosting
       </a>
-            <!--navbar a collapse pri zmenseni stranky-->
+      <!--navbar a collapse pri zmenseni stranky-->
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse justify-content-xl-end" id="collapsibleNavbar">
-      <ul class="navbar-nav">
-        <li class="nav-item">
-          <a class="nav-link" href="order.php">Order Now</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="faq.php">FaQ</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="boosters.php">Our Boosters</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="contact.php">Contact Us</a>
-        </li>
-        <li class="nav-item" id="review">
-          <a class="nav-link" href="review.php">Review</a>
-        </li>
-        <li class="nav-item " id="login">
-          <a class="nav-link" href="profile.php">Profile</a>
-        </li>
-      </ul>
+        <ul class="navbar-nav">
+          <li class="nav-item">
+          <li class="nav-item dropdown">
+            <div class="dropdown">
+              <button type="button" class="btn btn-primary dropdown-toggle" id="dropbtn" data-toggle="dropdown">
+                Order Now
+              </button>
+              <div class="dropdown-menu text-center" id="dropdown-menu">
+                <a class="dropdown-item" href="order.php">
+                  <img alt="LoL Boosting" style="width:32px;" class="me-1 game-icon" src="https://www.gameboost.eu/assets/img/svg/lol.svg">
+                  League of Legends
+                </a>
+                <a class="dropdown-item" href="ordertft.php">
+                  <img alt="TFT Boosting" style="width:32px;" class="me-1 game-icon" src="https://www.gameboost.eu/assets/img/svg/tft.svg">
+                  Teamfight Tactics
+                </a>
+                <a class="dropdown-item" href="ordervalo.php">
+                  <img alt="Valorant Boosting" style="width:32px;" class="me-1 game-icon" src="https://www.gameboost.eu/assets/img/svg/val.svg">
+                  VALORANT
+                </a>
+              </div>
+            </div>
+          </li>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="faq.php">FaQ</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="boosters.php">Our Boosters</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contact.php">Contact Us</a>
+          </li>
+          <li class="nav-item" id="review">
+            <a class="nav-link" href="review.php">Review</a>
+          </li>
+          <li class="nav-item " id="login">
+            <a class="nav-link" href="profile.php">Profile</a>
+          </li>
+        </ul>
     </nav>
-</div>
-    <!--konec navbaru-->
-    <div class="container">
+  </div>
+  <!--konec navbaru-->
+  <div class="container">
     <div id="card" class="card card-container">
       <h1>Password Change</h1>
-      <?php 
-        if(isset($_SESSION['errprompt'])) {
-          showError();
-        }
-      ?>
+
 
       <form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" method="POST">
 
@@ -138,19 +148,21 @@
           <a href="profile.php">Go back</a>
           <input class="btn btn-primary" type="submit" name="update" value="Update Password">
         </div>
-        
+
 
       </form>
     </div>
 
-  </section>
-      </div>
-      </div>
+    </section>
+  </div>
+  </div>
   <footer class="container-fluid text-center" style="position: fixed;">
-      <p>League of Legends is registered trademark of Riot Games, Inc. We are in no way affiliated with,
-         associated with or endorsed by Riot Games, Inc.
-          <br>
-          © 2021-2023 - ShinobiBoosting. All Right Reserved.
-      </p></footer>
+    <p>League of Legends is registered trademark of Riot Games, Inc. We are in no way affiliated with,
+      associated with or endorsed by Riot Games, Inc.
+      <br>
+      © 2021-2023 - ShinobiBoosting. All Right Reserved.
+    </p>
+  </footer>
 </body>
+
 </html>

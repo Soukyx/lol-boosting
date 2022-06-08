@@ -6,24 +6,7 @@ if(count($_POST)>0){
 		$staff_name=$_POST['staff_name'];
 		$descr=$_POST['descr'];
 
-		if (isset($_FILES['pp']['name']) AND !empty($_FILES['pp']['name'])) {
-         
-         
-			$img_name = $_FILES['pp']['name'];
-			$tmp_name = $_FILES['pp']['tmp_name'];
-			$error = $_FILES['pp']['error'];
-			
-			if($error === 0){
-			   $img_ex = pathinfo($img_name, PATHINFO_EXTENSION);
-			   $img_ex_to_lc = strtolower($img_ex);
-   
-			   $allowed_exs = array('jpg', 'jpeg', 'png');
-			   if(in_array($img_ex_to_lc, $allowed_exs)){
-				  $new_img_name = uniqid($staff_name, true).'.'.$img_ex_to_lc;
-				  $img_upload_path = 'upload/'.$new_img_name;
-				  move_uploaded_file($tmp_name, $img_upload_path);
-
-		$sql = "insert into staff (staff_name, descr, pp) values ('$staff_name','$descr', '$new_image_name')";}}}
+		$sql = "insert into staff (staff_name, descr) values ('$staff_name','$descr')";
 		if (mysqli_query($conn, $sql)) {
 			echo json_encode(array("statusCode"=>200));
 		} 
@@ -78,4 +61,3 @@ if(count($_POST)>0){
 		mysqli_close($conn);
 	}
 }
-?>

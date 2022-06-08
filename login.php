@@ -49,5 +49,3 @@ session_start();
 			header('location:login1.php?error=1');
 		}
 	}
-
-?>

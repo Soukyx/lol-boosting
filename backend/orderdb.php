@@ -5,7 +5,6 @@
 include("../connection.php");
 include("../functions.php");
 
-    if(count($_POST)>0){
             $user_name=$_POST['user_name'];
             $crank=$_POST['crank'];
             $cdivision=$_POST['cdivision'];
@@ -13,9 +12,9 @@ include("../functions.php");
             $division=$_POST['division'];
             $queueType=$_POST['queueType'];
             $price=$_POST['price'];
-            $server=$_POST['server'];
+            $lolserver=$_POST['lolserver'];
                 
-            $query = "insert into orders (user_name, crank, cdivision, rank, division, queueType, price, server) values ('$user_name','$crank','$cdivision','$rank','$division','$queueType','$price','$server')";
+            $query = "insert into orders (user_name, crank, cdivision, rank, division, queueType, price, lolserver) values ('$user_name','$crank','$cdivision','$rank','$division','$queueType','$price','$lolserver')";
             if (mysqli_query($con, $query)) {
                 header("Location: ../order.php");
             } 
@@ -24,7 +23,6 @@ include("../functions.php");
             }
 
             mysqli_close($con);
-    }
 
    
 ?>

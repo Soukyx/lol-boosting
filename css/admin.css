@@ -1,96 +1,119 @@
 .navbar {
-    margin-bottom: 0;
-    border-radius: 0;
-    background-color:rgba(0, 0, 0, 0.7);
-    }
-  .container{
-    min-height: 100%;
-    padding-bottom:60px;
-  }
-  footer {
-    color: white;
-    position: fixed;
-    width:100%;
-    bottom: 0;
-    padding: 15px;
-    background-color:rgba(0, 0, 0, 0.7);
-    border-top: solid;
-    border-color: #d5d5d5;
-    border-width: 1px;
-    } 
-    #sb {
-      color: #d5d5d5;
-    }   
-    #searchresult{
-    background-color:rgb(50, 50, 50);
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
-    }
-  #homelogo {
-    width: 180px;
-  }
-  i {
-    color: #33aaff;
-  }
-  h1 {
-    color: #d5d5d5;
-  }
-  .inf {
-    color: #d5d5d5; 
-    font-size:large;    
-  }
-  p {
-    color: #d5d5d5;  
-  }
-  label{
-    color: #d5d5d5;
-  }
-  h4 {
-    color: #d5d5d5;
-  }
-  #card {
-    padding: 20px 25px 30px;
-    margin: 0 auto 25px;
-    margin-top: 5%;
-    background-color:rgb(22, 22, 22);
-    border-radius: 30px;
+  margin-bottom: 0;
+  border-radius: 0;
+  background-color: rgba(0, 0, 0, 0.7);
 }
-  #myPage {
-    background-image: url("gwen.jpg");
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
-  }
-  .navbar li a, .navbar .navbar-brand { 
-    color: #d5d5d5 !important;
-  }
-  .navbar-nav li a:hover {
-    color: #fff !important;
-  }
-  .navbar-nav li.active a {
-    color: #fff !important;
-  }
-  .navbar-default .navbar-toggle {
-    border-color: transparent;
-  }
-  footer a {
-    color: #f5f5f5;
-  }
-  #login {
-    padding-left: 6px;
-    border-left:solid 1px #ccc;
-    border-color: white;
-  }
-  #logo {
-    padding-right: 2px;
-  }
-  hr {
-    background-color:#d5d5d5;
-    width:100%;
-  
-  }
-  /* Bootstrap 4 text input with search icon */
+
+.container {
+  min-height: 100%;
+  padding-bottom: 60px;
+}
+
+footer {
+  color: white;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  padding: 15px;
+  background-color: black;
+  border-top: solid;
+  border-color: #d5d5d5;
+  border-width: 1px;
+}
+
+#sb {
+  color: #d5d5d5;
+}
+
+#searchresult {
+  background-color: rgb(50, 50, 50);
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+#homelogo {
+  width: 180px;
+}
+
+i {
+  color: #33aaff;
+}
+
+h1 {
+  color: #d5d5d5;
+}
+
+.inf {
+  color: #d5d5d5;
+  font-size: large;
+}
+
+p {
+  color: #d5d5d5;
+}
+
+label {
+  color: #d5d5d5;
+}
+
+h4 {
+  color: #d5d5d5;
+}
+
+#card {
+  padding: 20px 25px 30px;
+  margin: 0 auto 25px;
+  margin-top: 5%;
+  background-color: rgb(22, 22, 22);
+  border-radius: 30px;
+}
+
+#myPage {
+  background-image: url("gwen.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+.navbar li a,
+.navbar .navbar-brand {
+  color: #d5d5d5 !important;
+}
+
+.navbar-nav li a:hover {
+  color: #fff !important;
+}
+
+.navbar-nav li.active a {
+  color: #fff !important;
+}
+
+.navbar-default .navbar-toggle {
+  border-color: transparent;
+}
+
+footer a {
+  color: #f5f5f5;
+}
+
+#login {
+  padding-left: 6px;
+  border-left: solid 1px #ccc;
+  border-color: white;
+}
+
+#logo {
+  padding-right: 2px;
+}
+
+hr {
+  background-color: #d5d5d5;
+  width: 100%;
+
+}
+
+/* Bootstrap 4 text input with search icon */
 
 .has-search .form-control {
   padding-left: 2.375rem;

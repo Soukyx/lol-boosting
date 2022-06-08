@@ -1,61 +1,67 @@
-
 .navbar {
-    margin-bottom: 0;
-    border-radius: 0;
+  margin-bottom: 0;
+  border-radius: 0;
 }
-  .container{
-    color: white;
-    min-height: 100%;
-    padding-bottom:60px;
-  }
-  th {
-      color:white;
-  }
-  td {
-    color:white;
+
+.container {
+  color: white;
+  min-height: 100%;
+  padding-bottom: 60px;
 }
-#podnadpis2{
+
+th {
+  color: white;
+}
+
+td {
+  color: white;
+}
+
+#podnadpis2 {
   color: #d5d5d5;
   font-size: 30px;
   font-weight: 200;
 }
-*{
+
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-body{
+body {
   height: 100vh;
   width: 100%;
 }
+
 #homelogo {
   width: 250px;
-  
+
 }
-h1{
+
+h1 {
   text-align: center;
   font-size: 30px;
   color: #222;
 }
 
-.profile-pic-div{
+.profile-pic-div {
   width: 100%;
   border-radius: 50%;
   overflow: hidden;
   border: 1px solid white;
 }
 
-#photo{
+#photo {
   height: 100%;
   width: 100%;
 }
 
-#file{
+#file {
   display: none;
 }
 
-#uploadBtn{
+#uploadBtn {
   height: 100%;
   width: 100%;
   position: absolute;
@@ -71,43 +77,81 @@ h1{
   cursor: pointer;
   display: none;
 }
-  footer {
-    color: white;
-    position: relative;
-    width:100%;
-    bottom: 0;
-    padding: 15px;
-    background-color:black;
-    border-top: solid;
-    border-color: #d5d5d5;
-    border-width: 1px;
-    }    
-  i {
-    color: #33aaff;
-  }
-  h1 {
-    color: #d5d5d5;
-  }
-  p {
-    color: #d5d5d5;     
-  }
-  label{
-    color: black;
-  }
-  h4 {
-    color: black;
-  }
-  #card {
-    padding: 20px 25px 30px;
-    margin: 0 auto 25px;
-    border-radius: 25px;
-    margin-top: 5%;
-    background-color: rgb(22, 22, 22);
+
+footer {
+  color: white;
+  position: relative;
+  width: 100%;
+  bottom: 0;
+  padding: 15px;
+  background-color: black;
+  border-top: solid;
+  border-color: #d5d5d5;
+  border-width: 1px;
 }
+
+i {
+  color: #33aaff;
+}
+
+h1 {
+  color: #d5d5d5;
+}
+
+p {
+  color: #d5d5d5;
+}
+
+label {
+  color: black;
+}
+
+h4 {
+  color: black;
+}
+
+.dropdown:hover>.dropdown-menu {
+  display: block;
+}
+
+.dropdown a {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.dropdown>.dropdown-toggle:active {
+  pointer-events: none;
+}
+
+#dropdown-menu {
+  background-color: rgba(0, 0, 0, 0.7);
+  border-radius: 20px;
+}
+
+#dropdown-menu :hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+#dropbtn {
+  color: #d5d5d5;
+  border: none;
+  background-color: transparent;
+}
+
+#card {
+  padding: 20px 25px 30px;
+  margin: 0 auto 25px;
+  border-radius: 25px;
+  margin-top: 5%;
+  background-color: rgb(22, 22, 22);
+  box-shadow: 0px 7px 20px 0px black;
+}
+
 #card2 {
   padding: 20px 25px 30px;
   margin: 0 auto 25px;
   margin-top: 5%;
+  box-shadow: 0px 7px 20px 0px black;
   background-color: rgb(40, 40, 40);
 }
 
@@ -116,47 +160,48 @@ h1{
   color: grey;
   font-size: 18px;
 }
-  #myPage {
-    background-image: url("gwen.jpg");
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
-  }
-  .navbar li a, .navbar .navbar-brand { 
-    color: #d5d5d5 !important;
-  }
-  .navbar-nav li a:hover {
-    color: #fff !important;
-  }
-  .navbar-nav li.active a {
-    color: #fff !important;
-  }
-  .navbar-default .navbar-toggle {
-    border-color: transparent;
-  }
-  footer a {
-    color: #f5f5f5;
-  }
-  #login {
-    padding-left: 6px;
-    border-left:solid 1px #ccc;
-    border-color: white;
-  }
-  #logo {
-    padding-right: 2px;
-  }
-  hr {
-    background-color:#d5d5d5;
-    width:100%;
-  
-  }
 
+#myPage {
+  background-image: url("gwen.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
 
+.navbar li a,
+.navbar .navbar-brand {
+  color: #d5d5d5 !important;
+}
 
+.navbar-nav li a:hover {
+  color: #fff !important;
+}
 
+.navbar-nav li.active a {
+  color: #fff !important;
+}
 
+.navbar-default .navbar-toggle {
+  border-color: transparent;
+}
 
+footer a {
+  color: #f5f5f5;
+}
 
+#login {
+  padding-left: 6px;
+  border-left: solid 1px #ccc;
+  border-color: white;
+}
 
-  
+#logo {
+  padding-right: 2px;
+}
+
+hr {
+  background-color: #d5d5d5;
+  width: 100%;
+
+}

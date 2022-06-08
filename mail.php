@@ -27,15 +27,15 @@ if(isset($_POST['submit'])){
 	
 
     $mail->isSMTP();
-    $mail->Host = 'smtp.gmail.com';
+    $mail->Host = 'smtp.seznam.cz';
     $mail->SMTPAuth = true;
-    $mail->Username = 'shinobiboosting@gmail.com'; 
-    $mail->Password = 'Sasuke1500?';
+    $mail->Username = 'shinobiboosting@seznam.cz'; 
+    $mail->Password = 'Sasuke1500!';
     $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
     $mail->Port = '587';
 
-    $mail->setFrom('shinobiboosting@gmail.com'); // adresa co mi poslouží jako SMTP server
-    $mail->addAddress('shinobiboosting@gmail.com'); // adresa kam to bude chodit
+    $mail->setFrom('shinobiboosting@seznam.cz'); // adresa co mi poslouží jako SMTP server
+    $mail->addAddress('shinobiboosting@seznam.cz'); // adresa kam to bude chodit
 
     $mail->isHTML(true);
     $mail->Subject = $subject;

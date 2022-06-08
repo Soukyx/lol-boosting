@@ -19,10 +19,10 @@ if(isset($_POST['submit'])){
 
  
     $mail->isSMTP();
-    $mail->Host = 'smtp.gmail.com';
+    $mail->Host = 'smtp.seznam.cz';
     $mail->SMTPAuth = true;
-    $mail->Username = 'shinobiboosting@gmail.com'; 
-    $mail->Password = 'Sasuke1500?';
+    $mail->Username = 'shinobiboosting@seznam.cz'; 
+    $mail->Password = 'Sasuke1500!';
     $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
     $mail->Port = '587';
 
